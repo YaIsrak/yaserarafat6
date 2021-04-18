@@ -18,12 +18,30 @@ body {
   color: #0e0e0e;
 }
 
+img {
+  border-radius: 1rem;
+}
+
+img:hover {
+  border-radius: 5rem;
+}
+
 section {
-  padding: 10vmin 0;
+  padding: 15vmin 0;
+}
+
+.sec-h1 {
+  letter-spacing: 0rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sec-h1:hover {
+  letter-spacing: 0.5rem;
 }
 
 .sec1 {
-  background-image: url("https://instagram.fdac33-1.fna.fbcdn.net/v/t51.2885-15/e35/s1080x1080/152452974_2497798793677875_4549359496032700625_n.jpg?tp=1&_nc_ht=instagram.fdac33-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=LqqBRUyqr7MAX-X9Rev&edm=AP_V10EAAAAA&ccb=7-4&oh=6287330a002faf7d11cfefd1d9c3ac66&oe=609F8E28&_nc_sid=4f375e");
+  background-image: url("../Photos/cover-1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,13 +49,22 @@ section {
 }
 
 .sec1 .overlay {
-  height: 100vh;
-  width: 100%;
+  height: 95vh;
+  width: 95%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 0.8;
   background-color: #0e0e0e;
+  border-radius: 2rem;
+}
+
+.sec1 .overlay:hover {
+  height: 100vh;
+  width: 100%;
+  border-radius: 0;
 }
 
 .sec1 .title {
@@ -46,7 +73,54 @@ section {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-weight: 600;
   font-style: italic;
+}
+
+.sec2 .row .info .art-info {
+  position: relative;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.sec2 .row .info .art-info ul li {
+  position: relative;
+  left: 0;
+}
+
+.sec2 .row .info .art-info ul li:hover {
+  left: 1rem;
+}
+
+.sec2 .row .photo .row .col-6 {
+  padding: 6px;
+}
+
+.sec3 .row .info .graph-info {
+  position: relative;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.sec3 .row .info .graph-info .sec3-link ul li {
+  position: relative;
+  left: 0;
+}
+
+.sec3 .row .info .graph-info .sec3-link ul li:hover {
+  left: 1rem;
+}
+
+.sec3 .row .info .graph-info .more-btn {
+  padding: 0.375rem 0.75rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sec3 .row .info .graph-info .more-btn:hover {
+  padding: 0.375rem 1.5rem;
 }
 /*# sourceMappingURL=index.css.map */
