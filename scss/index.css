@@ -74,6 +74,8 @@ section {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-style: italic;
+  font-size: 6vmin;
+  text-align: center;
 }
 
 .sec2 .row .info .art-info {

@@ -22,6 +22,8 @@
   .title {
     @include position(absolute, 50%, 50%, -50%, -50%);
     font-style: italic;
+    font-size: 6vmin;
+    text-align: center;
   }
 }
 
