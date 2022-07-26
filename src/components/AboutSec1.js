@@ -1,62 +1,44 @@
-import BackPP from '../Photos/2.jpg';
+import cp from '../images/cp-min.jpg';
 
 export default function AboutSec1() {
+	const links = [
+		{
+			iconClass: 'fab fa-facebook-f',
+			link: 'https://www.facebook.com/yaser.arafat.israk',
+		},
+		{
+			iconClass: 'fab fa-instagram',
+			link: 'https://www.facebook.com/y_israk',
+		},
+	];
+
 	return (
-		<section className='sec1'>
-			<div className='container'>
-				<div className='row'>
-					<div className='col-md-6 avater'>
-						<img src={BackPP} alt='' className='img-fluid' />
-					</div>
-					<div className='col-md-6 info'>
-						<div className='intro'>
-							<h1>MD Yaser Arafat Israk</h1>
-							<p>
-								I am Israk. I am an illustrator, concept artist, creative
-								designer located in Chittagong, Bangladesh. 🇧🇩
-								<br />
-								<br />
-								<br />
-								I like to draw dynamic and traditional characters, which is
-								sometimes gives me more inspiration. I begin pursuing art more
-								seriously at 16. I enjoy learning new things.
-								<br />
-								My force is drawing female characters, traditional concept art
-								and portrait.
-								<br />
-								<br />
-								<br />I am also a web and graphic designer. I started work at
-								web designing at 15.
-							</p>
-							<button className='btn btn-dark'>
-								<a
-									className='link-light'
-									href='mailto:yaserarafatisrak@gmail.com'>
-									Mail me
+		<section className='sec1 p-0'>
+			<div className='row w-full'>
+				<div
+					className='col-md-6 bg-cover bg-center h-screen'
+					style={{ backgroundImage: `url(${cp})` }}></div>
+				<div className='col-md-6 m-auto' style={{ padding: '15vmin' }}>
+					<div className='container'>
+						<h1 className='h1 fw-bold'>
+							MD Yaser Arafat <span className='text-primary'>Israk</span>
+						</h1>
+						<div className='d-flex gap-2'>
+							{links.map((link, index) => (
+								<a class='fs-5' href={link.link}>
+									<button
+										class='px-3 py-2 bg-blue-400 border-2 tracking-wider border-black mb-2 hover:bg-teal-400'
+										key={index}>
+										<i class={link.iconClass} />
+									</button>
 								</a>
-							</button>
-							<button className='btn btn-dark'>
-								<a
-									className='link-light'
-									href='https://www.facebook.com/yaser.arafat.israk'>
-									<i className='fab fa-facebook-f'></i>
-								</a>
-							</button>
-							<button className='btn btn-dark'>
-								<a
-									className='link-light'
-									href='https://www.instagram.com/_yaser.israk_'>
-									<i className='fab fa-instagram'></i>
-								</a>
-							</button>
-							<button className='btn btn-dark'>
-								<a
-									className='link-light'
-									href='https://www.linkedin.com/in/israk'>
-									<i className='fab fa-linkedin-in'></i>
-								</a>
-							</button>
+							))}
 						</div>
+						<p className='text-muted'>
+							I am a creative frontend developer, designer and illustrator from
+							Bangladesh. 🇧🇩
+						</p>
+						<p className='font2 text-muted fs-4'>{`// 2+ years of experience`}</p>
 					</div>
 				</div>
 			</div>

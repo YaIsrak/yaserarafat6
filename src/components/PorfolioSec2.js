@@ -1,46 +1,29 @@
-import PorfolioProjectImage from '../components/PorfolioProjectImage';
-import PorfolioProjectLink from './PorfolioProjectLink';
-
 export default function PorfolioSec2() {
-	let links = [
-		'https://yaserisrak.netlify.app',
-		'https://sma-hamid.netlify.app',
-		'http://forecomerce.epizy.com',
+	const links = [
+		{ name: 'Main Website', link: 'https://yaserisrak.netlify.app' },
+		{ name: 'React Quiz App', link: 'https://israkreact-app.netlify.app' },
+		{ name: 'Others', link: 'https://sma-hamid.netlify.app' },
 	];
 
 	return (
 		<section className='sec3' id=''>
 			<div className='container'>
 				<div className='row'>
-					<div className='col-md-6 photo' data-aos='fade-up'>
-						<div className='row'>
-							<PorfolioProjectImage link={'/'} />
-							<PorfolioProjectImage link={'/'} />
-							<PorfolioProjectImage link={'/'} />
-							<PorfolioProjectImage link={'/'} />
-						</div>
-					</div>
-					<div className='col-md-6 info' data-aos='fade-up'>
-						<div className='graph-info'>
-							<h1>Creative Designer</h1>
-							<p>
-								I'm also a <b>Web Designer</b> and <b>Graphic Designer</b>. I
-								started work at designing at 15.
-							</p>
-							<div className='sec3-link'>
-								<ul>
-									{links.map((link, index) => (
-										<PorfolioProjectLink name={link} link={link} key={index} />
-									))}
-								</ul>
-							</div>
-							<button className='more-btn btn btn-light'>
-								<a className='link-dark' href='https://www.behance.net/israk'>
-									Some of my project
+					{links.map((link, index) => (
+						<div className='col-md-6 p-2' key={index}>
+							<h2 className='h2 card-title pt-3'>{link.name}</h2>
+							<button className='px-3 py-2.5 my-1 bg-blue-500 rounded-lg hover:bg-indigo-500'>
+								<a href={link.link} className='text-white hover:text-white'>
+									View Website
 								</a>
 							</button>
+							<iframe
+								className='card-img-top'
+								style={{ height: '20rem', width: '100%' }}
+								src={link.link}
+								title={link.name}></iframe>
 						</div>
-					</div>
+					))}
 				</div>
 			</div>
 		</section>

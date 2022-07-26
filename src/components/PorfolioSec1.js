@@ -1,71 +1,35 @@
-import PorfolioProjectImage from './PorfolioProjectImage';
-import PorfolioProjectLink from './PorfolioProjectLink';
-
-export default function HomeSec2() {
-	let links = [
+export default function PortfolioSec1() {
+	const artsPhoto = [
 		{
-			name: 'Personal Art',
-			link: 'https://mdyaserarafatisrak.artstation.com/albums/2824156',
+			photoLink:
+				'https://scontent.fspd5-1.fna.fbcdn.net/v/t39.30808-6/288990678_870607304319442_4611487276021403139_n.jpg?stp=dst-jpg_s640x640&_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeE7n9cTB5l_NL1Y9hOCGywNCLjA6rfypGMIuMDqt_KkY082GtyGSWfJ6ksnRmayGn5Fa7XUzZbt6LXcQptFEFEd&_nc_ohc=v0yZC4Y_XkcAX9FtAbh&_nc_ht=scontent.fspd5-1.fna&oh=00_AT_6j3Ai51nRCUuPQg5XQ_XIXChp7e8JNIYozO7GkzpNWQ&oe=62E34CCE',
 		},
 		{
-			name: 'Portrait',
-			link: 'https://mdyaserarafatisrak.artstation.com/albums/2815097',
+			photoLink:
+				'https://scontent.fspd5-1.fna.fbcdn.net/v/t39.30808-6/281967720_849550213091818_6246410716383637998_n.jpg?stp=dst-jpg_s640x640&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeFwwcKUdV18nuajjslVAILwKuphwdIv2qYq6mHB0i_apgOWYtGoDvzNX_rfH_KCoFy42ywHjuxzmH1D56DW4Nbg&_nc_ohc=ftmW2_c9eecAX8XLoSM&_nc_ht=scontent.fspd5-1.fna&oh=00_AT-a_GZM2sdJkXp4EiRays2vFOF_H22uS-n3SpC8cXnkww&oe=62E38EEF',
 		},
 		{
-			name: 'Character Design',
-			link: 'https://mdyaserarafatisrak.artstation.com/albums/2855151',
+			photoLink:
+				'https://scontent.fspd5-1.fna.fbcdn.net/v/t39.30808-6/278585899_830364785010361_7723924948899654466_n.jpg?stp=dst-jpg_s640x640&_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeFivoLktnQN8Y5yWjn2_71e644-YDMoLsXrjj5gMyguxeNYao6Y3M0ZSwoKEnVB3KOtk2ONt0TSATiQlMfmA7_U&_nc_ohc=KpCUn0LjHaoAX_Av5_5&tn=kXEYChV5Fy-Kannu&_nc_ht=scontent.fspd5-1.fna&oh=00_AT_E5c-G4BQ-3wswbJRh3SKzLuIChXnDNGdJotl-322HuQ&oe=62E2A4E1',
 		},
 	];
+
 	return (
 		<section className='sec2' id='portfolio'>
 			<div className='container'>
-				<h1 className='title text-center sec-h1'>Portfolio</h1>
-				<div className='row'>
-					<div className='col-md-6 info' data-aos='fade-up'>
-						<div className='art-info'>
-							<h1>Digital Art</h1>
-							<p>
-								I like to draw dynamic and traditional characters, which is
-								sometimes gives me more inspiration. I begin pursuing art more
-								seriously at 16. I enjoy learning new things. My force is
-								drawing female characters, traditional concept art and portrait.
-							</p>
-							<ul>
-								{links.map((link, index) => (
-									<PorfolioProjectLink
-										name={link.name}
-										link={link.link}
-										key={index}
-									/>
-								))}
-							</ul>
-						</div>
-					</div>
-					<div className='col-md-6 photo' data-aos='fade-up'>
-						<div className='row'>
-							<PorfolioProjectImage
-								link={
-									'https://cdnb.artstation.com/p/assets/images/images/035/980/149/large/md-yaser-arafat-israk-asset.jpg?1616427147'
-								}
-							/>
-							<PorfolioProjectImage
-								link={
-									'https://cdna.artstation.com/p/assets/images/images/034/627/124/large/md-yaser-arafat-israk-asset.jpg?1612801914'
-								}
-							/>
-							<PorfolioProjectImage
-								link={
-									'https://cdna.artstation.com/p/assets/images/images/032/560/824/large/md-yaser-arafat-israk-asset.jpg?1606810395'
-								}
-							/>
-
-							<PorfolioProjectImage
-								link={
-									'https://cdnb.artstation.com/p/assets/images/images/032/498/081/large/md-yaser-arafat-israk-122451896-956995214797369-7909265820938984027-o.jpg?1606635440'
-								}
-							/>
-						</div>
-					</div>
+				<h1 className='h1 fw-bold'>Digital art and art concepts</h1>
+				<p className='text-muted'>
+					A collection of idea on painting and drawings 🎨
+				</p>
+				<div className='row art-gallery'>
+					{artsPhoto.map((artPhoto, index) => (
+						<img
+							className='col-4'
+							alt='hehe'
+							src={artPhoto.photoLink}
+							key={index}
+						/>
+					))}
 				</div>
 			</div>
 		</section>

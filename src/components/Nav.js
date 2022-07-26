@@ -2,11 +2,18 @@ import '../scss/nav.css';
 import Navlink from './Navlink';
 
 export default function Navbar() {
+	const navLinks = [
+		{ name: 'Home 🏘️', path: '/' },
+		{ name: 'About 😄', path: '/about' },
+		{ name: 'Portfolio 🎨', path: '/portfolio' },
+		{ name: 'Notes 📔', path: '/blog' },
+	];
+
 	return (
-		<nav className='navbar navbar-expand-lg navbar-dark fixed-top' id='navbar'>
+		<nav className='navbar navbar-expand-lg navbar-light fixed-top' id='navbar'>
 			<div className='container'>
-				<a className='navbar-brand' href='index.html'>
-					ISRAK
+				<a className='navbar-brand fw-bold' href='/'>
+					Israk
 				</a>
 				<button
 					className='navbar-toggler'
@@ -21,10 +28,14 @@ export default function Navbar() {
 				<div className='collapse navbar-collapse' id='navbarNav'>
 					<div className='mx-auto'></div>
 					<ul className='navbar-nav'>
-						<Navlink name='Home' path='/' />
-						<Navlink name='About' path='/about' />
-						<Navlink name='Portfolio' path='/portfolio' />
-						<Navlink name='Contact' path='mailto:yaserarafatisrak@gmail.com' />
+						{navLinks.map((navLink, index) => (
+							<Navlink name={navLink.name} path={navLink.path} key={index} />
+						))}
+						<li className='nav-item'>
+							<a className='nav-link' href='mailto:yaserarafatisrak@gmail.com'>
+								Contact 📧
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>

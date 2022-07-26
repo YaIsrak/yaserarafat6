@@ -5,7 +5,8 @@ export default function Layout({ children }) {
 	return (
 		<>
 			<Navbar />
-			<main className='dark-theme'>{children}</main>
+			<main>{children}</main>
+			<hr />
 			<Footer />
 		</>
 	);
