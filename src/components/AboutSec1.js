@@ -34,11 +34,11 @@ export default function AboutSec1() {
 								</a>
 							))}
 						</div>
-						<p className='text-muted'>
+						<p className='text-muted text-xl'>
 							I am a creative frontend developer, designer and illustrator from
 							Bangladesh. 🇧🇩
 						</p>
-						<p className='font2 text-muted fs-4'>{`// 2+ years of experience`}</p>
+						<p className='font2 text-muted text-xl'>{`// 2+ years of experience`}</p>
 					</div>
 				</div>
 			</div>

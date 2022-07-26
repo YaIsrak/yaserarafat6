@@ -72,7 +72,7 @@ export default function Footer() {
 				</div>
 				<div className='my-8'>
 					<h1 className='h3'>Thanks for checking my website!</h1>
-					<p className='text-muted font-mono fs-4'>
+					<p className='text-muted font-mono text-sm lg:text-lg'>
 						{"// It's a work in progress so check back often!"}
 					</p>
 				</div>

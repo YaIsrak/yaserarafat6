@@ -36,19 +36,25 @@ export default function AboutSec3() {
 					<h1 className='h3 fw-bold'>Experiences</h1>
 					<div className='row'>
 						<div className='col-3'>
-							<p className='fs-4 fw-bold text-primary'>Opputunity for Kids</p>
+							<p className='text-sm md:text-xl fw-bold text-primary'>
+								Opputunity for Kids
+							</p>
 							<PTag>@Assosiate of Graphic Design</PTag>
 							<PTag>Chittagong - Bangladesh</PTag>
 							<PTag>2020 - now</PTag>
 						</div>
 						<div className='col-3'>
-							<p className='fs-4 fw-bold text-primary'>Originative 360</p>
+							<p className='text-sm md:text-xl fw-bold text-primary'>
+								Originative 360
+							</p>
 							<PTag>@Assosiate of Graphic Design</PTag>
 							<PTag>Chittagong - Bangladesh</PTag>
 							<PTag>2020 - 2022</PTag>
 						</div>
 						<div className='col-3'>
-							<p className='fs-4 fw-bold text-primary'>Lorem Ipsum</p>
+							<p className='text-sm md:text-xl fw-bold text-primary'>
+								Lorem Ipsum
+							</p>
 							<PTag>@Position</PTag>
 							<PTag>Place</PTag>
 							<PTag>Time Period</PTag>
