@@ -1,4 +1,9 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../App';
+import Button from './Button';
+
 export default function PortfolioSec1() {
+	const { theme } = useContext(ThemeContext);
 	const artsPhoto = [
 		{
 			photoLink:
@@ -15,13 +20,15 @@ export default function PortfolioSec1() {
 	];
 
 	return (
-		<section className='sec2' id='portfolio'>
+		<section
+			className={`sec2 bg-${theme.bg} text-${theme.text}`}
+			id='portfolio'>
 			<div className='container'>
 				<h1 className='h1 fw-bold'>Digital art and art concepts</h1>
 				<p className='text-muted'>
 					A collection of idea on painting and drawings 🎨
 				</p>
-				<div className='row art-gallery'>
+				<div className='row art-gallery my-6'>
 					{artsPhoto.map((artPhoto, index) => (
 						<img
 							className='col-4'
@@ -31,6 +38,7 @@ export default function PortfolioSec1() {
 						/>
 					))}
 				</div>
+				<Button link='https://www.instagram.com/y_israk'>More Art? </Button>
 			</div>
 		</section>
 	);

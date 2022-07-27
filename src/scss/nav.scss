@@ -12,7 +12,6 @@
 			margin: 0 0.5rem;
 			position: relative;
 			font-weight: 500;
-			color: $navColor;
 			&::after {
 				position: absolute;
 				content: '';
@@ -45,12 +44,5 @@ footer {
 		p {
 			margin: 1rem 0 0 0;
 		}
-	}
-}
-
-// media quary
-@media (max-width: 992px) {
-	.navbar {
-		background-color: $themeBackgroud;
 	}
 }

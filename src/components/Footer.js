@@ -1,6 +1,9 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../App';
 import FooterP from './FooterP';
 
 export default function Footer() {
+	const { theme } = useContext(ThemeContext);
 	const songLists = [
 		{
 			name: 'E hawa',
@@ -26,14 +29,13 @@ export default function Footer() {
 			name: 'Blinding Light',
 			link: 'https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b?si=44ada2d436d34fac',
 		},
-		{ name: 'Blinding Light', link: '' },
 	];
 	return (
-		<footer className='bg-white font-mono'>
+		<footer className={`font-mono bg-${theme.bg} text-${theme.text}`}>
 			<div className='container'>
 				<img
-					alt=''
-					src='https://media.giphy.com/media/KCYCKOfUKl1tiFhbJG/giphy.gif'
+					alt='GIF'
+					src='https://data.whicdn.com/images/243225230/original.gif'
 				/>
 				<p className='text-muted fs-3'>{'// Made with'}</p>
 				<div className='row'>
@@ -42,7 +44,8 @@ export default function Footer() {
 						<FooterP>{'</>'}</FooterP>
 						<br />
 						<br />
-						<FooterP>Bootstrap 5</FooterP>
+						<FooterP>Bootstrap</FooterP>
+						<FooterP>Tailwind CSS</FooterP>
 						<FooterP>React.js</FooterP>
 						<FooterP>React Router Dom</FooterP>
 						<FooterP>Fisebase</FooterP>

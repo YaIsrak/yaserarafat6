@@ -1,8 +1,11 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../App';
 import PTag from './PTag';
 
 export default function AboutSec3() {
+	const { theme } = useContext(ThemeContext);
 	return (
-		<section className='sec3'>
+		<section className={`sec3 bg-${theme.bg} text-${theme.text}`}>
 			<div className='container font-mono grid gap-8'>
 				{/* Main Skills */}
 				<div>

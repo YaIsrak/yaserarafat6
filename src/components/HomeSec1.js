@@ -1,10 +1,15 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../App';
+
 export default function HomeSec1() {
+	const { theme } = useContext(ThemeContext);
+
 	return (
-		<section className='sec1' id='home'>
+		<section className={`sec1 bg-${theme.bg} text-${theme.text}`} id='home'>
 			<div className='container text-center'>
 				<div className='row'>
-					<div className='col-md-6 m-auto py-5'>
-						<h1 className='h1 fw-bold'>
+					<div className='col-md-6 mt-40 md:m-auto py-5'>
+						<h1 className='h1 fw-bold fs-1'>
 							Hey,
 							<br /> I'm <span className='text-primary'>Israk</span> 👋
 						</h1>
@@ -23,7 +28,7 @@ export default function HomeSec1() {
 					</div>
 				</div>
 				<div className='fs-5'>
-					<p className='fw-light mx-auto py-5 my-5' style={{ width: '50%' }}>
+					<p className='fw-light mx-auto py-5 my-5 w-4/5 md:w-1/2'>
 						"Welcome to the home of my notes, resources, experiments, findings
 						and <span className='fw-bold'>art, learning</span>
 					</p>

@@ -1,6 +1,10 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../App';
 import cp from '../images/cp-min.jpg';
+import Button from './Button';
 
 export default function AboutSec1() {
+	const { theme } = useContext(ThemeContext);
 	const links = [
 		{
 			iconClass: 'fab fa-facebook-f',
@@ -13,7 +17,7 @@ export default function AboutSec1() {
 	];
 
 	return (
-		<section className='sec1 p-0'>
+		<section className={`sec1 p-0 bg-${theme.bg} text-${theme.text}`}>
 			<div className='row w-full'>
 				<div
 					className='col-md-6 bg-cover bg-center h-screen'
@@ -25,13 +29,9 @@ export default function AboutSec1() {
 						</h1>
 						<div className='d-flex gap-2'>
 							{links.map((link, index) => (
-								<a class='fs-5' href={link.link}>
-									<button
-										class='px-3 py-2 bg-blue-400 border-2 tracking-wider border-black mb-2 hover:bg-teal-400'
-										key={index}>
-										<i class={link.iconClass} />
-									</button>
-								</a>
+								<Button link={link.link} key={index}>
+									<i className={link.iconClass} />
+								</Button>
 							))}
 						</div>
 						<p className='text-muted text-xl'>

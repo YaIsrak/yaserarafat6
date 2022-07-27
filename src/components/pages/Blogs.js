@@ -34,6 +34,9 @@ export default function Blogs() {
 							/>
 						)
 					)}
+					<p className='text-muted font2 fs-5'>
+						{"//This page can't reload dark mode"}
+					</p>
 				</div>
 			</section>
 		</>

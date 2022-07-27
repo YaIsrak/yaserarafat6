@@ -7,7 +7,6 @@
   margin: 0 0.5rem;
   position: relative;
   font-weight: 500;
-  color: black;
 }
 .navbar .navbar-nav .nav-link::after {
   position: absolute;
@@ -34,10 +33,4 @@ footer .social-link a {
 }
 footer .credit p {
   margin: 1rem 0 0 0;
-}
-
-@media (max-width: 992px) {
-  .navbar {
-    background-color: white;
-  }
 }/*# sourceMappingURL=nav.css.map */
