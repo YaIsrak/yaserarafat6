@@ -13,6 +13,7 @@ export default function PorfolioSec2() {
 	return (
 		<section className={`sec3 bg-${theme.bg} text-${theme.text}`} id=''>
 			<div className='container'>
+				<h1 className='h1 fw-bold'>Web Design</h1>
 				<div className='row'>
 					{links.map((link, index) => (
 						<div className='col-md-6 p-2' key={index}>

@@ -10,6 +10,6 @@ const app = initializeApp({
 	appId: process.env.REACT_APP_ID,
 });
 
-console.log('firebase-config');
+console.log('firebase perfectly worked');
 
 export default app;
