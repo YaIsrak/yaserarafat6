@@ -11,7 +11,7 @@ export default function HomeSec1() {
 					<div className='col-md-6 mt-40 md:m-auto py-5'>
 						<h1 className='h1 fw-bold fs-1'>
 							Hey,
-							<br /> I'm <span className='text-primary'>Israk</span> 👋
+							<br /> I'm <span className='text-indigo-500'>Israk</span> 👋
 						</h1>
 						<p className='text-muted fw-light'>
 							An Illustrator, developer and Designer located📍 in Bangladesh 🇧🇩

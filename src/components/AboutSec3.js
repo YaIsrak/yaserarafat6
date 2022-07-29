@@ -39,7 +39,7 @@ export default function AboutSec3() {
 					<h1 className='h3 fw-bold'>Experiences</h1>
 					<div className='row'>
 						<div className='col-3'>
-							<p className='text-sm md:text-xl fw-bold text-primary'>
+							<p className='text-sm md:text-xl fw-bold text-indigo-500'>
 								Opputunity for Kids
 							</p>
 							<PTag>@Assosiate of Graphic Design</PTag>
@@ -47,7 +47,7 @@ export default function AboutSec3() {
 							<PTag>2020 - now</PTag>
 						</div>
 						<div className='col-3'>
-							<p className='text-sm md:text-xl fw-bold text-primary'>
+							<p className='text-sm md:text-xl fw-bold text-indigo-500'>
 								Originative 360
 							</p>
 							<PTag>@Assosiate of Graphic Design</PTag>
@@ -55,7 +55,7 @@ export default function AboutSec3() {
 							<PTag>2020 - 2022</PTag>
 						</div>
 						<div className='col-3'>
-							<p className='text-sm md:text-xl fw-bold text-primary'>
+							<p className='text-sm md:text-xl fw-bold text-indigo-500'>
 								Lorem Ipsum
 							</p>
 							<PTag>@Position</PTag>

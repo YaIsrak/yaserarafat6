@@ -13,10 +13,9 @@ export default function useTheme() {
 			string: '🌞 Light',
 		},
 	};
-	// eslint-disable-next-line no-unused-vars
 	const [theme, setTheme] = useState(themeObject.light);
 
-	function switchTheme() {
+	const switchTheme = () => {
 		setTheme((theme) => {
 			if (theme.bg === 'dark') {
 				return (theme = themeObject.light);
@@ -24,7 +23,7 @@ export default function useTheme() {
 				return (theme = themeObject.dark);
 			}
 		});
-	}
+	};
 
 	return {
 		theme: theme,

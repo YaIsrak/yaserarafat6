@@ -23,7 +23,9 @@ export default function Navbar() {
 			id='navbar'>
 			<div className='container'>
 				{/* Nav brand */}
-				<a className='navbar-brand fw-bold' href='/'>
+				<a
+					className='navbar-brand fw-bold font2 fs-2 !text-indigo-500'
+					href='/'>
 					Israk
 				</a>
 				{/* theme Changing Button */}
@@ -41,7 +43,7 @@ export default function Navbar() {
 					aria-controls='navbarNav'
 					aria-expanded='false'
 					aria-label='Toggle navigation'>
-					<span className='navbar-toggler-icon'></span>
+					⏬{/* <span className='navbar-toggler-icon'></span> */}
 				</button>
 				<div className='collapse navbar-collapse' id='navbarNav'>
 					<div className='mx-auto'></div>
@@ -52,12 +54,18 @@ export default function Navbar() {
 								name={navLink.name}
 								path={navLink.path}
 								key={index}
-								className={`text-${theme.text}`}
+								className={`text-${
+									theme.text === 'dark'
+										? 'gray-900 after:bg-gray-900'
+										: 'gray-100 after:bg-gray-100'
+								} hover:text-indigo-500 `}
 							/>
 						))}
 						<li className='nav-item'>
 							<a
-								className={`nav-link text-${theme.text}`}
+								className={`nav-link text-${
+									theme.text === 'dark' ? 'gray-900' : 'gray-100'
+								} hover:text-indigo-500`}
 								href='mailto:yaserarafatisrak@gmail.com'>
 								Contact 📧
 							</a>

@@ -67,7 +67,7 @@ export default function Footer() {
 						<br />
 						<br />
 						{songLists.map((songList, index) => (
-							<FooterP className='hover:bg-purple-100' key={index}>
+							<FooterP className='hover:bg-purple-500/20' key={index}>
 								<a href={songList.link}>{songList.name}</a>
 							</FooterP>
 						))}
