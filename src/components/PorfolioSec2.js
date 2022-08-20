@@ -5,7 +5,6 @@ export default function PorfolioSec2() {
 	const { theme } = useContext(ThemeContext);
 
 	const links = [
-		{ name: 'Main Website', link: 'https://yaserisrak.netlify.app' },
 		{ name: 'React Quiz App', link: 'https://israkreact-app.netlify.app' },
 		{ name: 'Others', link: 'https://sma-hamid.netlify.app' },
 	];
@@ -16,7 +15,7 @@ export default function PorfolioSec2() {
 				<h1 className='h1 fw-bold'>Web Design</h1>
 				<div className='row'>
 					{links.map((link, index) => (
-						<div className='col-md-6 p-2' key={index}>
+						<div className='col-6 p-2' key={index}>
 							<h2 className='h2 card-title pt-3'>{link.name}</h2>
 							<Button link={link.link}>View Website</Button>
 							<iframe
