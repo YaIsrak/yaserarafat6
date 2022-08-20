@@ -1,0 +1,33 @@
+@import './variable.scss';
+
+* {
+	transition: 0.3s;
+}
+body {
+	font-family: $font1;
+}
+
+img {
+	border-radius: 1rem;
+	&:hover {
+		border-radius: 2rem;
+	}
+}
+section {
+	padding: 15vmin 0;
+}
+
+.font1 {
+	font-family: $font1 !important;
+}
+.font2 {
+	font-family: $font2 !important;
+}
+
+// mixin
+@mixin position($position, $top, $left, $t-top, $t-left) {
+	position: $position;
+	top: $top;
+	left: $left;
+	transform: translate($t-left, $t-top);
+}
