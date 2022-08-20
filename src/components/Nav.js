@@ -19,8 +19,9 @@ export default function Navbar() {
 				theme.bg === 'white' ? 'light' : 'dark'
 			} fixed-top bg-${
 				theme.bg === 'dark' ? 'red-900' : 'gray-100'
-			} md:bg-gray-100/0`}
+			} lg:bg-gray-100/0`}
 			id='navbar'>
+			<div className='bg-red-900 bg-gray-100'></div>
 			<div className='container'>
 				{/* Nav brand */}
 				<a

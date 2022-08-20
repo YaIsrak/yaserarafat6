@@ -21,8 +21,6 @@ export default function useBlogPost() {
 			}
 		}
 		getBlogPost();
-
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return {

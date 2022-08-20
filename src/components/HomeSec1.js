@@ -9,7 +9,7 @@ export default function HomeSec1() {
 		<section className={`sec1 bg-${theme.bg} text-${theme.text}`} id='home'>
 			<div className='container text-center'>
 				<div className='row'>
-					<div className='col-md-6 mt-40 md:m-auto py-5'>
+					<div className='col-md-6 md:m-auto py-5'>
 						<h1 className='h1 fw-bold fs-1'>
 							Hey,
 							<br /> I'm <span className='text-indigo-500'>Israk</span> 👋

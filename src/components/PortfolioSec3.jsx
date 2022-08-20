@@ -18,7 +18,12 @@ export default function PortfolioSec3() {
 				<h1 className='h1 fw-bold'>Graphic Design</h1>
 				<div className='row art-gallery my-6'>
 					{designPhotos.map((designPhoto) => (
-						<img src={designPhoto} alt='desgin' className='col-4 img-fluid' />
+						<img
+							key={designPhoto}
+							src={designPhoto}
+							alt='desgin'
+							className='col-4 img-fluid'
+						/>
 					))}
 				</div>
 				<Button link='https://www.instagram.com/y_israk'>More Art? </Button>
