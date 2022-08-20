@@ -26,7 +26,7 @@ export default function PortfolioSec3() {
 						/>
 					))}
 				</div>
-				<Button link='https://www.instagram.com/y_israk'>More Art? </Button>
+				<Button link='https://www.behance.net/israk'>More? </Button>
 			</div>
 		</section>
 	);
