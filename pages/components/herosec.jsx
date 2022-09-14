@@ -1,4 +1,6 @@
-// import PP from '../images/pp.jpg';
+import PP from '../../public/images/pp.jpg';
+
+import Image from 'next/image';
 
 export default function HeroSec() {
 	return (
@@ -16,11 +18,11 @@ export default function HeroSec() {
 						</p>
 					</div>
 					<div className='col-md-6'>
-						<img
+						<Image
 							className='img-fluid transform rotate-3 scale-100 hover:scale-105 mx-auto'
 							style={{ width: '70%' }}
 							alt='ProfilePicture'
-							src='/images/pp.jpg'
+							src={PP}
 						/>
 					</div>
 				</div>

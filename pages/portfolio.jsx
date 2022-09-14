@@ -12,7 +12,8 @@ export default function Porfolio() {
 			</Head>
 
 			<Layout>
-				<InstaFeed />
+				{/* <InstaFeed /> */}
+				<section>hello</section>
 			</Layout>
 		</div>
 	);
