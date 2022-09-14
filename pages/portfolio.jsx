@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import InstaFeed from './components/InstaFeed';
+// import InstaFeed from './components/InstaFeed';
 import Layout from '../components/Layout';
 
 export default function Porfolio() {

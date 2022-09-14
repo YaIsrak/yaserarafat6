@@ -9,9 +9,13 @@ export default function InstaFeed() {
 
 	useEffect(() => {
 		async function fatchData() {
-			const res = await fetch(token);
-			const posts = await res.json();
-			setPosts([posts.data]);
+			try {
+				const res = await fetch(token);
+				const posts = await res.json();
+				setPosts([posts.data]);
+			} catch (error) {
+				alert(error);
+			}
 		}
 		fatchData();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
