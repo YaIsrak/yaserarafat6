@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import InstaPost from './InstaPost';
+import InstaPost from '../../components/InstaPost';
 
 export default function InstaFeed() {
 	const [posts, setPosts] = useState([]);
@@ -9,13 +9,9 @@ export default function InstaFeed() {
 
 	useEffect(() => {
 		async function fatchData() {
-			try {
-				const res = await fetch(token);
-				const posts = await res.json();
-				setPosts([posts.data]);
-			} catch (error) {
-				alert(error);
-			}
+			const res = await fetch(token);
+			const posts = await res.json();
+			setPosts([posts.data]);
 		}
 		fatchData();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
