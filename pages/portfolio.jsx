@@ -1,8 +1,6 @@
 import Head from 'next/head';
+import InstaFeed from './components/InstaFeed';
 import Layout from '../components/Layout';
-import PortfolioSec1 from '../components/PorfolioSec1';
-import PortfolioSec2 from '../components/PorfolioSec2';
-import PortfolioSec3 from '../components/PortfolioSec3';
 
 export default function Porfolio() {
 	return (
@@ -14,9 +12,7 @@ export default function Porfolio() {
 			</Head>
 
 			<Layout>
-				<PortfolioSec1 />
-				<PortfolioSec2 />
-				<PortfolioSec3 />
+				<InstaFeed />
 			</Layout>
 		</div>
 	);

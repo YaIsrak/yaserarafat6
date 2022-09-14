@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import HomeSec1 from '../components/HomeSec1';
-import PortfolioSec1 from '../components/PorfolioSec1';
+import PortfolioSec1 from './components/PortfolioSec1';
 import PortfolioSec3 from '../components/PortfolioSec3';
+import HeroSec from './components/herosec';
 
 export default function Home() {
 	return (
@@ -14,7 +14,7 @@ export default function Home() {
 			</Head>
 
 			<Layout>
-				<HomeSec1 />
+				<HeroSec />
 				<hr />
 				<PortfolioSec1 />
 				<hr />
