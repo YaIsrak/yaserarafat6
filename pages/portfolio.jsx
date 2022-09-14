@@ -13,7 +13,7 @@ export default function Porfolio() {
 
 			<Layout>
 				{/* <InstaFeed /> */}
-				<section>hello</section>
+				<section>hello ok</section>
 			</Layout>
 		</div>
 	);
