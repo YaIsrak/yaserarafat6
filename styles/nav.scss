@@ -1,7 +1,5 @@
-@import './variable';
-
 .navbar {
-	$navColor: black;
+	$navColor: white;
 	.navbar-nav {
 		.nav-link {
 			margin: 0 0.5rem;
@@ -13,8 +11,7 @@
 				top: 100%;
 				left: 0;
 				width: 100%;
-				height: 2px;
-				// background-color: attr(data-background);
+				height: 1px;
 				background: $navColor;
 				transform: scaleX(0);
 				transform-origin: left;
@@ -24,11 +21,10 @@
 		.nav-link::after {
 			content: '';
 			position: absolute;
-
 			top: 100%;
 			left: 0;
 			width: 100%;
-			height: 2px;
+			height: 1px;
 			transform: scaleX(0);
 			transform-origin: left;
 			transition: 0.3s;

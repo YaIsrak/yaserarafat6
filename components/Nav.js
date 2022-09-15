@@ -12,16 +12,12 @@ export default function Navbar() {
 
 	return (
 		<nav
-			className='navbar navbar-expand-lg navbar-light fixed-top bg-gray-100 lg:bg-gray-100/0'
+			className='font3 navbar navbar-expand-lg navbar-dark fixed-top bg-stone-900/60 lg:bg-gray-100/0 backdrop-blur-lg lg:backdrop-blur-none'
 			id='navbar'
 		>
-			<div className='bg-red-900 bg-gray-100'></div>
 			<div className='container'>
 				{/* Nav brand */}
-				<a
-					className='navbar-brand fw-bold font2 fs-2 !text-indigo-500'
-					href='/'
-				>
+				<a className='navbar-brand fw-bold fs-2' href='/'>
 					Israk
 				</a>
 				{/* Menu opening Button */}

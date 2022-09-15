@@ -1,5 +1,4 @@
 import Head from 'next/head';
-// import InstaFeed from './components/InstaFeed';
 import Layout from '../components/Layout';
 
 export default function Porfolio() {
@@ -12,7 +11,6 @@ export default function Porfolio() {
 			</Head>
 
 			<Layout>
-				{/* <InstaFeed /> */}
 				<section>hello ok</section>
 			</Layout>
 		</div>

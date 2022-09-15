@@ -1,0 +1,78 @@
+.hero {
+	width: 100%;
+	height: 100vh;
+	background: $dark;
+	.img_container {
+		.images {
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				// width: 30%;
+				// height: auto;
+				aspect-ratio: 3 / 4;
+				opacity: 0;
+				background-attachment: fixed;
+			}
+			.left {
+				background: url('/images/art2.jpg') no-repeat 50% 50%;
+				background-size: cover;
+			}
+			.right {
+				background: url('/images/art3.jpg') no-repeat 50% 50%;
+				background-size: cover;
+			}
+		}
+	}
+	.hero_img {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.wrapper_img {
+			position: absolute;
+			overflow: hidden;
+			width: 50%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.box {
+				background: $dark;
+				// background-color: red;
+				opacity: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				z-index: 0;
+			}
+			img {
+				width: 100%;
+				object-fit: fill;
+			}
+		}
+	}
+
+	.header {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		.title {
+			color: white;
+			// opacity: 0;
+			width: 100%;
+		}
+	}
+}

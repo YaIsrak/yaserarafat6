@@ -1,8 +1,8 @@
 import Head from 'next/head';
+import HeroSec from '../components/HeroSec';
 import Layout from '../components/Layout';
 import PortfolioSec1 from '../components/PorfolioSec1';
 import PortfolioSec3 from '../components/PortfolioSec3';
-import HeroSec from '../components/HomeSec1';
 
 export default function Home() {
 	return (
