@@ -12,13 +12,48 @@
 	font-display: swap;
 	src: url(/font/VoyageBold.otf);
 }
+@font-face {
+	font-family: 'LaoMN';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url(/font/LaoMN.ttc);
+}
+
 // Color
-$light: white;
+$white: white;
+$light: #ffdfbf;
 $dark: #0e0e0e;
 $primary: red;
 $themeBackgroud: $light;
 
 // font
-$font1: 'Poppins', sans-serif;
+$font1: 'LaoMN'; // primary font
 $font2: 'Caveat', cursive;
 $font3: 'Voyage';
+
+.font1 {
+	font-family: $font1 !important;
+}
+.font2 {
+	font-family: $font2 !important;
+}
+.font3 {
+	font-family: $font3 !important;
+}
+
+// scrolbar
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: $dark;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $light;
+}

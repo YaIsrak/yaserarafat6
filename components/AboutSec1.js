@@ -22,7 +22,15 @@ export default function AboutSec1() {
 				<div className='col-md-6 m-auto' style={{ padding: '15vmin' }}>
 					<div className='container'>
 						<h1 className='h1 fw-bold'>
-							MD Yaser Arafat <span className='text-indigo-500'>Israk</span>
+							MD Yaser Arafat{' '}
+							<span
+								className='text-indigo-500'
+								// style={{
+								// 	color: '#90ffdc',
+								// }}
+							>
+								Israk
+							</span>
 						</h1>
 						<div className='d-flex gap-2'>
 							{links.map((link, index) => (

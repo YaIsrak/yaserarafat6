@@ -1,5 +1,4 @@
 .navbar {
-	$navColor: white;
 	.navbar-nav {
 		.nav-link {
 			margin: 0 0.5rem;
@@ -12,7 +11,7 @@
 				left: 0;
 				width: 100%;
 				height: 1px;
-				background: $navColor;
+				background: $light;
 				transform: scaleX(0);
 				transform-origin: left;
 				transition: 0.3s;

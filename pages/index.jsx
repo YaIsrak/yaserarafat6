@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import HeroSec from '../components/HeroSec';
 import Layout from '../components/Layout';
+import HeroSec from '../components/HeroSec';
 import PortfolioSec1 from '../components/PorfolioSec1';
 import PortfolioSec3 from '../components/PortfolioSec3';
 

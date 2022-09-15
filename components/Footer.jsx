@@ -28,12 +28,21 @@ export default function Footer() {
 		},
 	];
 	return (
-		// <footer className={`font-mono bg-${theme.bg} text-${theme.text}`}>
-		<footer className='font-mono bg-white text-dark'>
-			<div className='container'>
+		<footer
+			className='font-mono'
+			// style={{
+			// 	background:
+			// 		'url("https://media4.giphy.com/media/liUhPmZdArpYc/giphy.gif")',
+			// 	backgroundRepeat: 'no-repeat',
+			// 	backgroundSize: 'cover',
+			// 	backgroundPosition: 'center',
+			// 	backgroundAttachment: 'fixed',
+			// }}
+		>
+			<div className='container z-auto'>
 				<img
 					alt='GIF'
-					src='https://data.whicdn.com/images/243225230/original.gif'
+					src='https://media4.giphy.com/media/liUhPmZdArpYc/giphy.gif'
 				/>
 				<p className='text-muted fs-3'>{'// Made with'}</p>
 				<div className='row'>
@@ -44,9 +53,7 @@ export default function Footer() {
 						<br />
 						<FooterP>Bootstrap</FooterP>
 						<FooterP>Tailwind CSS</FooterP>
-						<FooterP>React.js</FooterP>
-						<FooterP>React Router Dom</FooterP>
-						<FooterP>Fisebase</FooterP>
+						<FooterP>Next.js</FooterP>
 						<FooterP>Adobe XD</FooterP>
 					</div>
 					<div className='col-4 expe'>
@@ -56,7 +63,6 @@ export default function Footer() {
 						<br />
 						<FooterP>+5h of thinking</FooterP>
 						<FooterP>+30h of code</FooterP>
-						<FooterP>React Router Dom</FooterP>
 						<FooterP>+10 of code crash</FooterP>
 					</div>
 					<div className='col-4 song'>
