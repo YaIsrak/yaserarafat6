@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import HeroSec from '../components/HeroSec';
 import PortfolioSec1 from '../components/PorfolioSec1';
-import PortfolioSec3 from '../components/PortfolioSec3';
+import AboutSec1 from '../components/AboutSec1';
 
 export default function Home() {
 	return (
@@ -17,8 +17,7 @@ export default function Home() {
 				<HeroSec />
 				<hr />
 				<PortfolioSec1 />
-				<hr />
-				<PortfolioSec3 />
+				<AboutSec1 />
 			</Layout>
 		</div>
 	);

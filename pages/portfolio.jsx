@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import PorfolioIntro from '../components/PorfolioIntro';
 
 export default function Porfolio() {
 	return (
@@ -11,7 +12,8 @@ export default function Porfolio() {
 			</Head>
 
 			<Layout>
-				<section>hello ok</section>
+				{/* <section>hello ok</section> */}
+				<PorfolioIntro />
 			</Layout>
 		</div>
 	);

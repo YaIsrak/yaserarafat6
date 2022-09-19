@@ -18,7 +18,8 @@ export default function Navbar() {
 			<div className='container'>
 				{/* Nav brand */}
 				<a className='navbar-brand fw-bold fs-2 font3' href='/'>
-					Israk
+					{/* Israk */}
+					<img src='/images/IMG_2918.PNG' alt='' className='w-16 md:w-32' />
 				</a>
 				{/* Menu opening Button */}
 				<button

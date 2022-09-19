@@ -28,17 +28,7 @@ export default function Footer() {
 		},
 	];
 	return (
-		<footer
-			className='font-mono'
-			// style={{
-			// 	background:
-			// 		'url("https://media4.giphy.com/media/liUhPmZdArpYc/giphy.gif")',
-			// 	backgroundRepeat: 'no-repeat',
-			// 	backgroundSize: 'cover',
-			// 	backgroundPosition: 'center',
-			// 	backgroundAttachment: 'fixed',
-			// }}
-		>
+		<footer className='font-mono'>
 			<div className='container z-auto'>
 				<img
 					alt='GIF'
@@ -54,6 +44,7 @@ export default function Footer() {
 						<FooterP>Bootstrap</FooterP>
 						<FooterP>Tailwind CSS</FooterP>
 						<FooterP>Next.js</FooterP>
+						<FooterP>Strapi</FooterP>
 						<FooterP>Adobe XD</FooterP>
 					</div>
 					<div className='col-4 expe'>
@@ -71,8 +62,10 @@ export default function Footer() {
 						<br />
 						<br />
 						{songLists.map((songList, index) => (
-							<FooterP className='hover:bg-purple-500/20' key={index}>
-								<a href={songList.link}>{songList.name}</a>
+							<FooterP className='hover:bg-orange-100/20 ' key={index}>
+								<a className='text-primary' href={songList.link}>
+									{songList.name}
+								</a>
 							</FooterP>
 						))}
 					</div>

@@ -24,8 +24,7 @@
 $white: white;
 $light: #ffdfbf;
 $dark: #0e0e0e;
-$primary: red;
-$themeBackgroud: $light;
+$primary: #cc6448;
 
 // font
 $font1: 'LaoMN'; // primary font
@@ -42,18 +41,6 @@ $font3: 'Voyage';
 	font-family: $font3 !important;
 }
 
-// scrolbar
-/* width */
-::-webkit-scrollbar {
-	width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: $dark;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: $light;
+.text-primary {
+	color: $primary !important;
 }

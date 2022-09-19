@@ -3,10 +3,12 @@ import Button from './Button';
 export default function AboutSec1() {
 	const links = [
 		{
+			name: 'Facebook',
 			iconClass: 'fab fa-facebook-f',
 			link: 'https://www.facebook.com/yaser.arafat.israk',
 		},
 		{
+			name: 'Instagram',
 			iconClass: 'fab fa-instagram',
 			link: 'https://www.facebook.com/y_israk',
 		},
@@ -22,20 +24,13 @@ export default function AboutSec1() {
 				<div className='col-md-6 m-auto' style={{ padding: '15vmin' }}>
 					<div className='container'>
 						<h1 className='h1 fw-bold'>
-							MD Yaser Arafat{' '}
-							<span
-								className='text-indigo-500'
-								// style={{
-								// 	color: '#90ffdc',
-								// }}
-							>
-								Israk
-							</span>
+							MD Yaser Arafat <span className='text-primary'>Israk</span>
 						</h1>
 						<div className='d-flex gap-2'>
 							{links.map((link, index) => (
-								<Button link={link.link} key={index}>
-									<i className={link.iconClass} />
+								<Button link={link.link} key={index} className='mb-2'>
+									{/* <i className={link.iconClass} /> */}
+									{link.name}
 								</Button>
 							))}
 						</div>
