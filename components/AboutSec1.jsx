@@ -35,8 +35,8 @@ export default function AboutSec1() {
 							))}
 						</div>
 						<p className='text-muted text-xl'>
-							I am a creative frontend developer, designer and illustrator from
-							Bangladesh. 🇧🇩
+							I am a Digital Artist, designer and Web Developer from Bangladesh.
+							🇧🇩
 						</p>
 						<p className='font2 text-muted text-xl'>{`// 2+ years of experience`}</p>
 					</div>
