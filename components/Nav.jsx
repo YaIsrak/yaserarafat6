@@ -32,6 +32,12 @@ export default function Navbar() {
 					aria-label='Toggle navigation'
 				>
 					<span className='navbar-toggler-icon'></span>
+					{/* <label for='check navbar-toogler-icon'>
+						<input type='checkbox' id='check' />
+						<span></span>
+						<span></span>
+						<span></span>
+					</label> */}
 				</button>
 				<div className='collapse navbar-collapse' id='navbarNav'>
 					<div className='mx-auto'></div>
@@ -47,6 +53,32 @@ export default function Navbar() {
 								`}
 							/>
 						))}
+
+						{/* Drop down */}
+						{/* <li className='nav-item dropdown'>
+							<a
+								className='nav-link dropdown-toggle'
+								href='#'
+								role='button'
+								data-bs-toggle='dropdown'
+								aria-expanded='false'
+							>
+								Porfolio
+							</a>
+							<ul className='dropdown-menu !bg-stone-900/60 lg:bg-gray-100/0 !backdrop-blur'>
+								<li>
+									<a className='dropdown-item text-secondary' href='#'>
+										Action
+									</a>
+								</li>
+								<li>
+									<a className='dropdown-item text-secondary' href='#'>
+										Another action
+									</a>
+								</li>
+							</ul>
+						</li> */}
+						{/* Drop End */}
 						<li className='nav-item'>
 							<a
 								className="nav-link text-'gray-100 after:bg-gray-100 hover:text-indigo-500"

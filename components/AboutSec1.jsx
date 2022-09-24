@@ -10,7 +10,7 @@ export default function AboutSec1() {
 		{
 			name: 'Instagram',
 			iconClass: 'fab fa-instagram',
-			link: 'https://www.facebook.com/y_israk',
+			link: 'https://www.instagram.com/y_israk',
 		},
 	];
 
@@ -26,7 +26,7 @@ export default function AboutSec1() {
 						<h1 className='h1 fw-bold'>
 							MD Yaser Arafat <span className='text-primary'>Israk</span>
 						</h1>
-						<div className='d-flex gap-2'>
+						<div className='d-flex gap-1'>
 							{links.map((link, index) => (
 								<Button link={link.link} key={index} className='mb-2'>
 									{/* <i className={link.iconClass} /> */}

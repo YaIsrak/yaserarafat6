@@ -44,7 +44,9 @@ export default function Footer() {
 						<FooterP>Bootstrap</FooterP>
 						<FooterP>Tailwind CSS</FooterP>
 						<FooterP>Next.js</FooterP>
-						<FooterP>Strapi</FooterP>
+						<FooterP>Sanity</FooterP>
+						<FooterP>Gsap</FooterP>
+						<FooterP>Framer Motion</FooterP>
 						<FooterP>Adobe XD</FooterP>
 					</div>
 					<div className='col-4 expe'>
@@ -54,7 +56,7 @@ export default function Footer() {
 						<br />
 						<FooterP>+5h of thinking</FooterP>
 						<FooterP>+30h of code</FooterP>
-						<FooterP>+10 of code crash</FooterP>
+						<FooterP>+20 of code crash</FooterP>
 					</div>
 					<div className='col-4 song'>
 						<br />

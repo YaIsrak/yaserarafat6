@@ -33,7 +33,7 @@ export default function PortfolioSec1() {
 							/>
 						</div>
 					</div>
-					<Button link={'/portfolio'}>Click more</Button>
+					<Button link={'https://www.instagram.com/_is.rak_/'}>See more</Button>
 				</div>
 			</section>
 		</div>

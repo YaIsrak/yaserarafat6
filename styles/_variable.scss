@@ -41,6 +41,16 @@ $font3: 'Voyage';
 	font-family: $font3 !important;
 }
 
+.bg-primary {
+	background-color: $primary !important;
+}
+.bg-secondary {
+	background-color: $light !important;
+}
 .text-primary {
 	color: $primary !important;
+}
+
+.text-secondary {
+	color: $light !important;
 }
