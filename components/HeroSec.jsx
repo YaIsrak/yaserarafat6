@@ -60,7 +60,7 @@ export default function HeroSec() {
 				<div className='wrapper_img'>
 					<div className='box'></div>
 					<div>
-						<img src='/images/art1.jpg' alt='' className='img-fluid' />
+						<img src='/images/art1.webp' alt='' className='img-fluid' />
 					</div>
 				</div>
 			</div>

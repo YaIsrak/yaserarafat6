@@ -1,4 +1,5 @@
-// import style from '../styles/nav.scss';
+import Logo from '../public/images/IMG_2918.PNG';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Navlink from './Navlink';
 
@@ -19,7 +20,10 @@ export default function Navbar() {
 				{/* Nav brand */}
 				<a className='navbar-brand fw-bold fs-2 font3' href='/'>
 					{/* Israk */}
-					<img src='/images/IMG_2918.PNG' alt='' className='w-16 md:w-32' />
+					{/* <img src='/images/IMG_2918.PNG' alt='' className='w-16 md:w-32' /> */}
+					<div className='w-20 md:w-32'>
+						<Image src={Logo} alt='Logo' className='w-16 md:w-32' />
+					</div>
 				</a>
 				{/* Menu opening Button */}
 				<button

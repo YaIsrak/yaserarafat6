@@ -3,6 +3,8 @@ module.exports = {
 	content: [
 		'./pages/*.{js,jsx}',
 		'./pages/**/*.{js,jsx}',
+		'./pages/**/**/*.{js,jsx}',
+		'./pages/**/**/**/*.{js,jsx}',
 		'./components/*.{jsx,js}',
 	],
 	theme: {
