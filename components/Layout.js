@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import Footer from './Footer';
 import Navbar from './Nav';
 
-export default function Layout({ children, route }) {
+export default function Layout({ children }) {
 	return (
 		<>
 			<Head>
-				<title>Israk {route}</title>
+				<title>Israk </title>
 			</Head>
 			<Navbar />
 			<main>{children}</main>

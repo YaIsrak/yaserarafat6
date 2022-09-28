@@ -20,6 +20,12 @@ h1 {
 p {
 	margin-bottom: 0;
 }
+a {
+	color: $primary;
+	&:hover {
+		color: $light;
+	}
+}
 
 // scrolbar
 /* width */

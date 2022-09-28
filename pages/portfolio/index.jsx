@@ -21,7 +21,7 @@ export default function Portfolio() {
 			/>
 			<hr />
 			<PorfolioIntro
-				link={'https://www.behance.net/israk'}
+				link={'/portfolio/web-design'}
 				name={'Web Develpoment Portfolio'}
 				photos={cover2}
 			/>
