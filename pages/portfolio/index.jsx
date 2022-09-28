@@ -1,19 +1,30 @@
 import Layout from '../../components/Layout';
-import Button from '../../components/Button';
 import PorfolioIntro from '../../components/PorfolioIntro';
+// images
+import cover from '../../public/images/art-bg.jpg';
+import cover2 from '../../public/images/cover2.jpg';
+
 export default function Portfolio() {
 	return (
 		<Layout>
 			<PorfolioIntro
-				url={'/images/art-bg.jpg'}
 				link={'https://www.instagram.com/_is.rak_'}
+				name={'Art Portfolio'}
+				photos={cover}
 			/>
-			<section>
-				<div className='container'>
-					<Button link='/portfolio/graphic-design'>Graphic Design</Button>
-					<Button link='/portfolio/web-design'>Web Design</Button>
-				</div>
-			</section>
+			<hr />
+			<PorfolioIntro
+				link={'https://www.behance.net/israk'}
+				name={'Design Portfolio'}
+				photos={cover2}
+				left={true}
+			/>
+			<hr />
+			<PorfolioIntro
+				link={'https://www.behance.net/israk'}
+				name={'Web Develpoment Portfolio'}
+				photos={cover2}
+			/>
 		</Layout>
 	);
 }

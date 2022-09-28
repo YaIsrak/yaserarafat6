@@ -13,10 +13,10 @@ export default function AboutSec3() {
 							<PTag>Digital Art</PTag>
 						</div>
 						<div className='col-3 DesignApp'>
-							<PTag>Photoshop CC</PTag>
-							<PTag>Illustrator CC</PTag>
+							<PTag>Photoshop</PTag>
+							<PTag>Illustrator</PTag>
 							<PTag>Premiere Pro</PTag>
-							<PTag>XD</PTag>
+							<PTag>Adobe XD</PTag>
 						</div>
 						<div className='col-3 DesignApp'>
 							<PTag>HTML, CSS</PTag>

@@ -1,20 +1,24 @@
+import Image from 'next/image';
 import Button from './Button';
 
-export default function PorfolioIntro({ link, url }) {
+export default function PorfolioIntro({ link, photos, name, left }) {
 	return (
-		<div>
-			<section
-				className='h-screen bg-center bg-no-repeat bg-cover'
-				style={{
-					backgroundImage: `url(${url})`,
-					backgroundAttachment: 'fixed',
-				}}
-			>
-				<div className='h-screen w-full bg-stone-900/80 absolute top-50 start-50 translate-middle'></div>
-				<div className='container absolute top-50 start-50 translate-middle w-auto'>
-					<Button link={link}>View Art Portfolio</Button>
+		<section className=''>
+			<div className='d-flex'>
+				{!left && (
+					<div className='col-6'>
+						<Image src={photos} alt='cover' />
+					</div>
+				)}
+				<div className='col-6 d-flex align-items-center justify-content-center'>
+					<Button link={link}>{name}</Button>
 				</div>
-			</section>
-		</div>
+				{left && (
+					<div className='col-6'>
+						<Image src={photos} alt='cover' />
+					</div>
+				)}
+			</div>
+		</section>
 	);
 }

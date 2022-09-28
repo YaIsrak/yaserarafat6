@@ -22,7 +22,7 @@ export default function Navbar() {
 					{/* Israk */}
 					{/* <img src='/images/IMG_2918.PNG' alt='' className='w-16 md:w-32' /> */}
 					<div className='w-20 md:w-32'>
-						<Image src={Logo} alt='Logo' className='w-16 md:w-32' />
+						<Image src={Logo} alt='Logo' className='' />
 					</div>
 				</a>
 				{/* Menu opening Button */}
