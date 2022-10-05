@@ -1,5 +1,7 @@
 import gsap from 'gsap';
+import Image from 'next/image';
 import { useEffect } from 'react';
+import Art1 from '../public/images/art1.jpg';
 
 export default function HeroSec() {
 	useEffect(() => {
@@ -60,7 +62,13 @@ export default function HeroSec() {
 				<div className='wrapper_img'>
 					<div className='box'></div>
 					<div>
-						<img src='/images/art1.webp' alt='' className='img-fluid' />
+						<Image
+							src={Art1}
+							placeholder='blur'
+							loading='eager'
+							alt=''
+							className='img-fluid'
+						/>
 					</div>
 				</div>
 			</div>

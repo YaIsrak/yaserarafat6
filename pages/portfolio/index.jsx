@@ -3,6 +3,7 @@ import PorfolioIntro from '../../components/PorfolioIntro';
 // images
 import cover from '../../public/images/art-bg.jpg';
 import cover2 from '../../public/images/cover2.jpg';
+import cover3 from '../../public/images/bg-cover2.png';
 
 export default function Portfolio() {
 	return (
@@ -23,7 +24,7 @@ export default function Portfolio() {
 			<PorfolioIntro
 				link={'/portfolio/web-design'}
 				name={'Web Develpoment Portfolio'}
-				photos={cover2}
+				photos={cover3}
 			/>
 		</Layout>
 	);

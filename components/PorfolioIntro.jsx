@@ -3,19 +3,19 @@ import Button from './Button';
 
 export default function PorfolioIntro({ link, photos, name, left }) {
 	return (
-		<section className=''>
+		<section className='container'>
 			<div className='d-flex'>
 				{!left && (
-					<div className='col-6'>
-						<Image src={photos} alt='cover' />
+					<div className='col-7'>
+						<Image placeholder='blur' src={photos} alt='cover' />
 					</div>
 				)}
-				<div className='col-6 d-flex align-items-center justify-content-center'>
+				<div className='col-5 d-flex align-items-center justify-content-center'>
 					<Button link={link}>{name}</Button>
 				</div>
 				{left && (
-					<div className='col-6'>
-						<Image src={photos} alt='cover' />
+					<div className='col-7'>
+						<Image placeholder='blur' src={photos} alt='cover' />
 					</div>
 				)}
 			</div>

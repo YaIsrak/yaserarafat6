@@ -14,6 +14,7 @@ export default function PortfolioSec1() {
 							<img
 								src='https://media2.giphy.com/media/JovoDX7y0ijQ08JlJw/giphy.gif'
 								alt=''
+								layout='fill'
 								className='img-fluid'
 							/>
 						</div>
