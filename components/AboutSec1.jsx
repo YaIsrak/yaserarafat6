@@ -34,7 +34,7 @@ export default function AboutSec1() {
 								</Button>
 							))}
 						</div>
-						<p className='text-muted text-xl'>
+						<p className='text-muted text-sm lg:text-base'>
 							I am a Digital Artist, designer and Web Developer from Bangladesh.
 							🇧🇩
 						</p>

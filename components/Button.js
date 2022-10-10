@@ -5,7 +5,7 @@ export default function Button({ children, className, link, ...rest }) {
 	return (
 		<a href={link}>
 			<motion.button
-				className={`${className} ${style.button} `}
+				className={`${className} ${style.button} text-xs lg:text-base rounded-2xl`}
 				{...rest}
 				whileHover={{ y: -5 }}
 				transition={{ duration: 0.03 }}

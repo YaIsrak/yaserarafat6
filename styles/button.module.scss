@@ -1,13 +1,11 @@
 @import './variable';
 
 .button {
-	background: rgba(255, 255, 255, 0);
+	background: transparent;
 	padding: 10px 20px;
 	text-align: center;
 	color: $light;
 	border: 1px dashed $primary;
-	// line-height: 30px;
-	border-radius: 1rem;
 	&:hover {
 		background: $primary;
 	}

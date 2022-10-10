@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import sanityClient from '../../client';
 import Button from '../../components/Button';
@@ -32,7 +33,15 @@ function Post({ data }) {
 	return (
 		<div className=' col-md-3'>
 			<div className='card bg-transparent'>
-				<img src={data.imageUrl.url} className='card-img-top' alt='...' />
+				<div className='position-relative w-full h-80'>
+					<Image
+						src={`${data.imageUrl.url}`}
+						// className='card-img-top'
+						alt='...'
+						layout='fill'
+						objectFit='cover'
+					/>
+				</div>
 				<div className='card-body'>
 					<h2>{data.title}</h2>
 					<Button link={data.url}>View</Button>
