@@ -12,34 +12,22 @@ export default function PortfolioSec1() {
 					</p>
 					<div className='row my-6 gallery'>
 						<div className='col-md-4 art art-1'>
-							<div className='position-relative w-full h-full'>
-								<Image
-									src='https://media2.giphy.com/media/JovoDX7y0ijQ08JlJw/giphy.gif'
-									alt=''
-									layout='fill'
-									objectFit='cover'
-								/>
-							</div>
+							<img
+								src='https://media2.giphy.com/media/JovoDX7y0ijQ08JlJw/giphy.gif'
+								alt=''
+							/>
 						</div>
 						<div className='col-md-4 art art-2'>
-							<div className='position-relative w-full h-full'>
-								<Image
-									src='https://media2.giphy.com/media/DM0MOTH1lFk52z0vrT/giphy.gif'
-									alt=''
-									layout='fill'
-									objectFit='cover'
-								/>
-							</div>
+							<img
+								src='https://media2.giphy.com/media/DM0MOTH1lFk52z0vrT/giphy.gif'
+								alt=''
+							/>
 						</div>
 						<div className='col-md-4 art art-3'>
-							<div className='position-relative w-full h-full'>
-								<img
-									src='https://media2.giphy.com/media/xnR4wTJZGNGF01oNHs/giphy.gif'
-									alt=''
-									// layout='fill'
-									// objectFit='cover'
-								/>
-							</div>
+							<img
+								src='https://media2.giphy.com/media/xnR4wTJZGNGF01oNHs/giphy.gif'
+								alt=''
+							/>
 						</div>
 					</div>
 					<Button link={'https://www.instagram.com/_is.rak_/'}>See more</Button>
