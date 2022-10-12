@@ -2,6 +2,7 @@ import Logo from '../public/images/logo.png';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Navlink from './Navlink';
+import Link from 'next/link';
 
 export default function Navbar() {
 	const router = useRouter();
@@ -18,12 +19,14 @@ export default function Navbar() {
 		>
 			<div className='container'>
 				{/* Nav brand */}
-				<a className='navbar-brand fw-bold fs-2 font3' href='/'>
-					{/* Israk */}
-					<div className='w-20 md:w-32'>
-						<Image src={Logo} placeholder='blur' alt='Logo' className='' />
-					</div>
-				</a>
+				<Link href={'/'}>
+					<a className='navbar-brand fw-bold fs-2 font3'>
+						{/* Israk */}
+						<div className='w-20 md:w-32'>
+							<Image src={Logo} placeholder='blur' alt='Logo' className='' />
+						</div>
+					</a>
+				</Link>
 				{/* Menu opening Button */}
 				<button
 					className='navbar-toggler text-gray-900'

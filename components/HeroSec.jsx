@@ -2,6 +2,8 @@ import gsap from 'gsap';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import Art1 from '../public/images/art1.jpg';
+import Art2 from '../public/images/art2.jpg';
+import Art3 from '../public/images/art3.jpg';
 
 export default function HeroSec() {
 	useEffect(() => {
@@ -54,21 +56,19 @@ export default function HeroSec() {
 		<div className='hero'>
 			<div className='img_container'>
 				<div className='images'>
-					<div className='img left w-1/4 h-auto'></div>
-					<div className='img right w-1/4 h-auto'></div>
+					<div className='img left w-1/4 h-auto'>
+						<Image src={Art2} alt='Hero Image 2' placeholder='blur' priority />
+					</div>
+					<div className='img right w-1/4 h-auto'>
+						<Image src={Art3} alt='Hero Image 3' placeholder='blur' priority />
+					</div>
 				</div>
 			</div>
 			<div className='hero_img'>
 				<div className='wrapper_img'>
 					<div className='box'></div>
 					<div>
-						<Image
-							src={Art1}
-							placeholder='blur'
-							loading='eager'
-							alt=''
-							className='img-fluid'
-						/>
+						<Image src={Art1} placeholder='blur' alt='Hero Image 1' priority />
 					</div>
 				</div>
 			</div>
