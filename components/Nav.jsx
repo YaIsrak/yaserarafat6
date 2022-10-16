@@ -23,7 +23,13 @@ export default function Navbar() {
 					<a className='navbar-brand fw-bold fs-2 font3'>
 						{/* Israk */}
 						<div className='w-20 md:w-32'>
-							<Image src={Logo} placeholder='blur' alt='Logo' className='' />
+							<Image
+								src={Logo}
+								placeholder='blur'
+								alt='Logo'
+								className=''
+								priority
+							/>
 						</div>
 					</a>
 				</Link>

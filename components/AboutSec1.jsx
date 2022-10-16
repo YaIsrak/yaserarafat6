@@ -1,4 +1,23 @@
+import Image from 'next/image';
 import Button from './Button';
+import MainPhoto from '../public/images/cp-min.jpg';
+import { motion } from 'framer-motion';
+
+const container = {
+	hidden: { opacity: 0, y: 100 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			staggerChildren: 0.3,
+			duration: 0.1,
+		},
+	},
+};
+const item = {
+	hidden: { opacity: 0, y: 100 },
+	show: { opacity: 1, y: 0 },
+};
 
 export default function AboutSec1() {
 	const links = [
@@ -17,29 +36,42 @@ export default function AboutSec1() {
 	return (
 		<section className='sec1 p-0'>
 			<div className='row w-full'>
-				<div
-					className='col-md-6 bg-cover bg-center h-screen'
-					style={{ backgroundImage: `url(images/cp-min.jpg)` }}
-				></div>
+				<div className='col-md-6 h-screen overflow-hidden flex justify-center '>
+					<Image
+						src={MainPhoto}
+						alt='photo'
+						placeholder='blur'
+						objectFit='cover'
+						className=''
+					/>
+				</div>
 				<div className='col-md-6 m-auto' style={{ padding: '15vmin' }}>
-					<div className='container'>
-						<h1 className='h1 fw-bold'>
+					<motion.div
+						className='container'
+						variants={container}
+						initial={'hidden'}
+						whileInView={'show'}
+					>
+						<motion.h1 className='h1 fw-bold' variants={item}>
 							MD Yaser Arafat <span className='text-primary'>Israk</span>
-						</h1>
-						<div className='d-flex gap-1'>
+						</motion.h1>
+						<motion.div className='d-flex gap-1' variants={item}>
 							{links.map((link, index) => (
 								<Button link={link.link} key={index} className='mb-2'>
 									{/* <i className={link.iconClass} /> */}
 									{link.name}
 								</Button>
 							))}
-						</div>
-						<p className='text-muted text-sm lg:text-base'>
+						</motion.div>
+						<motion.p
+							className='text-muted text-sm lg:text-base'
+							variants={item}
+						>
 							I am a Digital Artist, designer and Web Developer from Bangladesh.
 							🇧🇩
-						</p>
+						</motion.p>
 						<p className='font2 text-muted text-xl'>{`// 2+ years of experience`}</p>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</section>
