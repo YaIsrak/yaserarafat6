@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Button from './Button';
 import MainPhoto from '../public/images/cp-min.jpg';
 import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const container = {
 	hidden: { opacity: 0, y: 100 },
