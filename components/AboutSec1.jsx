@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Button from './Button';
 import MainPhoto from '../public/images/cp-min.jpg';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const container = {
 	hidden: { opacity: 0, y: 100 },
@@ -23,12 +25,12 @@ export default function AboutSec1() {
 	const links = [
 		{
 			name: 'Facebook',
-			iconClass: 'fab fa-facebook-f',
+			iconClass: faFacebookF,
 			link: 'https://www.facebook.com/yaser.arafat.israk',
 		},
 		{
 			name: 'Instagram',
-			iconClass: 'fab fa-instagram',
+			iconClass: faInstagram,
 			link: 'https://www.instagram.com/y_israk',
 		},
 	];
@@ -58,8 +60,7 @@ export default function AboutSec1() {
 						<motion.div className='d-flex gap-1' variants={item}>
 							{links.map((link, index) => (
 								<Button link={link.link} key={index} className='mb-2'>
-									{/* <i className={link.iconClass} /> */}
-									{link.name}
+									<FontAwesomeIcon icon={link.iconClass} />
 								</Button>
 							))}
 						</motion.div>
