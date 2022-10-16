@@ -7,10 +7,12 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"tailbuild": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
-		"tail": "npm run dev && npm run tailbuild"
+		"tailbuild": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.2.0",
+		"@fortawesome/free-solid-svg-icons": "^6.2.0",
+		"@fortawesome/react-fontawesome": "^0.2.0",
 		"@portabletext/react": "^1.0.6",
 		"@sanity/client": "^3.4.1",
 		"bootstrap": "^5.2.1",

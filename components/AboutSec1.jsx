@@ -9,7 +9,7 @@ const container = {
 		opacity: 1,
 		y: 0,
 		transition: {
-			staggerChildren: 0.3,
+			staggerChildren: 0.1,
 			duration: 0.1,
 		},
 	},
@@ -70,7 +70,10 @@ export default function AboutSec1() {
 							I am a Digital Artist, designer and Web Developer from Bangladesh.
 							🇧🇩
 						</motion.p>
-						<p className='font2 text-muted text-xl'>{`// 2+ years of experience`}</p>
+						<motion.p
+							className='font2 text-muted text-xl'
+							variants={item}
+						>{`// 2+ years of experience`}</motion.p>
 					</motion.div>
 				</div>
 			</div>
