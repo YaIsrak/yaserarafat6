@@ -4,10 +4,12 @@ import PorfolioIntro from '../../components/PorfolioIntro';
 import cover from '../../public/images/art-bg.jpg';
 import cover2 from '../../public/images/cover2.jpg';
 import cover3 from '../../public/images/bg-cover2.png';
+import Cover from '../../components/Cover';
 
 export default function Portfolio() {
 	return (
 		<Layout>
+			<Cover name='Porfolio' />
 			<PorfolioIntro
 				link={'https://www.instagram.com/_is.rak_'}
 				name={'Art Portfolio'}

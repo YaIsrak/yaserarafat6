@@ -546,6 +546,10 @@ video {
   z-index: auto;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -605,6 +609,10 @@ video {
   width: 5rem;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -641,14 +649,6 @@ video {
 
 .\!bg-stone-900\/60 {
   background-color: rgb(28 25 23 / 0.6) !important;
-}
-
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .p-0 {
@@ -690,9 +690,8 @@ video {
   line-height: 1rem;
 }
 
-.\!text-rose-900 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(136 19 55 / var(--tw-text-opacity)) !important;
+.font-bold {
+  font-weight: 700;
 }
 
 .text-white {
