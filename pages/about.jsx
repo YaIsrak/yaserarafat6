@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import AboutSec1 from '../components/AboutSec1';
 import AboutSec3 from '../components/AboutSec3';
-import Cover from '../components/Cover';
 
 export default function About() {
 	return (
@@ -13,7 +12,6 @@ export default function About() {
 			</Head>
 
 			<Layout route={'| About'}>
-				<Cover name='About' />
 				<AboutSec1 />
 				<AboutSec3 />
 			</Layout>

@@ -18,10 +18,12 @@
 		"@sanity/client": "^3.4.1",
 		"bootstrap": "^5.2.1",
 		"framer-motion": "^7.3.2",
+		"groq": "^2.33.2",
 		"gsap": "^3.11.1",
 		"next": "^12.3.2-canary.19",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-ig-feed": "^1.7.0",
 		"sass": "^1.54.9"
 	},
 	"devDependencies": {

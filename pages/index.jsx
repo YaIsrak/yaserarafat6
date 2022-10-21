@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import HeroSec from '../components/HeroSec';
 import PortfolioSec1 from '../components/PorfolioSec1';
-import HomSec3 from '../components/HomeSec3';
-import Inktober from '../components/Inktober';
 
 export default function Home() {
 	return (
@@ -17,10 +15,6 @@ export default function Home() {
 				<HeroSec />
 				<hr />
 				<PortfolioSec1 />
-				<hr />
-				<HomSec3 />
-				<hr />
-				<Inktober />
 			</Layout>
 		</div>
 	);
