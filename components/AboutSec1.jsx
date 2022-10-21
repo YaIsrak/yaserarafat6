@@ -40,6 +40,7 @@ export default function AboutSec1() {
 						alt='photo'
 						placeholder='blur'
 						objectFit='cover'
+						priority
 						className=''
 					/>
 				</div>

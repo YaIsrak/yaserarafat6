@@ -56,7 +56,7 @@ export default function PortfolioSec1() {
 							/>
 						</div>
 					</div>
-					<Button link={'https://www.instagram.com/_is.rak_/'}>See more</Button>
+					<Button link={'/portfolio/digitalart'}>See more</Button>
 				</motion.div>
 			</section>
 		</div>
