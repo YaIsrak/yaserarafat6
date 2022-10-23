@@ -21,7 +21,7 @@ export default function AboutSec3() {
 	return (
 		<section className='sec3'>
 			<motion.div
-				className='container font-mono grid gap-8'
+				className='container tw-font-mono tw-grid tw-gap-8'
 				variants={container}
 				initial='hidden'
 				whileInView='show'
@@ -63,7 +63,7 @@ export default function AboutSec3() {
 					</motion.h1>
 					<motion.div className='row' variants={item}>
 						<motion.div className='col-3' variants={item}>
-							<p className='text-sm md:text-xl fw-bold text-primary'>
+							<p className='tw-text-sm md:tw-text-xl fw-bold text-primary'>
 								Opputunity for Kids
 							</p>
 							<PTag>@Assosiate of Graphic Design</PTag>
@@ -71,7 +71,7 @@ export default function AboutSec3() {
 							<PTag>2020 - now</PTag>
 						</motion.div>
 						<motion.div className='col-3' variants={item}>
-							<p className='text-sm md:text-xl fw-bold text-primary'>
+							<p className='tw-text-sm md:tw-text-xl fw-bold text-primary'>
 								Originative 360
 							</p>
 							<PTag>@Assosiate of Graphic Design</PTag>

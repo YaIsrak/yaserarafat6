@@ -4,7 +4,7 @@ import Button from './Button';
 export default function PorfolioIntro({ link, photos, name, left }) {
 	return (
 		<section className='container'>
-			<div className='d-flex'>
+			<div className='tw-flex'>
 				{!left && (
 					<div className='col-7'>
 						<Image placeholder='blur' src={photos} alt='cover' />

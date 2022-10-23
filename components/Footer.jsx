@@ -28,8 +28,8 @@ export default function Footer() {
 		},
 	];
 	return (
-		<footer className='font-mono'>
-			<div className='container z-auto'>
+		<footer className='tw-font-mono'>
+			<div className='container tw-z-auto'>
 				<img
 					alt='GIF'
 					src='https://media4.giphy.com/media/liUhPmZdArpYc/giphy.gif'
@@ -64,7 +64,7 @@ export default function Footer() {
 						<br />
 						<br />
 						{songLists.map((songList, index) => (
-							<FooterP className='hover:bg-orange-100/20 ' key={index}>
+							<FooterP className='hover:tw-bg-orange-100/20 ' key={index}>
 								<a className='text-primary' href={songList.link}>
 									{songList.name}
 								</a>
@@ -72,9 +72,9 @@ export default function Footer() {
 						))}
 					</div>
 				</div>
-				<div className='my-8'>
+				<div className='tw-my-8'>
 					<h1 className='h3'>Thanks for checking my website!</h1>
-					<p className='text-muted font-mono text-sm lg:text-lg'>
+					<p className='text-muted tw-font-mono tw-text-sm lg:tw-text-lg'>
 						{"// It's a work in progress so check back often!"}
 					</p>
 				</div>

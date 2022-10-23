@@ -33,7 +33,7 @@ function Post({ data }) {
 	return (
 		<div className=' col-md-3'>
 			<div className='card bg-transparent'>
-				<div className='position-relative w-full h-80'>
+				<div className='position-relative tw-w-full tw-h-80'>
 					<Image
 						src={`${data.imageUrl.url}`}
 						// className='card-img-top'

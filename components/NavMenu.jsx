@@ -11,7 +11,7 @@ export default function NavMenu() {
 	];
 
 	return (
-		<div className='collapse navbar-collapse' id='navbarNav'>
+		<div className='collapse navbar-collapse' id='navbarNav '>
 			<div className='mx-auto'></div>
 			<ul className='navbar-nav'>
 				{/* Navlink */}
@@ -24,10 +24,7 @@ export default function NavMenu() {
 					/>
 				))}
 				<li className='nav-item'>
-					<a
-						className="nav-link text-'gray-100 after:bg-gray-100 hover:text-indigo-500"
-						href='mailto:yaserarafatisrak@gmail.com'
-					>
+					<a className='nav-link' href='mailto:yaserarafatisrak@gmail.com'>
 						Contact 📧
 					</a>
 				</li>

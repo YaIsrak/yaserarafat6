@@ -33,8 +33,8 @@ export default function AboutSec1() {
 
 	return (
 		<section className='sec1 p-0'>
-			<div className='row w-full'>
-				<div className='col-md-6 h-screen overflow-hidden flex justify-center '>
+			<div className='row tw-w-full'>
+				<div className='col-md-6 tw-h-screen tw-overflow-hidden tw-flex tw-justify-center '>
 					<Image
 						src={MainPhoto}
 						alt='photo'
@@ -62,14 +62,14 @@ export default function AboutSec1() {
 							))}
 						</motion.div>
 						<motion.p
-							className='text-muted text-sm lg:text-base'
+							className='text-muted tw-text-sm lg:tw-text-base'
 							variants={item}
 						>
 							I am a Digital Artist, designer and Web Developer from Bangladesh.
 							🇧🇩
 						</motion.p>
 						<motion.p
-							className='font2 text-muted text-xl'
+							className='font2 text-muted tw-text-xl'
 							variants={item}
 						>{`// 2+ years of experience`}</motion.p>
 					</motion.div>

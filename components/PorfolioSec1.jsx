@@ -33,7 +33,7 @@ export default function PortfolioSec1() {
 					<motion.p className='text-muted' variants={item}>
 						A collection of idea on painting and drawings 🎨
 					</motion.p>
-					<div className='row my-6 gallery'>
+					<div className='row tw-py-6 gallery'>
 						<div className='col-md-4 art art-1'>
 							<motion.img
 								src='https://media2.giphy.com/media/JovoDX7y0ijQ08JlJw/giphy.gif'

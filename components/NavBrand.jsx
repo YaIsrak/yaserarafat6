@@ -8,7 +8,7 @@ export default function NavBrand() {
 		<Link href={'/'}>
 			<a className='navbar-brand fw-bold fs-2 font3'>
 				{/* Israk */}
-				<div className='w-20 md:w-32'>
+				<div className='tw-w-20 md:tw-w-32'>
 					<Image
 						src={Logo}
 						placeholder='blur'

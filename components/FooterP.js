@@ -1,5 +1,7 @@
 export default function FooterP({ children, className }) {
 	return (
-		<p className={`text-sm lg:text-xl text-primary ${className}`}>{children}</p>
+		<p className={`tw-text-sm lg:tw-text-xl text-primary ${className}`}>
+			{children}
+		</p>
 	);
 }

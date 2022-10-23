@@ -56,10 +56,10 @@ export default function HeroSec() {
 		<div className='hero'>
 			<div className='img_container'>
 				<div className='images'>
-					<div className='img left w-1/4 h-auto'>
+					<div className='img left tw-w-1/4 tw-h-auto'>
 						<Image src={Art2} alt='Hero Image 2' placeholder='blur' priority />
 					</div>
-					<div className='img right w-1/4 h-auto'>
+					<div className='img right tw-w-1/4 tw-h-auto'>
 						<Image src={Art3} alt='Hero Image 3' placeholder='blur' priority />
 					</div>
 				</div>
@@ -74,7 +74,7 @@ export default function HeroSec() {
 			</div>
 			<div className='header text-center'>
 				<h1 className='title display-1 fw-bold font3'>Israk</h1>
-				<p className='font3 text-white text-xs lg:text-base'>
+				<p className='font3 text-white tw-text-xs lg:tw-text-base'>
 					Digital Artist - Graphic Designer - Web Developer
 				</p>
 			</div>
