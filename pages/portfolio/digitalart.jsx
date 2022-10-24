@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import InstagramFeed from 'react-ig-feed';
 import Layout from '../../components/Layout';
 
@@ -6,6 +7,9 @@ export default function art() {
 		<Layout>
 			<section>
 				<div className='container'>
+					<Link href={'/portfolio'}>
+						<a className='fs-3'>Back</a>
+					</Link>
 					<h1 className='display-2 fw-bold'>My Art</h1>
 
 					{/* feed */}

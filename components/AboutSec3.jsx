@@ -31,7 +31,7 @@ export default function AboutSec3() {
 					<motion.h1 className='h3 fw-bold' variants={item}>
 						Main Skills
 					</motion.h1>
-					<motion.div className='row' variants={item}>
+					<motion.div className='row' variants={container}>
 						<motion.div className='col-3 DesignApp' variants={item}>
 							<PTag>Illustration</PTag>
 							<PTag>Digital Art</PTag>
@@ -61,7 +61,7 @@ export default function AboutSec3() {
 					<motion.h1 className='h3 fw-bold' variants={item}>
 						Experiences
 					</motion.h1>
-					<motion.div className='row' variants={item}>
+					<motion.div className='row' variants={container}>
 						<motion.div className='col-3' variants={item}>
 							<p className='tw-text-sm md:tw-text-xl fw-bold text-primary'>
 								Opputunity for Kids
@@ -83,7 +83,7 @@ export default function AboutSec3() {
 
 				{/* busy */}
 				<div>
-					<motion.h1 className='h3 fw-bold' variants={item}>
+					<motion.h1 className='h3 fw-bold' variants={container}>
 						Also busy with
 					</motion.h1>
 					<motion.div className='row' variants={item}>

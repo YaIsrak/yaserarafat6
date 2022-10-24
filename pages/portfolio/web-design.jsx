@@ -21,7 +21,7 @@ export default function Webdesign({ datas }) {
 }
 function Posts({ datas }) {
 	return (
-		<div className='row'>
+		<div className='tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 tw-gap-3'>
 			{datas.map((data) => (
 				<Post key={data._id} data={data} />
 			))}
@@ -31,7 +31,7 @@ function Posts({ datas }) {
 
 function Post({ data }) {
 	return (
-		<div className=' col-md-3'>
+		<div className=''>
 			<div className='card bg-transparent'>
 				<div className='position-relative tw-w-full tw-h-80'>
 					<Image

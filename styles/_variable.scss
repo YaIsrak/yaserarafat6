@@ -20,6 +20,7 @@
 	src: url(/font/LaoMN.ttc);
 }
 
+// ----Varable ---- //
 // Color
 $white: white;
 $light: #ffdfbf;
@@ -31,29 +32,30 @@ $font1: 'LaoMN'; // primary font
 $font2: 'Caveat', cursive;
 $font3: 'Voyage';
 
-.font1 {
-	font-family: $font1 !important;
-}
-.font2 {
-	font-family: $font2 !important;
-}
-.font3 {
-	font-family: $font3 !important;
+// ----List ---- //
+$colors: (
+	'primary': $primary,
+	'light': $light,
+	'dark': $dark,
+);
+$fonts: (
+	'font1': $font1,
+	'font2': $font2,
+	'font3': $font3,
+);
+
+// ----Function ---- //
+@each $color, $value in $colors {
+	.bg-#{$color} {
+		background-color: $value !important;
+	}
+	.text-#{$color} {
+		color: $value !important;
+	}
 }
 
-.bg-dark {
-	background-color: $dark !important;
-}
-.bg-primary {
-	background-color: $primary !important;
-}
-.bg-secondary {
-	background-color: $light !important;
-}
-.text-primary {
-	color: $primary !important;
-}
-
-.text-secondary {
-	color: $light !important;
+@each $font, $value in $fonts {
+	.#{$font} {
+		font-family: $value;
+	}
 }
