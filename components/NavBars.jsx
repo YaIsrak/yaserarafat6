@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bars3BottomRightIcon } from '@heroicons/react/24/solid';
+import { Bars3BottomRightIcon } from '@heroicons/react/20/solid';
 import { motion } from 'framer-motion';
 
 export default function NavBars() {
@@ -15,8 +15,9 @@ export default function NavBars() {
 			initial={{ scale: 1 }}
 			whileTap={{ scale: 0.8 }}
 		>
-			<Bars3BottomRightIcon className='h-8 w-8 text-gray-400 hover:text-gray-50' />
-			{/* <span className='navbar-toggler-icon'></span> */}
+			<span className='navbar-toggler-icon !tw-bg-none'>
+				<Bars3BottomRightIcon className='h-8 w-8 text-gray-400 hover:text-gray-50' />
+			</span>
 		</motion.button>
 	);
 }

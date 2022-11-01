@@ -43,7 +43,6 @@ function SinglePost({ post }) {
 			<div className='tw-relative tw-w-auto tw-h-60 lg:tw-h-80'>
 				<Image src={post.media_url} alt='' layout='fill' objectFit='cover' />
 			</div>
-			{/* <img src={post.media_url} alt='' className='tw-object-contain' /> */}
 		</a>
 	);
 }
@@ -52,7 +51,6 @@ function Pagination({ posts, setUrl }) {
 	return (
 		<nav className='tw-flex tw-justify-between tw-py-4'>
 			<Button onClick={() => setUrl(posts.paging.previous)}>Previous</Button>
-
 			<Button onClick={() => setUrl(posts.paging.next)}>Next</Button>
 		</nav>
 	);

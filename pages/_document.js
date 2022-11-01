@@ -6,10 +6,7 @@ export default function Document() {
 			<Head>
 				{/* for seo */}
 				<meta name='name' content='MD Yaser Arafat Israk' />
-				<meta
-					name='description'
-					content='A digital artist located in Bangladesh'
-				/>
+				<meta name='description' content='A digital artist located in Bangladesh' />
 				<link
 					rel='stylesheet'
 					href='https://use.fontawesome.com/releases/v5.15.2/css/all.css'

@@ -32,8 +32,8 @@ export default function AboutSec1() {
 	];
 
 	return (
-		<section className='sec1 p-0'>
-			<div className='row tw-w-full'>
+		<section className='sec1 p-0 tw-overflow-x-hidden'>
+			<div className='row !m-0'>
 				<div className='col-md-6 tw-h-screen tw-overflow-hidden tw-flex tw-justify-center '>
 					<Image
 						src={MainPhoto}
@@ -51,7 +51,7 @@ export default function AboutSec1() {
 						initial={'hidden'}
 						whileInView={'show'}
 					>
-						<motion.h1 className='h1 fw-bold' variants={item}>
+						<motion.h1 className='fw-bold tw-text-5xl' variants={item}>
 							MD Yaser Arafat <span className='text-primary'>Israk</span>
 						</motion.h1>
 						<motion.div className='d-flex gap-1' variants={item}>
@@ -65,8 +65,7 @@ export default function AboutSec1() {
 							className='text-muted tw-text-sm lg:tw-text-base'
 							variants={item}
 						>
-							I am a Digital Artist, designer and Web Developer from Bangladesh.
-							🇧🇩
+							I am a Digital Artist, designer and Web Developer from Bangladesh. 🇧🇩
 						</motion.p>
 						<motion.p
 							className='font2 text-muted tw-text-xl'
