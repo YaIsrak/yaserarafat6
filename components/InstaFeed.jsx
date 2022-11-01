@@ -2,6 +2,7 @@ import { useState } from 'react';
 import usePosts from '../hooks/usePosts';
 import Loading from './Loading';
 import Button from './Button';
+import Image from 'next/image';
 
 export default function InstaFeed() {
 	const [url, setUrl] = useState(
@@ -39,7 +40,10 @@ function SinglePost({ post }) {
 	return (
 		// eslint-disable-next-line react/jsx-no-target-blank
 		<a href={post.permalink} className='' target={'_blank'}>
-			<img src={post.media_url} alt='' className='tw-object-contain' />
+			<div className='tw-relative tw-w-auto tw-h-60 lg:tw-h-80'>
+				<Image src={post.media_url} alt='' layout='fill' objectFit='cover' />
+			</div>
+			{/* <img src={post.media_url} alt='' className='tw-object-contain' /> */}
 		</a>
 	);
 }
