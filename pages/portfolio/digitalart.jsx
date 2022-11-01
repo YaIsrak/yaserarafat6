@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import InstagramFeed from 'react-ig-feed';
+// import InstagramFeed from 'react-ig-feed';
+import InstaFeed from '../../components/InstaFeed';
 import Layout from '../../components/Layout';
 
 export default function art() {
@@ -13,9 +14,10 @@ export default function art() {
 					<h1 className='display-2 fw-bold'>My Art</h1>
 
 					{/* feed */}
-					<div className='ig-feed'>
+					{/* <div className='ig-feed'>
 						<InstagramFeed token={process.env.NEXT_PUBLIC_INSTAGRAM_API} />
-					</div>
+					</div> */}
+					<InstaFeed />
 				</div>
 			</section>
 		</Layout>
