@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	reactStrictMode: false,
+	// reactStrictMode: false,
 	swcMinify: true,
 	images: {
 		domains: [
@@ -9,6 +9,12 @@ const nextConfig = {
 			'cdn.sanity.io',
 			'scontent.cdninstagram.com',
 		],
+	},
+	experimental: {
+		appDir: true,
+	},
+	compiler: {
+		styledComponents: true,
 	},
 };
 

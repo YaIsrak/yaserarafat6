@@ -6,6 +6,7 @@
 		"@next/next/no-sync-scripts": "off",
 		"no-unused-vars": "warn",
 		"no-console": "warn",
-		"react-hooks/rules-of-hooks": "off"
+		"react-hooks/rules-of-hooks": "off",
+		"react/jsx-no-target-blank": "off"
 	}
 }

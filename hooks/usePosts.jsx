@@ -1,27 +1,49 @@
-import { useEffect, useState } from 'react';
+'use client';
 
-export default function usePosts(url) {
-	const [posts, setPosts] = useState([]);
+import { useState } from 'react';
+import sanityClient from '../client';
 
-	// error handaling
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(false);
+// export default function usePosts(url) {
+// 	const [posts, setPosts] = useState([]);
 
-	useEffect(() => {
-		fetch(url)
-			.then((res) => res.json())
-			.then((data) => {
-				setPosts(data);
-				setLoading(false);
-			})
-			.catch((error) => {
-				setLoading(false);
-				setError(error);
-			});
-	}, [url]);
+// 	// error handaling
+// 	const [loading, setLoading] = useState(true);
+// 	const [error, setError] = useState(false);
+
+// 	useEffect(() => {
+// 		fetch(url)
+// 			.then((res) => res.json())
+// 			.then((data) => {
+// 				setPosts(data);
+// 				setLoading(false);
+// 			})
+// 			.catch((error) => {
+// 				setLoading(false);
+// 				setError(error);
+// 			});
+// 	}, [url]);
+// 	return {
+// 		posts,
+// 		loading,
+// 		error,
+// 	};
+// }
+
+export default async function useData(groq) {
+	const fetch = await getData();
+	const [datas, setData] = useState([]);
+	setData(fetch.props.datas);
+
+	return datas;
+}
+
+async function getData() {
+	const res = await sanityClient.fetch(groq);
+
 	return {
-		posts,
-		loading,
-		error,
+		props: {
+			datas: res,
+		},
+		revalidate: 10,
 	};
 }

@@ -1,11 +1,13 @@
-import { useRouter } from 'next/router';
+'use client';
+
+import { usePathname } from 'next/navigation';
 import NavBrand from './NavBrand';
 import Navlink from './Navlink';
 import { Bars3BottomRightIcon } from '@heroicons/react/20/solid';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
-	const router = useRouter();
+	const router = usePathname();
 	const navLinks = [
 		{ name: 'Home 🏘️', path: '/' },
 		{ name: 'About 😄', path: '/about' },
@@ -44,11 +46,15 @@ export default function Navbar() {
 								name={navLink.name}
 								path={navLink.path}
 								key={index}
-								className={`${router.pathname === navLink.path && 'active'}`}
+								className={`${router === navLink.path && 'active'}`}
 							/>
 						))}
 						<li className='nav-item'>
-							<a className='nav-link' href='mailto:yaserarafatisrak@gmail.com'>
+							<a
+								target={'_blank'}
+								className='nav-link'
+								href='https://linktr.ee/yaserisrak'
+							>
 								Contact 📧
 							</a>
 						</li>

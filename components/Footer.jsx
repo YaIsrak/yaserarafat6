@@ -1,11 +1,11 @@
-import FooterP from './FooterP';
+'use client';
+
 import { motion } from 'framer-motion';
 
 const container = {
-	hidden: { opacity: 0, y: 100 },
+	hidden: { opacity: 0 },
 	show: {
 		opacity: 1,
-		y: 0,
 		transition: {
 			staggerChildren: 0.1,
 			duration: 0.1,
@@ -13,33 +13,41 @@ const container = {
 	},
 };
 const item = {
-	hidden: { opacity: 0, y: 100 },
-	show: { opacity: 1, y: 0 },
+	hidden: { opacity: 0 },
+	show: { opacity: 1 },
 };
+
+// song list
 const songLists = [
 	{
 		name: 'E hawa',
-		link: 'https://open.spotify.com/track/5VIyjOoXddMARgRTtKVqXc?si=e776c9afbbc24e59',
+		link:
+			'https://open.spotify.com/track/5VIyjOoXddMARgRTtKVqXc?si=e776c9afbbc24e59',
 	},
 	{
 		name: 'Loki green theme',
-		link: 'https://open.spotify.com/track/5T7DUEeAj0hkMLTzIlDCRz?si=045eedd5c76d4c05',
+		link:
+			'https://open.spotify.com/track/5T7DUEeAj0hkMLTzIlDCRz?si=045eedd5c76d4c05',
 	},
 	{
 		name: 'Marry go round of Life',
-		link: 'https://open.spotify.com/track/3cIKojC2JBVIno9b35MJWn?si=9f4e0db3811e4ed1',
+		link:
+			'https://open.spotify.com/track/3cIKojC2JBVIno9b35MJWn?si=9f4e0db3811e4ed1',
 	},
 	{
 		name: 'Katware Doki',
-		link: 'https://open.spotify.com/track/4WedBZTeFawYCBCgfj36iK?si=68aa41933c7f4183',
+		link:
+			'https://open.spotify.com/track/4WedBZTeFawYCBCgfj36iK?si=68aa41933c7f4183',
 	},
 	{
 		name: 'Utshorgo',
-		link: 'https://open.spotify.com/track/7tcHBMra1AZ3QWIHX3hX0r?si=7756f09bc62e4dff',
+		link:
+			'https://open.spotify.com/track/7tcHBMra1AZ3QWIHX3hX0r?si=7756f09bc62e4dff',
 	},
 	{
 		name: 'Blinding Light',
-		link: 'https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b?si=44ada2d436d34fac',
+		link:
+			'https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b?si=44ada2d436d34fac',
 	},
 ];
 
@@ -89,8 +97,8 @@ export default function Footer() {
 						<br />
 						<br />
 						{songLists.map((songList, index) => (
-							<FooterP className='hover:tw-bg-orange-100/20 ' key={index}>
-								<a className='text-primary' href={songList.link}>
+							<FooterP className='hover:tw-bg-orange-100/20' key={index}>
+								<a className='txt-primary' href={songList.link}>
 									{songList.name}
 								</a>
 							</FooterP>
@@ -105,5 +113,13 @@ export default function Footer() {
 				</div>
 			</motion.div>
 		</footer>
+	);
+}
+
+function FooterP({ children, className }) {
+	return (
+		<p className={`tw-text-sm lg:tw-text-xl tw-mb-0 txt-primary ${className}`}>
+			{children}
+		</p>
 	);
 }

@@ -15,16 +15,17 @@
 		"bootstrap": "^5.2.1",
 		"framer-motion": "^7.3.2",
 		"gsap": "^3.11.1",
-		"next": "^12.3.2-canary.19",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
+		"next": "^13.5.3",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"react-ig-feed": "^1.7.0",
+		"react-random-reveal": "^2.0.0",
 		"sass": "^1.54.9"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.12",
 		"eslint": "8.23.0",
-		"eslint-config-next": "12.3.0",
+		"eslint-config-next": "^13.5.3",
 		"postcss": "^8.4.18",
 		"tailwindcss": "^3.2.0"
 	}

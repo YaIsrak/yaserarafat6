@@ -32,6 +32,9 @@ export default function InstaFeed() {
 							post.media_type !== 'VIDEO' && <SinglePost post={post} key={post.id} />
 					)}
 			</div>
+
+			{/* Paginantion */}
+			{!loading && !error && <Pagination posts={posts} setUrl={setUrl} />}
 		</div>
 	);
 }
@@ -41,7 +44,14 @@ function SinglePost({ post }) {
 		// eslint-disable-next-line react/jsx-no-target-blank
 		<a href={post.permalink} className='' target={'_blank'}>
 			<div className='tw-relative tw-w-auto tw-h-60 lg:tw-h-80'>
-				<Image src={post.media_url} alt='' layout='fill' objectFit='cover' />
+				<Image
+					src={post.media_url}
+					alt=''
+					layout='fill'
+					objectFit='cover'
+					placeholder='blur'
+					blurDataURL='/images/logo.png'
+				/>
 			</div>
 		</a>
 	);

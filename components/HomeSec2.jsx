@@ -1,3 +1,5 @@
+'use client';
+
 import Button from './Button';
 import { motion } from 'framer-motion';
 
@@ -17,7 +19,7 @@ const item = {
 	show: { opacity: 1, y: 0 },
 };
 
-export default function PortfolioSec1() {
+export default function HomeSec2() {
 	return (
 		<div>
 			<section className='sec2' id='portfolio'>

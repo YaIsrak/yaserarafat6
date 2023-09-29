@@ -1,10 +1,12 @@
+'use client';
+
 import Image from 'next/image';
-import Button from './Button';
-import MainPhoto from '../public/images/cp-min.jpg';
+import Button from '../../components/Button';
+import MainPhoto from '../../public/images/cp-min.jpg';
 import { motion } from 'framer-motion';
 
 const container = {
-	hidden: { opacity: 0, y: 100 },
+	hidden: { opacity: 0 },
 	show: {
 		opacity: 1,
 		y: 0,
@@ -15,8 +17,8 @@ const container = {
 	},
 };
 const item = {
-	hidden: { opacity: 0, y: 100 },
-	show: { opacity: 1, y: 0 },
+	hidden: { opacity: 0 },
+	show: { opacity: 1 },
 };
 
 export default function AboutSec1() {
@@ -52,7 +54,7 @@ export default function AboutSec1() {
 						whileInView={'show'}
 					>
 						<motion.h1 className='fw-bold tw-text-5xl' variants={item}>
-							MD Yaser Arafat <span className='text-primary'>Israk</span>
+							MD Yaser Arafat <span className='txt-primary'>Israk</span>
 						</motion.h1>
 						<motion.div className='d-flex gap-1' variants={item}>
 							{links.map((link, index) => (

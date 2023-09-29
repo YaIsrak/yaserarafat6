@@ -9,9 +9,9 @@
 	transition: 0.3s;
 }
 body {
-	font-family: $font1;
-	background: $dark;
-	color: $light;
+	font-family: $font1 !important;
+	background: $dark !important;
+	color: $light !important;
 }
 section {
 	padding: 15vmin 0;

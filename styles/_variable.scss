@@ -12,6 +12,7 @@
 	font-display: swap;
 	src: url(/font/VoyageBold.otf);
 }
+
 @font-face {
 	font-family: 'LaoMN';
 	font-style: normal;
@@ -50,6 +51,9 @@ $fonts: (
 		background-color: $value !important;
 	}
 	.text-#{$color} {
+		color: $value !important;
+	}
+	.txt-#{$color} {
 		color: $value !important;
 	}
 }

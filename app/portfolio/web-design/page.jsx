@@ -1,28 +1,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import sanityClient from '../../client';
-import Button from '../../components/Button';
-import Layout from '../../components/Layout';
+import sanityClient from '../../../client';
+import Button from '../../../components/Button';
 
-export default function Webdesign({ datas }) {
+export default async function Webdesign() {
+	const info = await getData();
+	const datas = info.props.datas;
+
 	return (
-		<Layout>
+		<>
 			<section>
 				<div className='container'>
-					<Link href={'/portfolio'}>
-						<a className='fs-3'>Back</a>
+					<Link href={'/portfolio'} className='fs-3'>
+						Back
 					</Link>
 					<h1 className='fw-bold'>My Web Development Portfolio</h1>
 					{datas ? <Posts datas={datas} /> : <h1>nai</h1>}
 				</div>
 			</section>
-		</Layout>
+		</>
 	);
 }
 function Posts({ datas }) {
 	return (
 		<div className='tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 tw-gap-3'>
-			{datas.map((data) => (
+			{datas?.map((data) => (
 				<Post key={data._id} data={data} />
 			))}
 		</div>
@@ -36,10 +38,10 @@ function Post({ data }) {
 				<div className='position-relative tw-w-full tw-h-80'>
 					<Image
 						src={`${data.imageUrl.url}`}
-						// className='card-img-top'
 						alt='...'
-						layout='fill'
-						objectFit='cover'
+						fill
+						sizes='100'
+						style={{ objectFit: 'cover' }}
 					/>
 				</div>
 				<div className='card-body'>
@@ -51,14 +53,13 @@ function Post({ data }) {
 	);
 }
 
-export async function getStaticProps() {
+async function getData() {
 	const res = await sanityClient.fetch(
 		`*[_type == 'web']{
-			...,
-			"imageUrl": mainImage.asset->{ url}
-  		}`
+					...,
+					"imageUrl": mainImage.asset->{ url}
+		  		}`
 	);
-
 	return {
 		props: {
 			datas: res,

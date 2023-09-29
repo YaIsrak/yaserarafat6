@@ -1,19 +1,24 @@
+'use client';
+
 import gsap from 'gsap';
 import Image from 'next/image';
 import { useEffect } from 'react';
+
 import Art1 from '../public/images/art1.jpg';
 import Art2 from '../public/images/art2.jpg';
 import Art3 from '../public/images/art3.jpg';
 
-export default function HeroSec() {
+export default function HomeSec() {
+	// Animation
 	useEffect(() => {
 		let tl = gsap.timeline();
-		tl.to('.box', {
-			duration: 1,
-			y: '-100%',
-			ease: 'power4.inOut',
-			delay: 0.5,
-		})
+		tl
+			.to('.box', {
+				duration: 1,
+				y: '-100%',
+				ease: 'power4.inOut',
+				delay: 0.5,
+			})
 			.to('.header', {
 				duration: 2,
 				opacity: 1,

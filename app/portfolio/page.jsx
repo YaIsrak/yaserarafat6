@@ -1,5 +1,5 @@
-import Layout from '../../components/Layout';
 import PorfolioIntro from '../../components/PorfolioIntro';
+
 // images
 import cover from '../../public/images/art-bg.jpg';
 import cover2 from '../../public/images/cover2.jpg';
@@ -7,25 +7,25 @@ import cover3 from '../../public/images/bg-cover2.png';
 
 export default function Portfolio() {
 	return (
-		<Layout>
+		<>
 			<PorfolioIntro
 				link={'/portfolio/digitalart'}
 				name={'Art Portfolio'}
 				photos={cover}
 			/>
-			<hr />
+			{/* <hr /> */}
 			<PorfolioIntro
 				link={'https://www.behance.net/israk'}
 				name={'Design Portfolio'}
 				photos={cover2}
 				left={true}
 			/>
-			<hr />
+			{/* <hr /> */}
 			<PorfolioIntro
 				link={'/portfolio/web-design'}
 				name={'Web Develpoment Portfolio'}
 				photos={cover3}
 			/>
-		</Layout>
+		</>
 	);
 }

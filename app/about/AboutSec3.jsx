@@ -1,8 +1,10 @@
-import PTag from './PTag';
+'use client';
+
+import PTag from '../../components/PTag';
 import { motion } from 'framer-motion';
 
 const container = {
-	hidden: { opacity: 0, y: 100 },
+	hidden: { opacity: 0 },
 	show: {
 		opacity: 1,
 		y: 0,
@@ -13,11 +15,28 @@ const container = {
 	},
 };
 const item = {
-	hidden: { opacity: 0, y: 100 },
-	show: { opacity: 1, y: 0 },
+	hidden: { opacity: 0 },
+	show: { opacity: 1 },
 };
 
 export default function AboutSec3() {
+	const experiences = [
+		{
+			name: 'Opputunity for Kids',
+			post: 'Assosiate of Graphic Designer',
+			location: 'Chittagong - Bangladesh',
+			time: '2020 - now',
+			link: 'https://www.ofkbd.com',
+		},
+		{
+			name: 'Originative 360',
+			post: 'Assosiate of Graphic Designer',
+			location: 'Chittagong - Bangladesh',
+			time: '2020 - 2022',
+			link: 'http://originative360.com',
+		},
+	];
+
 	return (
 		<section className='sec3'>
 			<motion.div
@@ -62,7 +81,21 @@ export default function AboutSec3() {
 						Experiences
 					</motion.h1>
 					<motion.div className='row' variants={container}>
-						<motion.div className='col-3' variants={item}>
+						{experiences.map((exp, i) => (
+							<motion.div className='col-3' variants={item} key={i}>
+								<a
+									className='tw-text-sm md:tw-text-xl fw-bold txt-primary tw-no-underline'
+									href={exp.link}
+									target={'_blank'}
+								>
+									{exp.name}
+								</a>
+								<PTag>@{exp.post}</PTag>
+								<PTag>{exp.location}</PTag>
+								<PTag>{exp.time}</PTag>
+							</motion.div>
+						))}
+						{/* <motion.div className='col-3' variants={item}>
 							<p className='tw-text-sm md:tw-text-xl fw-bold text-primary'>
 								Opputunity for Kids
 							</p>
@@ -77,7 +110,7 @@ export default function AboutSec3() {
 							<PTag>@Assosiate of Graphic Design</PTag>
 							<PTag>Chittagong - Bangladesh</PTag>
 							<PTag>2020 - 2022</PTag>
-						</motion.div>
+						</motion.div> */}
 					</motion.div>
 				</div>
 
