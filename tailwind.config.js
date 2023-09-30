@@ -9,6 +9,11 @@ module.exports = {
 	],
 
 	theme: {
+		colors: {
+			light: '#ffdfbf',
+			dark: '#0e0e0e',
+			primary: '#cc6448',
+		},
 		extend: {},
 	},
 	plugins: [],

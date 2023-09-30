@@ -1,0 +1,40 @@
+@import './variable';
+.sketchbook {
+	.items {
+		.item {
+			border-color: $light;
+			.item-wrapper {
+				.item-copy {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					justify-content: space-between;
+					padding: 8em 2em;
+					text-transform: uppercase;
+					line-height: 60px;
+					color: $light;
+					z-index: 2;
+					text-align: center;
+					transition: 0.01s cubic-bezier(0.075, 0.82, 0.165, 1);
+				}
+				.img-overlay {
+					background: $dark;
+					transition: 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+				}
+				.img {
+					transform: scale(1.2);
+					transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+				}
+				&:hover .item-copy {
+					color: $dark;
+				}
+				&:hover .img {
+					transform: scale(1);
+				}
+				&:hover .img-overlay {
+					top: -100%;
+				}
+			}
+		}
+	}
+}

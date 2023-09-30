@@ -6,12 +6,10 @@ const nextConfig = {
 		domains: [
 			'media2.giphy.com',
 			'media1.giphy.com',
+			'media.giphy.com',
 			'cdn.sanity.io',
 			'scontent.cdninstagram.com',
 		],
-	},
-	experimental: {
-		appDir: true,
 	},
 	compiler: {
 		styledComponents: true,

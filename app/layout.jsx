@@ -1,11 +1,14 @@
-'use client';
-
 import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.scss';
 import Footer from '../components/Footer';
 import Navbar from '../components/Nav';
 import Head from 'next/head';
+
+export const metadata = {
+	title: 'Israk',
+	description: '...',
+};
 
 export default function RootLayout({ children }) {
 	return (
