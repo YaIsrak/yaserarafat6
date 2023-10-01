@@ -37,14 +37,16 @@ export default function AboutSec1() {
 		<section className='sec1 p-0 tw-overflow-x-hidden'>
 			<div className='row !m-0'>
 				<div className='col-md-6 tw-h-screen tw-overflow-hidden tw-flex tw-justify-center '>
-					<Image
-						src={MainPhoto}
-						alt='photo'
-						placeholder='blur'
-						objectFit='cover'
-						priority
-						className=''
-					/>
+					<div className='tw-relative tw-w-full'>
+						<Image
+							src={MainPhoto}
+							alt='photo'
+							placeholder='blur'
+							objectFit='cover'
+							fill
+							priority
+						/>
+					</div>
 				</div>
 				<div className='col-md-6 m-auto' style={{ padding: '15vmin' }}>
 					<motion.div

@@ -1,44 +1,55 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import '../styles/slider.scss';
+import sanityClient from '../client';
+import CImage from './CImage';
 
-export default function Sketchbooks({ datas }) {
+export default async function Sketchbooks() {
+	const info = await getData();
+	const datas = info.props.datas;
+
 	return (
-		<div className='sketchbook tw-h-screen tw-w-full'>
-			<div>
-				<div className='items tw-h-screen tw-whitespace-nowrap tw-divide-x '>
-					{datas?.map((data, i) => (
-						<Card key={data._id} data={data} i={i} />
-					))}
-				</div>
+		<div className=''>
+			<div className='tw-grid tw-grid-cols-2 tw-gap-4 md:tw-grid-cols-3 lg:tw-grid-cols-4'>
+				{datas?.map((data) => (
+					<Card key={data._id} data={data} />
+				))}
 			</div>
 		</div>
 	);
 }
 
-function Card({ data, i }) {
+function Card({ data }) {
 	return (
-		<Link
-			className='item tw-w-1/2 md:tw-w-1/3 lg:tw-w-1/4 tw-inline-block tw-relative tw-h-screen tw-overflow-hidden '
-			href={`digitalart/${data.slug.current}`}
-		>
-			<div className='item-wrapper'>
-				<div className='item-copy tw-flex tw-flex-col tw-items-center tw-w-full tw-h-full'>
-					<h1 className='item-name display-5'>{data.title}</h1>
-					<div className='id tw-font-bold display-1'>{i + 1}</div>
+		<div className='tw-relative'>
+			<Link
+				className=' tw-text-light tw-no-underline hover:tw-text-light'
+				href={`digitalart/${data.slug.current}`}
+			>
+				<div className='wrapper'>
+					<div className='blur-overlay tw-bg-dark tw-absolute tw-z-10 tw-h-full tw-w-full tw-opacity-30 hover:tw-opacity-5'></div>
+					<div className='img tw-relative tw-h-80'>
+						<CImage src={data.imageUrl.url} alt='Sketchbooks-cover' />
+					</div>
+					<div className='tw-absolute tw-bottom-0 tw-ps-3 tw-z-20'>
+						<h1 className='fs-1'>{data.title}</h1>
+						<p className=''>{data.body}</p>
+					</div>
 				</div>
-				<div className='img tw-relative tw-h-screen'>
-					<Image
-						className='img'
-						alt='sketchbook-cover'
-						src={data.imageUrl.url}
-						fill
-						sizes='100'
-						style={{ objectFit: 'cover' }}
-					/>
-				</div>
-				<div className='img-overlay tw-absolute tw-h-full tw-w-full tw-top-0 tw-left-0'></div>
-			</div>
-		</Link>
+			</Link>
+		</div>
 	);
+}
+
+async function getData() {
+	const res = await sanityClient.fetch(
+		`*[_type == 'sketchbook']{
+			...,
+					"imageUrl": mainImage.asset->{ url},
+		  		}`
+	);
+	return {
+		props: {
+			datas: res,
+		},
+		revalidate: 10,
+	};
 }

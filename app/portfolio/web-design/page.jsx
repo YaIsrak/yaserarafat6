@@ -1,24 +1,24 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import CImage from '../../CImage';
 import sanityClient from '../../../client';
 import Button from '../../../components/Button';
+import SectionHeader from '../../SectionHeader';
 
 export default async function Webdesign() {
 	const info = await getData();
 	const datas = info.props.datas;
 
 	return (
-		<>
-			<section>
-				<div className='container'>
-					<Link href={'/portfolio'} className='fs-3'>
-						Back
-					</Link>
-					<h1 className='fw-bold'>My Web Development Portfolio</h1>
-					{datas ? <Posts datas={datas} /> : <h1>nai</h1>}
-				</div>
-			</section>
-		</>
+		<section>
+			<div className='container'>
+				<SectionHeader
+					href='/portfolio'
+					heading='My Web Development Portfolio'
+					body='lorem'
+				/>
+				<hr />
+				{datas ? <Posts datas={datas} /> : <h1>nai</h1>}
+			</div>
+		</section>
 	);
 }
 function Posts({ datas }) {
@@ -36,13 +36,7 @@ function Post({ data }) {
 		<div className=''>
 			<div className='card bg-transparent'>
 				<div className='position-relative tw-w-full tw-h-80'>
-					<Image
-						src={`${data.imageUrl.url}`}
-						alt='...'
-						fill
-						sizes='100'
-						style={{ objectFit: 'cover' }}
-					/>
+					<CImage src={`${data.imageUrl.url}`} alt='...' />
 				</div>
 				<div className='card-body'>
 					<h2>{data.title}</h2>

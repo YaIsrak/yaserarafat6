@@ -1,9 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import sanityClient from '../../../../client';
+import CImage from '../../../CImage';
 
 export default async function pages({ params }) {
-	const datas = await getData(params.slug[0]);
+	const info = await getData(params.slug[0]);
+	const datas = info.props.datas;
 
 	return (
 		<section className=''>
@@ -25,13 +26,7 @@ export default async function pages({ params }) {
 					{datas.imageUrl?.map((image, i) => (
 						<div className='tw-relative tw-w-full tw-h-96' key={i}>
 							<h1>hello</h1>
-							<Image
-								className='tw-rounded-lg'
-								alt='Sketch'
-								src={image.url}
-								fill
-								style={{ objectFit: 'cover' }}
-							/>
+							<CImage src={image.url} alt={''} className={'tw-rounded-lg'} />
 						</div>
 					))}
 				</div>
@@ -41,11 +36,17 @@ export default async function pages({ params }) {
 }
 
 async function getData(slug) {
-	return sanityClient.fetch(
+	const res = await sanityClient.fetch(
 		`*[_type == "sketchbook" && slug.current == $slug][0]{
-        ...,
-		"imageUrl" : imagesGallery[].asset->{url}
-      }`,
+			        ...,
+					"imageUrl" : imagesGallery[].asset->{url}
+			      }`,
 		{ slug }
 	);
+	return {
+		props: {
+			datas: res,
+		},
+		revalidate: 10,
+	};
 }

@@ -8,7 +8,7 @@ import cover3 from '../../public/images/bg-cover2.png';
 
 export default function page() {
 	return (
-		<div className='work tw-w-full tw-h-screen tw-flex tw-justify-center tw-items-center tw-flex-col tw-gap-4'>
+		<div className='work tw-h-screen tw-flex tw-justify-center tw-items-center tw-flex-col tw-gap-4'>
 			<Item
 				src={cover}
 				name={'Digital'}
