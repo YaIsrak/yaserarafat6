@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
 					rel='stylesheet'
 					href='https://use.fontawesome.com/releases/v5.15.2/css/all.css'
 				/>
+				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
 			<body suppressHydrationWarning={true}>

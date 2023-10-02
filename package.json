@@ -16,6 +16,7 @@
 		"framer-motion": "^7.3.2",
 		"gsap": "^3.8.0",
 		"next": "^13.5.3",
+		"next-reveal": "^1.0.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-ig-feed": "^1.7.0",
