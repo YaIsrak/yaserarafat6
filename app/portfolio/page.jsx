@@ -39,13 +39,13 @@ function Item({ src, name, name2, link }) {
 	return (
 		<Link
 			href={link}
-			className='group tw-flex tw-justify-center tw-items-center tw-gap-2 hover:tw-gap-10 tw-no-underline tw-w-full tw-text-light hover:tw-text-primary'
+			className='tw-flex tw-justify-center tw-items-center tw-gap-2 hover:tw-gap-x-0 hover:md:tw-gap-x-10 tw-no-underline tw-w-full tw-text-primary hover:tw-text-light hover:tw-bg-primary/25'
 		>
-			<h1>{name}</h1>
-			<div className='tw-relative tw-w-40 tw-h-20 group-hover:tw-w-44'>
-				<CImage src={src} alt='' local priority size={100} />
+			<h1 className='display-2 !tw-font-bold'>{name}</h1>
+			<div className='tw-relative tw-w-40 '>
+				<CImage src={src} alt='' local priority />
 			</div>
-			<h1>{name2}</h1>
+			<h1 className='display-2 !tw-font-bold'>{name2}</h1>
 		</Link>
 	);
 }

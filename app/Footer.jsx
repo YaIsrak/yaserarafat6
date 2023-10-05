@@ -61,11 +61,6 @@ export default function Footer() {
 				initial={'hidden'}
 				whileInView={'show'}
 			>
-				<motion.img
-					alt='GIF'
-					src='https://media4.giphy.com/media/liUhPmZdArpYc/giphy.gif'
-					variants={item}
-				/>
 				<motion.p className='text-muted fs-3' variants={item}>
 					{'// Made with'}
 				</motion.p>

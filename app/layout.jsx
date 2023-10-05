@@ -9,8 +9,7 @@ import Head from 'next/head';
 
 export const metadata = {
 	title: 'Israk',
-	description:
-		'I am a Digital Artist, designer and Web Developer from Bangladesh. 🇧🇩',
+	description: 'MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
 };
 
 export default function RootLayout({ children }) {

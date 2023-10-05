@@ -1,3 +1,9 @@
+import Loading from '../loading';
+
 export default async function page() {
-	return <div className=''></div>;
+	return (
+		<div className=''>
+			<Loading />
+		</div>
+	);
 }

@@ -58,7 +58,7 @@ export default function HomeSec() {
 	}, []);
 
 	return (
-		<div className='hero'>
+		<div className='hero' id='#home'>
 			<div className='img_container'>
 				<div className='images'>
 					<div className='img left tw-w-1/4 tw-h-auto'>
