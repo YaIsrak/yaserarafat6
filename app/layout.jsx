@@ -8,8 +8,14 @@ import Navbar from '../components/Nav';
 import Head from 'next/head';
 
 export const metadata = {
-	title: 'Israk',
+	title: {
+		default: 'Israk',
+		template: `Israk | %s`,
+	},
 	description: 'MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
+	verification: {
+		google: 'google-site-verification= googleeff188a2933ed135',
+	},
 };
 
 export default function RootLayout({ children }) {

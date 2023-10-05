@@ -3,6 +3,24 @@ import CImage from '../../../CImage';
 import Loading from '../../../loading';
 import SectionHeader from '../../../SectionHeader';
 
+export async function generateMetadata({ params }) {
+	const info = await getData(params.slug[0]);
+	if (!info)
+		return {
+			title: 'Not found',
+			description: 'This page is not found',
+		};
+
+	return {
+		title: info.props.datas.title,
+		description: info.props.datas.body,
+		alternates: {
+			canonical: `https://yaserisrak.vercel.app/portfolio/digitalart/${params.slug[0]}`,
+		},
+	};
+	// const datas = info.props.datas;
+}
+
 export default async function pages({ params }) {
 	const info = await getData(params.slug[0]);
 	const datas = info.props.datas;
