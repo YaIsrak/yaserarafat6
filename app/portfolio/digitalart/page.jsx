@@ -10,8 +10,10 @@ export default async function art() {
 				body='A collection of idea on painting and drawings 🎨'
 			/>
 			<hr />
-			<h1 className='display-3'>Sketchbooks tour</h1>
-			<Sketchbooks />
+			<div className='tw-py-4'>
+				<h1 className='display-3 tw-text-center'>Sketchbooks tour</h1>
+				<Sketchbooks />
+			</div>
 		</section>
 	);
 }

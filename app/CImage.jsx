@@ -1,13 +1,6 @@
 import Image from 'next/image';
 
-export default function CImage({
-	src,
-	alt,
-	className,
-	local,
-	priority,
-	sizes,
-}) {
+export default function CImage({ src, alt, local, ...rest }) {
 	return (
 		<>
 			{local ? (
@@ -15,22 +8,20 @@ export default function CImage({
 					src={src}
 					alt={`${alt} | MD Yaser Arafat Israk`}
 					placeholder='blur'
-					className={className}
-					style={{ objectFit: 'cover' }}
-					priority={priority}
-					sizes={sizes}
+					style={{ objectFit: 'contain' }}
+					sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+					{...rest}
 				/>
 			) : (
 				<Image
 					src={src}
 					alt={`${alt} | MD Yaser Arafat Israk`}
 					fill
-					style={{ objectFit: 'cover' }}
+					style={{ objectFit: 'contain' }}
 					placeholder='blur'
 					blurDataURL='/images/loading.png'
-					className={className}
-					priority={priority}
-					sizes={sizes}
+					sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+					{...rest}
 				/>
 			)}
 		</>

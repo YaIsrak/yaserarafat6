@@ -8,7 +8,7 @@ export default async function Sketchbooks() {
 
 	return (
 		<div className=''>
-			<div className='tw-grid tw-grid-cols-2 tw-gap-4 md:tw-grid-cols-3 lg:tw-grid-cols-4'>
+			<div className='tw-grid tw-grid-cols-2 tw-gap-2 md:tw-grid-cols-3 lg:tw-grid-cols-4'>
 				{datas?.map((data) => (
 					<Card key={data._id} data={data} />
 				))}
@@ -26,7 +26,7 @@ function Card({ data }) {
 			>
 				<div className='wrapper'>
 					<div className='blur-overlay tw-bg-dark tw-absolute tw-z-10 tw-h-full tw-w-full tw-opacity-30 hover:tw-opacity-5'></div>
-					<div className='img tw-relative tw-h-80'>
+					<div className='img tw-relative tw-h-96'>
 						<CImage src={data.imageUrl.url} alt='Sketchbooks-cover' />
 					</div>
 					<div className='tw-absolute tw-bottom-0 tw-ps-3 tw-z-20'>
@@ -43,8 +43,8 @@ async function getData() {
 	const res = await sanityClient.fetch(
 		`*[_type == 'sketchbook']{
 			...,
-					"imageUrl": mainImage.asset->{ url},
-		  		}`
+			"imageUrl": mainImage.asset->{ url},
+		} | order(title desc)`
 	);
 	return {
 		props: {

@@ -35,13 +35,13 @@ export default function AboutSec1() {
 
 	return (
 		<section className='sec1 p-0 tw-overflow-x-hidden'>
-			<div className='row !m-0'>
-				<div className='col-md-6 tw-h-screen tw-overflow-hidden tw-flex tw-justify-center '>
-					<div className='tw-relative tw-w-full'>
+			<div className='tw-grid tw-grid-cols-1 md:tw-grid-cols-2'>
+				<div className='tw-overflow-hidden tw-justify-center tw-flex'>
+					<div className='tw-relative tw-w-full tw-mx-11 tw-mt-24 md:tw-m-0'>
 						<CImage src={MainPhoto} alt='Profile photo' priority local />
 					</div>
 				</div>
-				<div className='col-md-6 m-auto' style={{ padding: '15vmin' }}>
+				<div className='m-auto' style={{ padding: '15vmin' }}>
 					<motion.div
 						className='container'
 						variants={container}

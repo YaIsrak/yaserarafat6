@@ -54,6 +54,7 @@ const songLists = [
 export default function Footer() {
 	return (
 		<footer className='tw-font-mono'>
+			<hr />
 			<motion.div
 				className='container tw-z-auto'
 				variants={container}

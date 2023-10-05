@@ -1,45 +1,39 @@
-import Link from 'next/link';
 import sanityClient from '../../../../client';
 import CImage from '../../../CImage';
 import Loading from '../../../loading';
+import SectionHeader from '../../../SectionHeader';
 
 export default async function pages({ params }) {
 	const info = await getData(params.slug[0]);
 	const datas = info.props.datas;
 
 	return (
-		<section className=''>
-			<header className=''>
-				<div className='container'>
-					{/* Navigation */}
-					<Link href={'/portfolio/digitalart'} className='fs-3 txt-primary'>
-						Back
-					</Link>
-					{/* Text */}
-					<h1 className='display-2 fw-bold'>{datas.title}</h1>
-				</div>
-			</header>
-			{/* <hr /> */}
+		<section className='container'>
+			<SectionHeader
+				href={'/portfolio/digitalart'}
+				heading={datas.title}
+				body={datas.body}
+			/>
 
-			<div className='container'>
-				<div className='tw-grid tw-gap-3 tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4'>
-					{datas ? (
-						<>
-							{datas.imageUrl?.map((image, i) => (
-								<div className='tw-relative tw-w-full tw-h-96' key={i}>
-									<CImage
-										src={image.url}
-										alt={''}
-										className={'tw-rounded-lg'}
-										priority
-									/>
-								</div>
-							))}
-						</>
-					) : (
-						<Loading />
-					)}
-				</div>
+			<hr />
+
+			<div className='tw-grid tw-gap-3 tw-grid-cols-1 md:tw-grid-cols-3 lg:tw-grid-cols-4'>
+				{datas ? (
+					<>
+						{datas.imageUrl?.map((image, i) => (
+							<div className='tw-relative tw-w-full tw-h-[100vh] md:tw-h-96' key={i}>
+								<CImage
+									src={image.url}
+									alt={datas.title + ' ' + datas.body}
+									className={'tw-rounded-lg'}
+									priority
+								/>
+							</div>
+						))}
+					</>
+				) : (
+					<Loading />
+				)}
 			</div>
 		</section>
 	);

@@ -31,9 +31,7 @@ export default function HomeSec3() {
 
 				{/* Column 2 */}
 				<div>
-					<h1 className='tw-text-7xl md:tw-text-6xl !tw-font-bold tw-text-center'>
-						Kohotobyo
-					</h1>
+					<h1 className='display-3 !tw-font-bold tw-text-center'>Kohotobyo</h1>
 					<RevealWrapper
 						reset
 						delay={200}

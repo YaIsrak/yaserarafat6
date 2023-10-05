@@ -50,25 +50,28 @@ export default function AboutSec3() {
 					<motion.h1 className='h3 fw-bold' variants={item}>
 						Main Skills
 					</motion.h1>
-					<motion.div className='row' variants={container}>
-						<motion.div className='col-3 DesignApp' variants={item}>
+					<motion.div
+						className='tw-grid tw-grid-cols-3 md:tw-grid-cols-4 tw-gap-3'
+						variants={container}
+					>
+						<motion.div className='DesignApp' variants={item}>
 							<PTag>Illustration</PTag>
 							<PTag>Digital Art</PTag>
 						</motion.div>
-						<motion.div className='col-3 DesignApp' variants={item}>
+						<motion.div className='DesignApp' variants={item}>
 							<PTag>Photoshop</PTag>
 							<PTag>Illustrator</PTag>
 							<PTag>Premiere Pro</PTag>
 							<PTag>Adobe XD</PTag>
 						</motion.div>
-						<motion.div className='col-3 DesignApp' variants={item}>
+						<motion.div className='DesignApp' variants={item}>
 							<PTag>HTML, CSS</PTag>
 							<PTag>Javascript</PTag>
 							<PTag>React, node</PTag>
 							<PTag>Python</PTag>
 						</motion.div>
 
-						<motion.div className='col-3 DesignApp' variants={item}>
+						<motion.div className='DesignApp' variants={item}>
 							<PTag>Frontend</PTag>
 							<PTag>UI design</PTag>
 						</motion.div>
@@ -80,9 +83,12 @@ export default function AboutSec3() {
 					<motion.h1 className='h3 fw-bold' variants={item}>
 						Experiences
 					</motion.h1>
-					<motion.div className='row' variants={container}>
+					<motion.div
+						className='tw-grid tw-grid-cols-2 md:tw-grid-cols-3 tw-gap-3'
+						variants={container}
+					>
 						{experiences.map((exp, i) => (
-							<motion.div className='col-3' variants={item} key={i}>
+							<motion.div className='' variants={item} key={i}>
 								<a
 									className='tw-text-sm md:tw-text-xl fw-bold txt-primary tw-no-underline'
 									href={exp.link}
@@ -95,22 +101,6 @@ export default function AboutSec3() {
 								<PTag>{exp.time}</PTag>
 							</motion.div>
 						))}
-						{/* <motion.div className='col-3' variants={item}>
-							<p className='tw-text-sm md:tw-text-xl fw-bold text-primary'>
-								Opputunity for Kids
-							</p>
-							<PTag>@Assosiate of Graphic Design</PTag>
-							<PTag>Chittagong - Bangladesh</PTag>
-							<PTag>2020 - now</PTag>
-						</motion.div>
-						<motion.div className='col-3' variants={item}>
-							<p className='tw-text-sm md:tw-text-xl fw-bold text-primary'>
-								Originative 360
-							</p>
-							<PTag>@Assosiate of Graphic Design</PTag>
-							<PTag>Chittagong - Bangladesh</PTag>
-							<PTag>2020 - 2022</PTag>
-						</motion.div> */}
 					</motion.div>
 				</div>
 
@@ -119,16 +109,18 @@ export default function AboutSec3() {
 					<motion.h1 className='h3 fw-bold' variants={container}>
 						Also busy with
 					</motion.h1>
-					<motion.div className='row' variants={item}>
-						<motion.div className='col-3' variants={item}>
+					<motion.div
+						className='tw-grid tw-grid-cols-3 md:tw-grid-cols-4 tw-gap-3'
+						variants={item}
+					>
+						<motion.div className='' variants={item}>
 							<PTag>Skecthbook</PTag>
-						</motion.div>
-						<motion.div className='col-3' variants={item}>
 							<PTag>Accoustic Guiter</PTag>
-						</motion.div>
-						<motion.div className='col-3' variants={item}>
 							<PTag>Video game</PTag>
+							<PTag>Watching F.R.I.E.N.D.S.</PTag>
 						</motion.div>
+						<motion.div className='' variants={item}></motion.div>
+						<motion.div className='' variants={item}></motion.div>
 					</motion.div>
 				</div>
 			</motion.div>

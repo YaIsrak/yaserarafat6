@@ -18,9 +18,7 @@ export default function HomeSec4() {
 				</RevealWrapper>
 				<div className='tw-my-auto'>
 					<RevealList interval={300} delay={200} reset>
-						<h1 className='display-3 !tw-font-bold tw-whitespace-nowrap'>
-							Spirited Away: Chihiro
-						</h1>
+						<h1 className='display-3 !tw-font-bold'>Spirited Away: Chihiro</h1>
 						<p>
 							This fanart of <span className='tw-text-primary'>Chihiro</span> from{' '}
 							<span className='tw-text-primary'>Spirited Away</span> depicts the
