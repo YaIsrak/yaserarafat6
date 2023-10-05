@@ -1,9 +1,3 @@
-import Sketchbooks from '../sketchbooks';
-
-export default function page() {
-	return (
-		<div>
-			<Sketchbooks />
-		</div>
-	);
+export default async function page() {
+	return <div className=''></div>;
 }

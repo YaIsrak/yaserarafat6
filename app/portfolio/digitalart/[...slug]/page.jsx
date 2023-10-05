@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import sanityClient from '../../../../client';
 import CImage from '../../../CImage';
+import Loading from '../../../loading';
 
 export default async function pages({ params }) {
 	const info = await getData(params.slug[0]);
@@ -18,17 +19,26 @@ export default async function pages({ params }) {
 					<h1 className='display-2 fw-bold'>{datas.title}</h1>
 				</div>
 			</header>
-
 			{/* <hr /> */}
 
 			<div className='container'>
 				<div className='tw-grid tw-gap-3 tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4'>
-					{datas.imageUrl?.map((image, i) => (
-						<div className='tw-relative tw-w-full tw-h-96' key={i}>
-							<h1>hello</h1>
-							<CImage src={image.url} alt={''} className={'tw-rounded-lg'} />
-						</div>
-					))}
+					{datas ? (
+						<>
+							{datas.imageUrl?.map((image, i) => (
+								<div className='tw-relative tw-w-full tw-h-96' key={i}>
+									<CImage
+										src={image.url}
+										alt={''}
+										className={'tw-rounded-lg'}
+										priority
+									/>
+								</div>
+							))}
+						</>
+					) : (
+						<Loading />
+					)}
 				</div>
 			</div>
 		</section>
@@ -47,6 +57,5 @@ async function getData(slug) {
 		props: {
 			datas: res,
 		},
-		revalidate: 10,
 	};
 }

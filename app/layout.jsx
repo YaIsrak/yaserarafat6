@@ -1,13 +1,16 @@
 import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.scss';
-import Footer from '../components/Footer';
+
+// component
+import Footer from './Footer';
 import Navbar from '../components/Nav';
 import Head from 'next/head';
 
 export const metadata = {
 	title: 'Israk',
-	description: '...',
+	description:
+		'I am a Digital Artist, designer and Web Developer from Bangladesh. 🇧🇩',
 };
 
 export default function RootLayout({ children }) {

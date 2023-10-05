@@ -9,6 +9,7 @@ const nextConfig = {
 			'media.giphy.com',
 			'cdn.sanity.io',
 			'scontent.cdninstagram.com',
+			'api.slingacademy.com',
 		],
 	},
 	compiler: {

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import cover from '../../public/images/art-bg.jpg';
 import cover2 from '../../public/images/cover2.jpg';
 import cover3 from '../../public/images/bg-cover2.png';
+import CImage from '../CImage';
 
 export default function page() {
 	return (
@@ -42,14 +43,7 @@ function Item({ src, name, name2, link }) {
 		>
 			<h1>{name}</h1>
 			<div className='tw-relative tw-w-40 tw-h-20 group-hover:tw-w-44'>
-				<Image
-					src={src}
-					alt=''
-					fill
-					sizes='100'
-					style={{ objectFit: 'cover' }}
-					placeholder='blur'
-				/>
+				<CImage src={src} alt='' local priority size={100} />
 			</div>
 			<h1>{name2}</h1>
 		</Link>

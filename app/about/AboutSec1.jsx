@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import Button from '../../components/Button';
 import MainPhoto from '../../public/images/cp-min.jpg';
 import { motion } from 'framer-motion';
+import CImage from '../CImage';
 
 const container = {
 	hidden: { opacity: 0 },
@@ -38,14 +38,7 @@ export default function AboutSec1() {
 			<div className='row !m-0'>
 				<div className='col-md-6 tw-h-screen tw-overflow-hidden tw-flex tw-justify-center '>
 					<div className='tw-relative tw-w-full'>
-						<Image
-							src={MainPhoto}
-							alt='photo'
-							placeholder='blur'
-							objectFit='cover'
-							fill
-							priority
-						/>
+						<CImage src={MainPhoto} alt='Profile photo' priority local />
 					</div>
 				</div>
 				<div className='col-md-6 m-auto' style={{ padding: '15vmin' }}>

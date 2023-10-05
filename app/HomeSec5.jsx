@@ -17,7 +17,7 @@ export default function HomeSec5() {
 				className='tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-7'
 			>
 				<div className='img-wrapper'>
-					<h1 className='!tw-font-bold tw-whitespace-nowrap'>
+					<h1 className='!tw-font-bold'>
 						Nandita Mahamud
 						<br />
 						<span className='tw-font-normal'>from</span>

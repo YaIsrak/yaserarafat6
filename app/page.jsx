@@ -1,4 +1,4 @@
-import HomeSec from '../components/HomeSec';
+import HomeSec from './HomeSec';
 import HomeSec3 from './HomeSec3';
 import HomeSec2 from './HomeSec2';
 import HomeSec4 from './HomeSec4';
