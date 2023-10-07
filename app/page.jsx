@@ -4,6 +4,7 @@ import HomeSec2 from './HomeSec2';
 import HomeSec4 from './HomeSec4';
 import HomeSec5 from './HomeSec5';
 import Sketchbooks from './sketchbooks';
+import HomeSec6 from './HomeSec6';
 
 export default function Home() {
 	return (
@@ -11,17 +12,16 @@ export default function Home() {
 			<HomeSec />
 			<hr />
 			<>
-				<HomeSec2 />
+				<HomeSec2 /> {/* grace and beauty*/}
 				<hr />
-				<HomeSec3 />
+				<HomeSec3 /> {/* Kohotobyo */}
+				<HomeSec4 /> {/* Spirited away */}
+				<HomeSec5 /> {/* Nandita */}
 				<hr />
-				<HomeSec4 />
-				<hr />
-				<HomeSec5 />
-				<hr />
+				<HomeSec6 />
 				<div className='container'>
 					<h1 className='display-3 tw-text-center'>Sketchbook tour</h1>
-					<Sketchbooks />
+					<Sketchbooks homepage={true} />
 				</div>
 			</>
 		</>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import sanityClient from '../client';
 import CImage from './CImage';
 
-export default async function Sketchbooks() {
+export default async function Sketchbooks({ homepage }) {
 	const info = await getData();
 	const datas = info.props.datas;
 
@@ -10,19 +10,23 @@ export default async function Sketchbooks() {
 		<div className=''>
 			<div className='tw-grid tw-grid-cols-2 tw-gap-2 md:tw-grid-cols-3 lg:tw-grid-cols-4'>
 				{datas?.map((data) => (
-					<Card key={data._id} data={data} />
+					<Card key={data._id} data={data} homepage={homepage} />
 				))}
 			</div>
 		</div>
 	);
 }
 
-function Card({ data }) {
+function Card({ data, homepage }) {
 	return (
 		<div className='tw-relative'>
 			<Link
 				className=' tw-text-light tw-no-underline hover:tw-text-light'
-				href={`digitalart/${data.slug.current}`}
+				href={
+					homepage
+						? `portfolio/digitalart/${data.slug.current}`
+						: `digitalart/${data.slug.current}`
+				}
 			>
 				<div className='wrapper'>
 					<div className='blur-overlay tw-bg-dark tw-absolute tw-z-10 tw-h-full tw-w-full tw-opacity-30 hover:tw-opacity-5'></div>
