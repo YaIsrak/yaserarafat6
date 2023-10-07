@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.scss';
+import { Analytics } from '@vercel/analytics/react';
 
 // component
 import Footer from './Footer';
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
 				<main>{children}</main>
 				<Footer />
 				<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js'></script>
+				<Analytics />
 			</body>
 		</html>
 	);
