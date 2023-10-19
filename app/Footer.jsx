@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const container = {
 	hidden: { opacity: 0 },
@@ -106,6 +107,12 @@ export default function Footer() {
 					<p className='text-muted tw-font-mono tw-text-sm lg:tw-text-lg'>
 						{"// It's a work in progress so check back often!"}
 					</p>
+					<Link
+						href={'/blog'}
+						className='tw-text-primary hover:tw-text-primary tw-no-underline'
+					>
+						See my blog
+					</Link>
 				</div>
 			</motion.div>
 		</footer>
