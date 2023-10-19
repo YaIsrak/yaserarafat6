@@ -29,7 +29,9 @@ export default async function page({ params }) {
 			<br />
 
 			{/* Body */}
-			<PortableText content={data.body} />
+			<div className='tw-mx-0 md:tw-mx-12 lg:tw-mx-44 '>
+				<PortableText content={data.body} />
+			</div>
 
 			<Link
 				href={'/blog'}
