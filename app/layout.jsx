@@ -19,7 +19,8 @@ export const metadata = {
 			'%s | MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
 	},
 	verification: {
-		google: 'google-site-verification= googleeff188a2933ed135',
+		google:
+			'google-site-verification=fmDb5LvLMBphFnbLxy0twqLiHhx4sOWt_ie3fZKiGwk',
 	},
 };
 
