@@ -3,8 +3,8 @@ import sanityClient from '../client';
 import CImage from './CImage';
 
 export default async function Sketchbooks({ homepage }) {
-	const info = await getData();
-	const datas = info.props.datas;
+	const res = await getData();
+	const datas = res.res;
 
 	return (
 		<div className=''>
@@ -50,10 +50,5 @@ async function getData() {
 			"imageUrl": mainImage.asset->{ url},
 		} | order(title desc)`
 	);
-	return {
-		props: {
-			datas: res,
-		},
-		revalidate: 10,
-	};
+	return { res, revalidate: 10 };
 }

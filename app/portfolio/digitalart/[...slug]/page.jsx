@@ -4,16 +4,17 @@ import Loading from '../../../loading';
 import SectionHeader from '../../../SectionHeader';
 
 export async function generateMetadata({ params }) {
-	const info = await getData(params.slug[0]);
-	if (!info)
+	const res = await getData(params.slug[0]);
+	const data = res.res;
+	if (!data)
 		return {
 			title: 'Not found',
 			description: 'This page is not found',
 		};
 
 	return {
-		title: info.props.datas.title,
-		description: info.props.datas.body,
+		title: data.title,
+		description: data.body,
 		alternates: {
 			canonical: `https://yaserisrak.vercel.app/portfolio/digitalart/${params.slug[0]}`,
 		},
@@ -22,8 +23,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function pages({ params }) {
-	const info = await getData(params.slug[0]);
-	const datas = info.props.datas;
+	const res = await getData(params.slug[0]);
+	const datas = res.res;
 
 	return (
 		<section className='container'>
@@ -66,8 +67,7 @@ async function getData(slug) {
 		{ slug }
 	);
 	return {
-		props: {
-			datas: res,
-		},
+		res,
+		revalidate: 10,
 	};
 }

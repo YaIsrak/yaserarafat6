@@ -1,11 +1,14 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 // images
 import cover from '../../public/images/art-bg.jpg';
-import cover2 from '../../public/images/cover2.jpg';
 import cover3 from '../../public/images/bg-cover2.png';
+import cover2 from '../../public/images/cover2.jpg';
 import CImage from '../CImage';
+
+export const metadata = {
+	title: 'Work',
+};
 
 export default function page() {
 	return (

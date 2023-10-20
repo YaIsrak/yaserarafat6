@@ -1,19 +1,23 @@
-import '../styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.scss';
-import { Analytics } from '@vercel/analytics/react';
+import '../styles/globals.css';
 
 // component
-import Footer from './Footer';
-import Navbar from '../components/Nav';
 import Head from 'next/head';
+import Navbar from '../components/Nav';
+import Footer from './Footer';
 
 export const metadata = {
 	title: {
 		default: 'Israk',
 		template: `Israk | %s`,
 	},
-	description: 'MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
+	description: {
+		default: 'MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
+		template:
+			'%s | MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
+	},
 	verification: {
 		google: 'google-site-verification= googleeff188a2933ed135',
 	},

@@ -11,9 +11,9 @@ export default function HomeSec6() {
 			<h2 className='display-3 tw-text-center !tw-font-bold'>
 				Portraits I&apos;m proud of
 			</h2>
-			<div className='tw-grid tw-grid-cols-4 tw-gap-3'>
+			<div className='tw-grid tw-grid-cols-2 md:tw-grid-cols-4 tw-gap-3'>
 				{array.map((img, i) => (
-					<div className='tw-relative tw-w-full tw-h-96' key={i}>
+					<div className='tw-relative tw-w-full tw-h-64 md:tw-h-96' key={i}>
 						<CImage src={img} alt={'Portraits'} local key={i} fill />
 					</div>
 				))}
