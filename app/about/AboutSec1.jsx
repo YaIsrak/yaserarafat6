@@ -1,8 +1,8 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import Button from '../../components/Button';
 import MainPhoto from '../../public/images/cp-min.jpg';
-import { motion } from 'framer-motion';
 import CImage from '../CImage';
 
 const container = {

@@ -2,6 +2,11 @@
 const nextConfig = {
 	// reactStrictMode: false,
 	swcMinify: true,
+	experimental: {
+		images: {
+			allowFutureImage: true,
+		},
+	},
 	images: {
 		domains: [
 			'media2.giphy.com',

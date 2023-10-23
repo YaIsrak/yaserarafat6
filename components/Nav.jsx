@@ -1,10 +1,10 @@
 'use client';
 
+import { Bars3BottomRightIcon } from '@heroicons/react/20/solid';
+import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import NavBrand from './NavBrand';
 import Navlink from './Navlink';
-import { Bars3BottomRightIcon } from '@heroicons/react/20/solid';
-import { motion } from 'framer-motion';
 
 export default function Navbar() {
 	const router = usePathname();

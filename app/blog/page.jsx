@@ -17,9 +17,9 @@ export default async function Blogs() {
 					blog.title && blog.description && blog.publishedAt && blog.mainImage ? (
 						<Blog key={blog._id} data={blog} />
 					) : (
-						<h1 key={i} className='text-danger'>
+						<p key={i} className='text-danger'>
 							There is a problem in blog
-						</h1>
+						</p>
 					)
 				)}
 			</div>

@@ -1,3 +1,4 @@
+
 import { Analytics } from '@vercel/analytics/react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.scss';
@@ -5,8 +6,6 @@ import '../styles/globals.css';
 
 // component
 import Head from 'next/head';
-import Navbar from '../components/Nav';
-import Footer from './Footer';
 
 export const metadata = {
 	title: {
@@ -36,9 +35,7 @@ export default function RootLayout({ children }) {
 			</Head>
 
 			<body suppressHydrationWarning={true}>
-				<Navbar />
-				<main>{children}</main>
-				<Footer />
+					<main>{children}</main>
 				<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js'></script>
 				<Analytics />
 			</body>

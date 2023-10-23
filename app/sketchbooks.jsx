@@ -30,8 +30,12 @@ function Card({ data, homepage }) {
 			>
 				<div className='wrapper'>
 					<div className='blur-overlay tw-bg-dark tw-absolute tw-z-10 tw-h-full tw-w-full tw-opacity-30 hover:tw-opacity-5'></div>
-					<div className='img tw-relative tw-h-96'>
-						<CImage src={data.imageUrl.url} alt='Sketchbooks-cover' />
+					<div className='img tw-relative'>
+						<CImage
+							src={data.imageUrl.url}
+							alt='Sketchbooks-cover'
+							className='tw-object-cover tw-h-auto tw-w-full'
+						/>
 					</div>
 					<div className='tw-absolute tw-bottom-0 tw-ps-3 tw-z-20'>
 						<h1 className='fs-1'>{data.title}</h1>

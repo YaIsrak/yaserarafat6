@@ -40,11 +40,11 @@ export default async function pages({ params }) {
 				{datas ? (
 					<>
 						{datas.imageUrl?.map((image, i) => (
-							<div className='tw-relative tw-w-full tw-h-[100vh] md:tw-h-96' key={i}>
+							<div className='tw-relative tw-w-full tw-h-full ' key={i}>
 								<CImage
 									src={image.url}
 									alt={datas.title + ' ' + datas.body}
-									className={'tw-rounded-lg'}
+									className='tw-rounded-lg tw-object-contain tw-h-auto tw-w-full'
 									priority
 								/>
 							</div>
