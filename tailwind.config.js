@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = {
 	prefix: 'tw-',
 	content: [
@@ -18,4 +19,13 @@ module.exports = {
 	},
 	plugins: [],
 	darkMode: 'class',
+=======
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: ['./src/components/pages/*.js', './src/components/*.{html,js}'],
+	theme: {
+		extend: {},
+	},
+	plugins: [],
+>>>>>>> f47877dac4c17814ecfc1dc8bc92d5bb07fb6705
 };
