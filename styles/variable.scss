@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'Voyage';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url(/font/Voyage.otf);
+}
+@font-face {
+	font-family: 'Voyage';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url(/font/VoyageBold.otf);
+}
+
+@font-face {
+	font-family: 'LaoMN';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url(/font/LaoMN.ttc);
+}
+
+// ----Varable ---- //
+// Color
+$white: white;
+$light: #ffdfbf;
+$dark: #0e0e0e;
+$primary: #cc6448;
+
+// font
+$font1: 'LaoMN'; // primary font
+$font2: 'Caveat', cursive;
+$font3: 'Voyage';
+
+// ----List ---- //
+$colors: (
+	'primary': $primary,
+	'light': $light,
+	'dark': $dark,
+);
+$fonts: (
+	'font1': $font1,
+	'font2': $font2,
+	'font3': $font3,
+);
+
+// ----Function ---- //
+@each $color, $value in $colors {
+	.bg-#{$color} {
+		background-color: $value !important;
+	}
+	.text-#{$color} {
+		color: $value !important;
+	}
+	.txt-#{$color} {
+		color: $value !important;
+	}
+}
+
+@each $font, $value in $fonts {
+	.#{$font} {
+		font-family: $value;
+	}
+}

@@ -1,0 +1,19 @@
+.menu {
+	padding: 12vh 0 24vh;
+	.menu_item {
+		display: flex;
+		h1 {
+			cursor: pointer;
+		}
+		.menu_img {
+			position: relative;
+			top: -20px;
+			padding: 0 20px;
+			height: 20vh;
+			transform: scale(0);
+		}
+		&:hover > img {
+			transform: scale(1);
+		}
+	}
+}

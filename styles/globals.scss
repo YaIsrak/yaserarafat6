@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import './variable';
+@import './nav.scss';
+@import './herosec.scss';
+@import './menu.scss';
+
+* {
+	transition: 0.3s;
+}
+body {
+	font-family: $font1 !important;
+	background: $dark !important;
+	color: $light !important;
+}
+section {
+	padding: 15vmin 0;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+h5 {
+	font-family: $font3;
+}
+p {
+	margin-bottom: 0;
+}
+a {
+	color: $primary;
+	&:hover {
+		color: $light;
+	}
+}
+
+// scrolbar
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: $dark;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $light;
+}
+
+.text-muted {
+	color: gray !important ;
+}
