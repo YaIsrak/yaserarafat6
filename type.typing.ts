@@ -27,3 +27,18 @@ interface WebDesign extends Base {
 	body: any;
 	slug: { current: string; _type: string };
 }
+
+interface Blog extends Base {
+	title: string;
+	description: string;
+	slug: { current: string; _type: string };
+	body: any;
+	mainImage: {
+		asset: {
+			_rev: string;
+			_type: string;
+		};
+	};
+	imageUrl: { url: string };
+	publishedAt: string;
+}

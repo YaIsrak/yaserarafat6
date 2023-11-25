@@ -2,7 +2,7 @@ import { Github } from 'lucide-react';
 import Image from 'next/image';
 import Button from '../Button';
 
-export default function WebPost({ data }: { data: WebDesign }) {
+export default function WebPostCard({ data }: { data: WebDesign }) {
 	return (
 		<div className=''>
 			<div className='card bg-transparent'>
@@ -18,12 +18,14 @@ export default function WebPost({ data }: { data: WebDesign }) {
 				</div>
 				<div className='card-body'>
 					<h2 className='h2 tw-font-bold tw-text-primary'>{data.title}</h2>
+
 					<div className='tw-flex tw-gap-2'>
 						<Button link={data.url}>Visit Site</Button>
 						<Button link={data.url} className='tw-flex tw-align-middle tw-gap-1'>
 							<Github />
 							Github
 						</Button>
+						P
 					</div>
 				</div>
 			</div>
