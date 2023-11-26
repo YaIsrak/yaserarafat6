@@ -23,14 +23,14 @@ export default async function Webdesign() {
 async function getData() {
 	const res = await sanityClient.fetch(
 		`*[_type == 'web']{
-					...,
-					"mainImageUrl": mainImage.asset->{ url}
-		  		}`
+			...,
+			"mainImageUrl": mainImage.asset->{url},
+			technology[]->
+		}`
 	);
 	return {
 		props: {
 			datas: res,
 		},
-		revalidate: 10,
 	};
 }

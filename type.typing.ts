@@ -23,9 +23,14 @@ interface SketchBook extends Base {
 interface WebDesign extends Base {
 	title: string;
 	url: string;
+	github: string;
 	mainImageUrl: { url: string };
-	body: any;
+	technology: Technology[];
 	slug: { current: string; _type: string };
+}
+
+interface Technology extends Base {
+	name: string;
 }
 
 interface Blog extends Base {
