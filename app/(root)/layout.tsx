@@ -11,10 +11,13 @@ import '../globals.css';
 export const metadata: Metadata = {
 	title: {
 		default: 'Israk',
-		template: `Israk | %s`,
+		template: `%s | Israk`,
 	},
 	description: 'MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
-
+	robots: {
+		follow: true,
+		index: true,
+	},
 	verification: {
 		google: 'fmDb5LvLMBphFnbLxy0twqLiHhx4sOWt_ie3fZKiGwk',
 	},

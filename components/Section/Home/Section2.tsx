@@ -20,7 +20,7 @@ export default function HomeSec2() {
 								stands before us. Her long, flowing hair cascades over her shoulders,
 								and her serene eyes meet ours. The sari she wears is a masterpiece of
 								color and pattern, its vibrant hues echoing the vibrant colors of India
-								itself.
+								itself
 							</p>
 						</RevealList>
 					</div>
