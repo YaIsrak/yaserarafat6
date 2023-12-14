@@ -21,6 +21,9 @@ export const metadata: Metadata = {
 	verification: {
 		google: 'fmDb5LvLMBphFnbLxy0twqLiHhx4sOWt_ie3fZKiGwk',
 	},
+	twitter: {
+		card: 'summary_large_image',
+	},
 };
 
 export default function RootLayout({

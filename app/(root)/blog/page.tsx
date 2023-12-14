@@ -35,6 +35,5 @@ async function getData() {
 	);
 	return {
 		res,
-		revalidate: 10,
 	};
 }
