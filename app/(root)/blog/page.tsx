@@ -1,5 +1,4 @@
 import BlogCard from '@/components/Card/BlogCard';
-import sanityClient from '@/lib/client';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -7,7 +6,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Blogs() {
-	const data: Blog[] = (await getData()).res;
+	const data = (await getData()).res;
+
 	return (
 		<section className='container'>
 			{/* Blog */}
@@ -26,14 +26,12 @@ export default async function Blogs() {
 	);
 }
 
-async function getData() {
-	const res = await sanityClient.fetch(
-		`*[_type == 'blog']{
-			...,
-			"imageUrl": mainImage.asset->{ url}
-		}`
+export async function getData() {
+	const res = await fetch(process.env.baseURL + '/api/blog').then((data) =>
+		data.json()
 	);
 	return {
 		res,
+		revalidate: 1,
 	};
 }
