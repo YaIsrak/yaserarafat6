@@ -1,4 +1,3 @@
-import HomeSec1 from '@/components/Section/Home/Section1';
 import HomeSec2 from '@/components/Section/Home/Section2';
 import HomeSec3 from '@/components/Section/Home/Section3';
 import HomeSec4 from '@/components/Section/Home/Section4';
@@ -9,7 +8,7 @@ import Sketchbooks from '@/components/Section/Sketchbooks';
 export default function Home() {
 	return (
 		<>
-			<HomeSec1 />
+			{/* <HomeSec1 /> */}
 			<hr />
 			<HomeSec2 />
 			<HomeSec3 />
