@@ -58,7 +58,7 @@ export default function HomeSec1() {
 	}, []);
 
 	return (
-		<div className='hero' id='#home'>
+		<div className='hero tw-border-b tw-border-light/20' id='#home'>
 			<div className='img_container'>
 				<div className='images'>
 					<div className='img left tw-w-1/4 tw-h-auto'>
@@ -78,8 +78,8 @@ export default function HomeSec1() {
 				</div>
 			</div>
 			<div className='header text-center'>
-				<h1 className='title display-1 fw-bold font3'>Israk</h1>
-				<p className='font3 text-white tw-text-xs lg:tw-text-base'>
+				<h1 className='display-1 fw-bold font3'>Israk</h1>
+				<p className='font3 tw-text-xs lg:tw-text-base tw-text-light'>
 					Digital Artist - Graphic Designer - Web Developer
 				</p>
 			</div>

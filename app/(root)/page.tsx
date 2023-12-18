@@ -10,7 +10,6 @@ export default function Home() {
 	return (
 		<>
 			<HomeSec1 />
-			<hr />
 			<HomeSec2 />
 			<HomeSec3 />
 			<HomeSec4 />
