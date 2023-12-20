@@ -1,3 +1,4 @@
+import { dateFormatter } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,7 +14,7 @@ export default function BlogCard({ data }: { data: Blog }) {
 						src={data.imageUrl.url}
 						alt={`${data.title} | MD Yaser Arafat Israk`}
 						fill
-						style={{ objectFit: 'contain' }}
+						style={{ objectFit: 'cover' }}
 						placeholder='blur'
 						blurDataURL='/images/loading.png'
 						sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -25,7 +26,7 @@ export default function BlogCard({ data }: { data: Blog }) {
 				<h2 className='display-6 tw-font-bold tw-text-primary'>{data.title}</h2>
 				<span className='md:tw-text-base tw-text-sm'>
 					{data.description} <br />
-					<span className='tw-text-light/50'>{data.publishedAt}</span>
+					<span className='tw-text-light/50'>{dateFormatter(data.publishedAt)}</span>
 				</span>
 			</Link>
 		</div>

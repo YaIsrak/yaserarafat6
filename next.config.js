@@ -4,6 +4,7 @@ const nextConfig = {
 	swcMinify: true,
 	experimental: {
 		serverActions: true,
+		isrMemoryCacheSize: 0,
 	},
 	images: {
 		domains: [

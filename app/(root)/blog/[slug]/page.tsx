@@ -1,4 +1,5 @@
 import sanityClient from '@/lib/client';
+import { dateFormatter } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import PortableText from 'react-portable-text';
@@ -35,9 +36,8 @@ export default async function page({ params }: { params: { slug: string } }) {
 			{/* header */}
 			<header className='text-center'>
 				<h1 className='display-3 tw-font-bold'>{data.title}</h1>
-				<p>
-					<p className='tw-text-light/50'>{data.publishedAt}</p>
-				</p>
+
+				<p className='tw-text-light/50'>{dateFormatter(data.publishedAt)}</p>
 			</header>
 
 			{/* Image section */}
@@ -45,7 +45,7 @@ export default async function page({ params }: { params: { slug: string } }) {
 				<Image
 					src={data.imageUrl.url}
 					alt={data.title}
-					className='tw-rounded-xl !tw-object-contain'
+					className='tw-rounded-xl !tw-object-cover'
 					fill
 					placeholder='blur'
 					blurDataURL='/images/loading.png'
@@ -61,13 +61,21 @@ export default async function page({ params }: { params: { slug: string } }) {
 				<PortableText
 					content={data.body}
 					serializers={{
-						h1: (props: any) => <h1 className='display-3' {...props} />,
-						h2: (props: any) => <h1 className='display-4' {...props} />,
-						h3: (props: any) => <h1 className='display-5' {...props} />,
-						h4: (props: any) => <h1 className='display-6' {...props} />,
+						h1: (props: any) => (
+							<h1 className='display-3 tw-mb-4 tw-mt-6' {...props} />
+						),
+						h2: (props: any) => (
+							<h1 className='display-4 tw-mb-4 tw-mt-6' {...props} />
+						),
+						h3: (props: any) => (
+							<h1 className='display-5 tw-mb-4 tw-mt-6' {...props} />
+						),
+						h4: (props: any) => (
+							<h1 className='display-6 tw-mb-4 tw-mt-6' {...props} />
+						),
 						a: (props: any) => <h1 className='tw-text-primary' {...props} />,
 						li: ({ children }: { children: React.ReactNode }) => (
-							<li className='tw-list-item'>{children}</li>
+							<li className='tw-list-disc tw-list-inside'>{children}</li>
 						),
 					}}
 				/>
@@ -94,6 +102,9 @@ async function getData(slug: string) {
 	);
 	return {
 		res,
+		cache: 'no-store',
 		revalidate: 10,
 	};
 }
+
+export const dynamic = 'force-dynamic';
