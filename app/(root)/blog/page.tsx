@@ -28,14 +28,14 @@ export default async function Blogs() {
 	);
 }
 
-export async function getData() {
+async function getData() {
 	const res = await SanityClient.fetch(`*[_type == 'blog']{
         ...,
         "imageUrl": mainImage.asset->{ url}
     }`);
 	return {
 		res,
-		revalidate: 10,
+		revalidate: 3600,
 		caches: 'no-store',
 	};
 }

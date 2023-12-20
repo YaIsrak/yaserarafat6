@@ -23,5 +23,7 @@ async function getData() {
 			"mainImageUrl": mainImage.asset->{url},
 		} | order(title desc)`
 	);
-	return { res, revalidate: 10 };
+	return { res, revalidate: 3600 };
 }
+
+export const dynamic = 'force-dynamic';

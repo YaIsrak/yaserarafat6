@@ -103,7 +103,7 @@ async function getData(slug: string) {
 	return {
 		res,
 		cache: 'no-store',
-		revalidate: 10,
+		revalidate: 3600,
 	};
 }
 
