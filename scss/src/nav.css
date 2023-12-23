@@ -1,0 +1,111 @@
+.navigation nav .container .nav-icon {
+  z-index: 10000;
+  border: none;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 100%;
+  -webkit-box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.3);
+}
+
+.navigation nav .container .nav-icon:hover {
+  background-color: #2d2d2d;
+}
+
+.navigation nav .container .nav-icon:hover .hambuger-bar::before,
+.navigation nav .container .nav-icon:hover .hambuger-bar::after {
+  background: white;
+}
+
+.navigation nav .container .nav-icon .hambuger-bar {
+  width: 18px;
+  height: 1px;
+}
+
+.navigation nav .container .nav-icon .hambuger-bar::before, .navigation nav .container .nav-icon .hambuger-bar::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: #2d2d2d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navigation nav .container .nav-icon .hambuger-bar::before {
+  -webkit-transform: rotate(0deg) translate(0px, -4px);
+          transform: rotate(0deg) translate(0px, -4px);
+}
+
+.navigation nav .container .nav-icon .hambuger-bar::after {
+  -webkit-transform: rotate(0deg) translate(0px, 4px);
+          transform: rotate(0deg) translate(0px, 4px);
+}
+
+.navigation nav .container .nav-container {
+  background-color: #0e0e0e;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 0vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.navigation nav .container .nav-container .navbar-nav {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigation nav .container .nav-container .navbar-nav .nav-item .nav-link {
+  font-size: 2rem;
+  margin: 3vmin;
+}
+
+.navigation nav .container .active-nav {
+  height: 100vh;
+}
+
+.navigation nav .container .active-icon .hambuger-bar::before {
+  -webkit-transform: rotate(45deg) translate(0px, 0px);
+          transform: rotate(45deg) translate(0px, 0px);
+}
+
+.navigation nav .container .active-icon .hambuger-bar::after {
+  -webkit-transform: rotate(-45deg) translate(0px, 0px);
+          transform: rotate(-45deg) translate(0px, 0px);
+}
+
+.social-icon {
+  z-index: 1000;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.social-icon ul .social-link {
+  list-style-type: none;
+  margin: 2vmin 0;
+}
+
+.social-icon ul .social-link a {
+  color: white;
+  font-size: 3vmin;
+  position: relative;
+  left: 0;
+}
+
+.social-icon ul .social-link a:hover {
+  color: #d90d4f;
+  left: 5px;
+}
+/*# sourceMappingURL=nav.css.map */

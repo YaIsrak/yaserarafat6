@@ -1,0 +1,102 @@
+.navigation {
+  nav {
+    .container {
+      .nav-icon {
+        z-index: 10000;
+        border: none;
+        $humburger-size: 50px;
+        height: $humburger-size;
+        width: $humburger-size;
+        background-color: white;
+        border-radius: 100%;
+        box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.3);
+        &:hover {
+          background-color: #2d2d2d;
+          .hambuger-bar::before,
+          .hambuger-bar::after {
+            background: white;
+          }
+        }
+        .hambuger-bar {
+          width: 18px;
+          height: 1px;
+          //   position: absolute;
+          //   top: 50%;
+          //   left: 50%;
+          //   transform: translate(-50%, -50%);
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 2px;
+            background: #2d2d2d;
+            transition: 0.3s;
+          }
+          &::before {
+            transform: rotate(0deg) translate(0px, -4px);
+          }
+          &::after {
+            transform: rotate(0deg) translate(0px, 4px);
+          }
+        }
+      }
+      .nav-container {
+        background-color: #0e0e0e;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 0vh;
+        width: 100%;
+        overflow: hidden;
+        .navbar-nav {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          justify-content: center;
+          .nav-item {
+            .nav-link {
+              font-size: 2rem;
+              margin: 3vmin;
+            }
+          }
+        }
+      }
+      .active-nav {
+        height: 100vh;
+      }
+      .active-icon {
+        .hambuger-bar::before {
+          transform: rotate(45deg) translate(0px, 0px);
+        }
+        .hambuger-bar::after {
+          transform: rotate(-45deg) translate(0px, 0px);
+        }
+      }
+    }
+  }
+}
+
+// Social Link
+.social-icon {
+  z-index: 1000;
+  top: 50%;
+  transform: translateY(-50%);
+  ul {
+    .social-link {
+      list-style-type: none;
+      margin: 2vmin 0;
+      a {
+        color: white;
+        font-size: 3vmin;
+        position: relative;
+        left: 0;
+        &:hover {
+          color: #d90d4f;
+          left: 5px;
+        }
+      }
+    }
+  }
+}

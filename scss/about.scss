@@ -1,0 +1,23 @@
+section {
+  padding: 15vmin 0;
+}
+.section1 {
+  background-image: url("https://yaserisrak.netlify.app/pic/2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  .container {
+    .row {
+      .intro {
+        border-radius: 10px;
+        h1 {
+          font-weight: 600;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
