@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Theme
+$dark: #0e0e0e;
+
+* {
+  transition: 0.3s;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.dark-theme {
+  background-color: $dark;
+  color: white;
+}
+.light-theme {
+  background-color: white;
+  color: $dark;
+}
+// Header and Paragraph
+
+// Button
+
+// image{
+img {
+  border-radius: 1rem;
+  &:hover {
+    border-radius: 5rem;
+  }
+}
+section {
+  padding: 15vmin 0;
+}
+
+// mixin
+@mixin position($position, $top, $left, $t-top, $t-left) {
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: translate($t-left, $t-top);
+}
+.sec-h1 {
+  letter-spacing: 0rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  &:hover {
+    letter-spacing: 0.5rem;
+  }
+}
