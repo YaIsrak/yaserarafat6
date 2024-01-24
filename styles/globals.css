@@ -34,9 +34,9 @@
 		--popover: 240 10% 3.9%;
 		--popover-foreground: 0 0% 98%;
 		--primary: 13 56% 54%;
-		--primary-foreground: 60 9.1% 97.8%;
+		--primary-foreground: 30 100% 86%;
 		--secondary: 12 6.5% 15.1%;
-		--secondary-foreground: 60 9.1% 97.8%;
+		--secondary-foreground: 30 100% 86%;
 		--muted: 12 6.5% 15.1%;
 		--muted-foreground: 24 5.4% 63.9%;
 		--accent: 12 6.5% 15.1%;
@@ -51,9 +51,30 @@
 
 @layer base {
 	* {
-		@apply border-border;
+		@apply border-border text-secondary-foreground;
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+	h1 {
+		@apply text-4xl font-extrabold lg:text-5xl;
+	}
+	h2 {
+		@apply text-3xl font-semibold tracking-tight;
+	}
+	h3 {
+		@apply text-2xl font-semibold;
+	}
+	h4 {
+		@apply text-xl font-semibold;
+	}
+	small {
+		@apply text-sm font-medium leading-none;
+	}
+}
+
+@layer components {
+	.container {
+		@apply mx-auto px-4 sm:px-8 md:px-12 lg:px-24;
 	}
 }
