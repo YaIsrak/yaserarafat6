@@ -1,5 +1,4 @@
 import SectionHeader from '../_components/SectionHeader';
-import Sketchbook from '../_components/Sketchbook';
 
 export default function DIGITALARTPAGE() {
 	return (
@@ -15,7 +14,7 @@ export default function DIGITALARTPAGE() {
 				{/* SketchBook tour */}
 				<div className='pt-6'>
 					<h1 className='font-light text-center lg:text-7xl'>Sketchbooks tour</h1>
-					<Sketchbook />
+					{/* <Sketchbook /> */}
 				</div>
 			</div>
 		</section>
