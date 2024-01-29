@@ -31,7 +31,7 @@ export default async function page() {
 	);
 }
 
-export async function getBlog() {
+async function getBlog() {
 	const res = await fetch(`${baseUrl}/api/blog`)
 		.then((res) => res.json())
 		.catch((error) => {

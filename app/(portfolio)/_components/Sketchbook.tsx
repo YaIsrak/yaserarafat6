@@ -15,7 +15,7 @@ export default async function Sketchbook() {
 	);
 }
 
-export async function getSketchBookData() {
+async function getSketchBookData() {
 	const res = await fetch(`${baseUrl}/api/sketchbook`)
 		.then((res) => res.json())
 		.catch((error) => {

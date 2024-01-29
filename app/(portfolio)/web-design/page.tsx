@@ -21,7 +21,7 @@ export default async function page() {
 	);
 }
 
-export async function getWebDesignData() {
+async function getWebDesignData() {
 	const res = await fetch(`${baseUrl}/api/web-design`)
 		.then((res) => res.json())
 		.catch((error) => {
