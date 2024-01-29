@@ -48,7 +48,7 @@ export default async function page({ params }: { params: { slug: string } }) {
 	);
 }
 
-export async function getSingleSketchBook(slug: string) {
+async function getSingleSketchBook(slug: string) {
 	const res = await fetch(`${baseUrl}/api/sketchbook/${slug}`)
 		.then((res) => res.json())
 		.catch((err) => {
