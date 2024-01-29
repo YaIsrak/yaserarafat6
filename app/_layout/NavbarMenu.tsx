@@ -49,7 +49,7 @@ function NavDropDownLink({ navLink }: { navLink: NavLinkProps }) {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger>{navLink.name}</DropdownMenuTrigger>
-			<DropdownMenuContent className=''>
+			<DropdownMenuContent className='bg-background/50 backdrop-blur-lg'>
 				{navLink.dropDownContent?.map((dropDownContent, i) => (
 					<DropdownMenuItem
 						key={i}

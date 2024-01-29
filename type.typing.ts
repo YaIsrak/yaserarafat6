@@ -50,7 +50,7 @@ export interface SketchBookProps extends Base {
 	};
 	mainImageUrl: { url: string };
 }
-export interface WebDesign extends Base {
+export interface WebDesignProps extends Base {
 	title: string;
 	url: string;
 	github: string;

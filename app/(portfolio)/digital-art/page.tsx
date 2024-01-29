@@ -5,12 +5,11 @@ import Sketchbook from '../_components/Sketchbook';
 export default function page() {
 	return (
 		<section className='section'>
+			<SectionHeader
+				header='Digital art & concepts'
+				description='A collection of idea on painting and drawings 🎨'
+			/>
 			<div className='container'>
-				<SectionHeader
-					header='Digital art & concepts'
-					description='A collection of idea on painting and drawings 🎨'
-				/>
-
 				{/* Instagram feed */}
 				<div className='my-6'>
 					<InstagramFeed />
