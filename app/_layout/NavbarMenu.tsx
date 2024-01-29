@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { navlinks } from '@/lib/constant';
 import { cn } from '@/lib/utils';
-import { NavLinkProps } from '@/typing';
+import { NavLinkProps } from '@/type.typing';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 

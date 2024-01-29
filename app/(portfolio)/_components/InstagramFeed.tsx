@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/carousel';
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import useInstagramFeed from '@/lib/hooks/useInstagramFeed';
-import { InstagramMediaProps } from '@/typing';
+import { InstagramMediaProps } from '@/type.typing';
 import { Loader } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -70,7 +70,9 @@ function InstagramPostCard({ InstaQ }: { InstaQ: InstagramMediaProps }) {
 					<DrawerContent>
 						<div className='container space-y-6 my-6'>
 							{InstaQ.caption && (
-								<p className='text-sm text-muted-foreground'>{InstaQ.caption}</p>
+								<p className='text-sm text-muted-foreground line-clamp-3 md:line-clamp-2'>
+									{InstaQ.caption}
+								</p>
 							)}
 							{/* Static Image */}
 							{InstaQ.media_type === 'IMAGE' && (

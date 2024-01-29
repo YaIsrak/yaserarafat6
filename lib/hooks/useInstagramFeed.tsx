@@ -1,6 +1,6 @@
 'use client';
 
-import { InstagramPostProps } from '@/typing';
+import { InstagramPostProps } from '@/type.typing';
 import { useEffect, useState } from 'react';
 import { baseUrl } from '../utils';
 export default function useInstagramFeed() {
