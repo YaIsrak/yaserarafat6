@@ -5,7 +5,7 @@ import {
 	SheetHeader,
 	SheetTrigger,
 } from '@/components/ui/sheet';
-import useScroll from '@/lib/useScroll';
+import useScroll from '@/lib/hooks/useScroll';
 import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
 import NavbarBrand from './NavbarBrand';
@@ -17,7 +17,9 @@ export default function Navbar() {
 		<nav
 			className={cn(
 				'fixed top-0 w-full flex justify-center z-30 transition-all',
-				scolled ? 'border-b bg-background/50 backdrop-blur-xl' : 'bg-background/0'
+				scolled
+					? 'border-b border-muted-foreground/30 bg-background/50 backdrop-blur-xl'
+					: 'bg-background/0'
 			)}
 		>
 			<div className='container flex h-16 items-center justify-between w-full'>

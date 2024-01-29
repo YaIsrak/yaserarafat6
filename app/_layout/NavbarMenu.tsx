@@ -16,14 +16,14 @@ export default function NavbarMenu() {
 	const pathname = usePathname();
 	return (
 		<>
-			{navlinks.map((navLink) => (
-				<>
+			{navlinks.map((navLink, i) => (
+				<div key={i}>
 					{!navLink.dropDownContent ? (
 						<NavLink navLink={navLink} />
 					) : (
 						<NavDropDownLink navLink={navLink} />
 					)}
-				</>
+				</div>
 			))}
 		</>
 	);
@@ -50,8 +50,9 @@ function NavDropDownLink({ navLink }: { navLink: NavLinkProps }) {
 		<DropdownMenu>
 			<DropdownMenuTrigger>{navLink.name}</DropdownMenuTrigger>
 			<DropdownMenuContent className=''>
-				{navLink.dropDownContent?.map((dropDownContent) => (
+				{navLink.dropDownContent?.map((dropDownContent, i) => (
 					<DropdownMenuItem
+						key={i}
 						className={cn(
 							'hover:!text-secondary-foreground hover:!bg-primary/50',
 							dropDownContent.href === pathname

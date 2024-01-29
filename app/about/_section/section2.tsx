@@ -1,5 +1,4 @@
 import { experiences } from '@/lib/constant';
-import PTag from './Ptag';
 
 export default function Section2() {
 	return (
@@ -70,5 +69,19 @@ export default function Section2() {
 				</div>
 			</div>
 		</section>
+	);
+}
+
+export function PTag({
+	children,
+	className,
+}: {
+	children: React.ReactNode;
+	className?: string;
+}) {
+	return (
+		<p className={`m-0 text-muted-foreground  text-sm md:text-lg ${className}`}>
+			{children}
+		</p>
 	);
 }
