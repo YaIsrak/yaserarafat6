@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const baseUrl = process.env.baseURL
 	? `https://${process.env.baseURL}`
-	: 'http://localhost:3000';
+	: 'https://yaserisrak.vercel.app';
 
 export function dateFormatter(date: string) {
 	const newDate = new Date(date);
