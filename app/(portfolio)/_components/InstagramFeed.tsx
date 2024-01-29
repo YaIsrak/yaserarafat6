@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -12,7 +13,6 @@ import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import useInstagramFeed from '@/lib/hooks/useInstagramFeed';
 import { InstagramMediaProps } from '@/type.typing';
 import { Loader } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function InstagramFeed() {
@@ -60,7 +60,8 @@ function InstagramPostCard({ InstaQ }: { InstaQ: InstagramMediaProps }) {
 			{InstaQ.media_type != 'VIDEO' && (
 				<Drawer>
 					<DrawerTrigger className='aspect-square overflow-hidden'>
-						<Image
+						{/* eslint-disable-next-line @next/next/no-img-element */}
+						<img
 							src={InstaQ.media_url}
 							alt={InstaQ.media_url}
 							width={500}
@@ -77,7 +78,8 @@ function InstagramPostCard({ InstaQ }: { InstaQ: InstagramMediaProps }) {
 							{/* Static Image */}
 							{InstaQ.media_type === 'IMAGE' && (
 								<Link className='' href={InstaQ.permalink} target='_blank'>
-									<Image
+									{/* eslint-disable-next-line @next/next/no-img-element */}
+									<img
 										src={InstaQ.media_url}
 										alt={InstaQ.media_url}
 										width={300}
@@ -91,7 +93,7 @@ function InstagramPostCard({ InstaQ }: { InstaQ: InstagramMediaProps }) {
 									<CarouselContent>
 										{InstaQ.children?.data?.map((child) => (
 											<CarouselItem key={child.id}>
-												<Image
+												<img
 													src={child.media_url}
 													alt={child.media_url}
 													width={300}
