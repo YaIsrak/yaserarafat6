@@ -2,9 +2,10 @@
 
 import { InstagramPostProps } from '@/type.typing';
 import { useEffect, useState } from 'react';
-import { baseUrl } from '../utils';
 export default function useInstagramFeed() {
-	const [restAPI, setRestAPI] = useState(`${baseUrl}/api/instagram`);
+	const [restAPI, setRestAPI] = useState(
+		`https://yaserisrak.vercel.app/api/instagram`
+	);
 	const [InstaQuery, setInstaQuery] = useState<InstagramPostProps>();
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(false);
