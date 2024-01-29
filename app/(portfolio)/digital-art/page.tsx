@@ -1,8 +1,7 @@
-import InstagramFeed from '../_components/InstagramFeed';
 import SectionHeader from '../_components/SectionHeader';
 import Sketchbook from '../_components/Sketchbook';
 
-export default function page() {
+export default function DIGITALARTPAGE() {
 	return (
 		<section className='section'>
 			<SectionHeader
@@ -11,9 +10,7 @@ export default function page() {
 			/>
 			<div className='container'>
 				{/* Instagram feed */}
-				<div className='my-6'>
-					<InstagramFeed />
-				</div>
+				<div className='my-6'>{/* <InstagramFeed /> */}</div>
 
 				{/* SketchBook tour */}
 				<div className='pt-6'>
