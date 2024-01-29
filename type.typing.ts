@@ -63,7 +63,7 @@ export interface Technology extends Base {
 	name: string;
 }
 
-export interface Blog extends Base {
+export interface BlogProps extends Base {
 	title: string;
 	description: string;
 	slug: { current: string; _type: string };

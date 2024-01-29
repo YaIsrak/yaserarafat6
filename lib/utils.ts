@@ -8,3 +8,14 @@ export function cn(...inputs: ClassValue[]) {
 export const baseUrl = process.env.baseURL
 	? `https://${process.env.baseURL}`
 	: 'http://localhost:3000';
+
+export function dateFormatter(date: string) {
+	const newDate = new Date(date);
+	const res = newDate.toLocaleString('en-US', {
+		month: 'long',
+		day: 'numeric',
+		year: 'numeric',
+	});
+
+	return res;
+}
