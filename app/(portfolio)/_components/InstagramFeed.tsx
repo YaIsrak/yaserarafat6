@@ -62,7 +62,7 @@ function InstagramPostCard({ InstaQ }: { InstaQ: InstagramMediaProps }) {
 					<DrawerTrigger className='aspect-square overflow-hidden'>
 						{/* eslint-disable-next-line @next/next/no-img-element */}
 						<img
-							src={InstaQ.media_url}
+							src={InstaQ.trumbnail_url}
 							alt={InstaQ.media_url}
 							width={500}
 							height={500}

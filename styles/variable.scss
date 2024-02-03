@@ -1,3 +1,4 @@
+// Voyage font
 @font-face {
 	font-family: 'Voyage';
 	font-style: normal;
@@ -5,7 +6,6 @@
 	font-display: swap;
 	src: url(/font/Voyage.otf);
 }
-
 @font-face {
 	font-family: 'Voyage';
 	font-style: normal;
@@ -14,6 +14,16 @@
 	src: url(/font/VoyageBold.otf);
 }
 
+// Kobe font
+@font-face {
+	font-family: 'Kobe';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url(/font/koberegular.ttf);
+}
+
+// LaoMN font
 @font-face {
 	font-family: 'LaoMN';
 	font-style: normal;
@@ -33,6 +43,7 @@ $primary: #cc6448;
 $font-primary: 'LaoMN'; // primary font
 $font2: 'Caveat', cursive;
 $font3: 'Voyage';
+$font4: 'Kobe';
 
 // ----List ---- //
 $colors: (
@@ -44,6 +55,7 @@ $fonts: (
 	'font1': $font-primary,
 	'font2': $font2,
 	'font3': $font3,
+	'font4': $font4,
 );
 
 // ----Function ---- //

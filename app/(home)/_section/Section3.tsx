@@ -18,6 +18,7 @@ export default function Section3() {
 					interval={200}
 					reset
 					className='grid grid-cols-1 md:grid-cols-3'
+					origin='bottom'
 				>
 					{/* column 1 */}
 					<div className='my-auto'>
@@ -40,6 +41,7 @@ export default function Section3() {
 							delay={200}
 							rotate={{ x: 12, y: 40, z: 0 }}
 							className='aspect-square mx-auto'
+							origin='bottom'
 						>
 							<Image
 								src={Art2}

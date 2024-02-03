@@ -14,6 +14,7 @@ export default function Section5() {
 					delay={200}
 					interval={200}
 					className='grid grid-cols-1 md:grid-cols-3 gap-7'
+					origin='bottom'
 				>
 					<div className='img-wrapper'>
 						<h1 className='!font-bold lg:text-7xl md:!text-4xl mb-6'>
@@ -28,6 +29,7 @@ export default function Section5() {
 							reset
 							delay={300}
 							rotate={{ x: 12, y: 40, z: 0 }}
+							origin='bottom'
 						>
 							<Image
 								src={Sketch6}
@@ -60,6 +62,7 @@ export default function Section5() {
 						className='img-wrapper'
 						rotate={{ x: 12, y: 40, z: 0 }}
 						delay={200}
+						origin='bottom'
 					>
 						<div className='aspect-square mx-auto'>
 							<Image

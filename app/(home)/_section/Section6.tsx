@@ -11,7 +11,7 @@ export default function Section6() {
 	return (
 		<section className='section'>
 			<div className='container'>
-				<RevealWrapper reset delay={200}>
+				<RevealWrapper reset delay={200} origin='bottom'>
 					<h1 className='lg:text-7xl text-center !font-bold mb-4'>
 						Portraits I&apos;m proud of
 					</h1>
@@ -21,6 +21,7 @@ export default function Section6() {
 					delay={200}
 					reset
 					className='grid grid-cols-2 md:grid-cols-4 gap-3'
+					origin='bottom'
 				>
 					{array.map((img, i) => (
 						<div className='w-full !aspect-[3/4] mx-auto' key={i}>

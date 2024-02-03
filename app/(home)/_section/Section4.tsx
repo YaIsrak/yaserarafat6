@@ -20,6 +20,7 @@ export default function Section4() {
 						delay={200}
 						className=''
 						rotate={{ x: 12, y: 40, z: 0 }}
+						origin='bottom'
 					>
 						<div className='aspect-square mx-auto'>
 							<Image
@@ -32,7 +33,7 @@ export default function Section4() {
 						</div>
 					</RevealWrapper>
 					<div className='my-auto'>
-						<RevealList interval={300} delay={200} reset>
+						<RevealList interval={300} delay={200} reset origin='bottom'>
 							<h1 className='lg:text-7xl !font-bold'>Spirited Away: Chihiro</h1>
 							<p className='mt-4'>
 								This fanart of <span className='text-primary'>Chihiro</span> from{' '}
