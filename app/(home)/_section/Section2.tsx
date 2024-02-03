@@ -11,7 +11,13 @@ export default function Section2() {
 			<div className='container'>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
 					<div className='text-left md:text-right my-auto'>
-						<RevealList interval={200} delay={200} reset origin='bottom'>
+						<RevealList
+							interval={200}
+							delay={200}
+							reset
+							origin='bottom'
+							className='space-y-2'
+						>
 							<h1 className='!font-bold lg:text-7xl'>Grace and Beauty</h1>
 							<p>
 								A vision of grace and beauty, a woman in a traditional Indian sari

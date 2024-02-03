@@ -77,4 +77,7 @@
 	.container {
 		@apply mx-auto px-4 sm:px-8 md:px-12 lg:px-24;
 	}
+	.container-lg {
+		@apply mx-auto px-24;
+	}
 }
