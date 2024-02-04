@@ -1,13 +1,7 @@
 'use client';
-import {
-	Sheet,
-	SheetContent,
-	SheetHeader,
-	SheetTrigger,
-} from '@/components/ui/sheet';
 import useScroll from '@/lib/hooks/useScroll';
 import { cn } from '@/lib/utils';
-import { Menu } from 'lucide-react';
+import MobileNavbar from './MobileNavbar';
 import NavbarBrand from './NavbarBrand';
 import NavbarMenu from './NavbarMenu';
 
@@ -32,7 +26,7 @@ export default function Navbar() {
 
 				{/* Mobile menu */}
 				<div className='block md:hidden'>
-					<Sheet>
+					{/* <Sheet>
 						<SheetTrigger>
 							<Menu />
 						</SheetTrigger>
@@ -44,7 +38,8 @@ export default function Navbar() {
 								<NavbarMenu />
 							</div>
 						</SheetContent>
-					</Sheet>
+					</Sheet> */}
+					<MobileNavbar />
 				</div>
 			</div>
 		</nav>

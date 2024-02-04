@@ -9,6 +9,7 @@ import {
 import { navlinks } from '@/lib/constant';
 import { cn } from '@/lib/utils';
 import { NavLinkProps } from '@/type.typing';
+import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -48,7 +49,9 @@ function NavDropDownLink({ navLink }: { navLink: NavLinkProps }) {
 	const pathname = usePathname();
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger>{navLink.name}</DropdownMenuTrigger>
+			<DropdownMenuTrigger className='flex items-center gap-2'>
+				{navLink.name} <ChevronDown className='w-5 h-5' />
+			</DropdownMenuTrigger>
 			<DropdownMenuContent className='bg-background/50 backdrop-blur-lg'>
 				{navLink.dropDownContent?.map((dropDownContent, i) => (
 					<DropdownMenuItem
