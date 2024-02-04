@@ -80,4 +80,13 @@
 	.container-lg {
 		@apply mx-auto px-24;
 	}
+	.display-1 {
+		@apply text-[4rem]  md:text-[5rem] lg:text-[6em] font-light leading-none;
+	}
+	.display-2 {
+		@apply text-[3rem]  md:text-[4rem] lg:text-[5em] font-light leading-none;
+	}
+	.display-3 {
+		@apply text-[2rem]  md:text-[3rem] lg:text-[4em] font-light leading-none;
+	}
 }

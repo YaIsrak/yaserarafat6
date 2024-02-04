@@ -18,7 +18,7 @@ export default function Section2() {
 							origin='bottom'
 							className='space-y-2'
 						>
-							<h1 className='!font-bold lg:text-7xl'>Grace and Beauty</h1>
+							<h1 className='font-normal display-1'>Grace and Beauty</h1>
 							<p>
 								A vision of grace and beauty, a woman in a traditional Indian sari
 								stands before us. Her long, flowing hair cascades over her shoulders,

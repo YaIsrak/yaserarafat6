@@ -12,7 +12,7 @@ export default function Section6() {
 		<section className='section'>
 			<div className='container'>
 				<RevealWrapper reset delay={200} origin='bottom'>
-					<h1 className='lg:text-7xl text-center !font-bold mb-4'>
+					<h1 className='display-1 text-center  mb-4'>
 						Portraits I&apos;m proud of
 					</h1>
 				</RevealWrapper>
@@ -31,6 +31,7 @@ export default function Section6() {
 								fill
 								style={{ objectFit: 'cover' }}
 								placeholder='blur'
+								className='rounded-lg'
 							/>
 						</div>
 					))}

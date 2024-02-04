@@ -33,9 +33,14 @@ export default function Footer() {
 							<FooterP>+30h of code</FooterP>
 							<FooterP>+20 of code crash</FooterP>
 						</div>
+						<div className='flex justify-center items-center col-span-2 md:col-span-1'>
+							<h1 className='display-2 text-center my-24'>
+								Israk <span className='font-bold'>& You</span>
+							</h1>
+						</div>
 					</div>
 					<div className='my-8'>
-						<h2>Thanks for checking my website!</h2>
+						<h2 className='font-normal'>Thanks for checking my website!</h2>
 						<p className='text-muted-foreground font-mono text-sm lg:text-lg'>
 							{"// It's a work in progress so check back often!"}
 						</p>

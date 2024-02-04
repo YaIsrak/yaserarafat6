@@ -35,7 +35,7 @@ export default function Section3() {
 
 					{/* Column 2 */}
 					<div>
-						<h1 className='lg:text-7xl mb-2 !font-bold text-center'>Kohotobyo</h1>
+						<h1 className='display-1 text-center'>Kohotobyo</h1>
 						<RevealWrapper
 							reset
 							delay={200}

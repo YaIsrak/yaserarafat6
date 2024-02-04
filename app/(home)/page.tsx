@@ -1,4 +1,5 @@
 import Section1 from './_section/Section1';
+import Section1Point5 from './_section/Section1.5';
 import Section2 from './_section/Section2';
 import Section3 from './_section/Section3';
 import Section4 from './_section/Section4';
@@ -9,6 +10,7 @@ export default function Home() {
 	return (
 		<>
 			<Section1 />
+			<Section1Point5 />
 			<Section2 />
 			<Section3 />
 			<Section4 />

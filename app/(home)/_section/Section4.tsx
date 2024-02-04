@@ -34,7 +34,7 @@ export default function Section4() {
 					</RevealWrapper>
 					<div className='my-auto'>
 						<RevealList interval={300} delay={200} reset origin='bottom'>
-							<h1 className='lg:text-7xl !font-bold'>Spirited Away: Chihiro</h1>
+							<h1 className='display-1'>Spirited Away: Chihiro</h1>
 							<p className='mt-4'>
 								This fanart of <span className='text-primary'>Chihiro</span> from{' '}
 								<span className='text-primary'>Spirited Away</span> depicts the

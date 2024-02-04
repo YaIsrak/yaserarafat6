@@ -10,8 +10,9 @@ export default function Section1() {
 				<RevealList
 					interval={200}
 					delay={200}
+					reset
 					origin='bottom'
-					className='flex flex-col justify-center text-center text-7xl lg:text-9xl font3'
+					className='flex flex-col justify-center text-center text-7xl lg:text-9xl font3 mt-24'
 				>
 					<p>
 						Welcome to the <br /> playground{' '}
@@ -29,7 +30,8 @@ export default function Section1() {
 				</RevealList>
 				<RevealList
 					interval={200}
-					delay={200}
+					delay={10}
+					reset
 					origin='bottom'
 					className='flex justify-center gap-6   items-center mt-16 font-light text-center'
 				>

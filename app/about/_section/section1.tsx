@@ -25,13 +25,13 @@ export default function Section1() {
 				</div>
 
 				{/* Lefty Side */}
-				<div className='mx-auto my-12 p-[5vmin]'>
+				<div className='mx-auto my-12 p-[3vmin]'>
 					<RevealList
 						interval={50}
 						delay={50}
 						reset
 						origin='bottom'
-						className='font-normal text-7xl md:text-9xl flex flex-col font3'
+						className='display-1 flex flex-col font3'
 					>
 						<span className='ml-12'>Let‘s</span>
 						<span className='ml-24'>create</span>
@@ -48,13 +48,13 @@ export default function Section1() {
 				origin='bottom'
 				className='container'
 			>
-				<h1 className='text-[25em] font-normal text-end text-primary'>Hi! I’m</h1>
-				<h1 className='text-[25em] font-normal text-primary'>Israk</h1>
-				{/* <div className='flex justify-center gap-6 items-center mt-16 font-light text-center'>
-					<h1 className='mt-2 font1 text-sm md:text-4xl'>Web developer</h1>
-					<h1>&</h1>
-					<h1 className='mt-2 font1 text-sm  md:text-4xl'>Illustrator</h1>
-				</div> */}
+				<h1 className='display-1 md:text-[16rem] lg:text-[25rem] text-[12rem] text-end'>
+					Hi! I’m
+				</h1>
+				<h1 className='display-1 md:text-[16rem] lg:text-[25rem] text-[12rem] text-primary'>
+					Israk
+				</h1>
+
 				<div className='container'>
 					<RevealWrapper reset origin='bottom' className='container'>
 						<p className='w-[em] text-lg'>

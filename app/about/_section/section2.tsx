@@ -6,7 +6,7 @@ export default function Section2() {
 			<div className='container font-mono grid gap-8'>
 				{/* Main Skills */}
 				<div>
-					<h2 className='font-semibold mb-2'>Main Skills</h2>
+					<h2 className='display-3 mb-2'>Main Skills</h2>
 					<div className='grid grid-cols-3 md:grid-cols-4 gap-3'>
 						<div className='DesignApp'>
 							<PTag>Illustration</PTag>
@@ -34,7 +34,7 @@ export default function Section2() {
 
 				{/* Experience */}
 				<div>
-					<h2 className='h2 font-semibold mb-2'>Experiences</h2>
+					<h2 className='display-3 mb-2'>Experiences</h2>
 					<div className='grid grid-cols-2 md:grid-cols-3 gap-3'>
 						{experiences.map((exp, i) => (
 							<div className='' key={i}>
@@ -55,7 +55,7 @@ export default function Section2() {
 
 				{/* busy */}
 				<div>
-					<h2 className='font-semibold mb-2'>Also busy with</h2>
+					<h2 className='display-3 mb-2'>Also busy with</h2>
 					<div className='grid grid-cols-3 md:grid-cols-4 gap-3'>
 						<div className=''>
 							<PTag>Sketchbook</PTag>
