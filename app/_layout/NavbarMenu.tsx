@@ -18,13 +18,13 @@ export default function NavbarMenu() {
 	return (
 		<>
 			{navlinks.map((navLink, i) => (
-				<div key={i}>
+				<span key={i} className='flex cursor-pointer'>
 					{!navLink.dropDownContent ? (
 						<NavLink navLink={navLink} />
 					) : (
 						<NavDropDownLink navLink={navLink} />
 					)}
-				</div>
+				</span>
 			))}
 		</>
 	);
@@ -37,7 +37,9 @@ function NavLink({ navLink }: { navLink: NavLinkProps }) {
 			href={navLink.href}
 			className={cn(
 				'mx-auto',
-				navLink.href === pathname ? 'text-primary' : 'text-secondary-foreground'
+				navLink.href === pathname
+					? 'text-primary line-through'
+					: 'text-secondary-foreground'
 			)}
 		>
 			{navLink.name}

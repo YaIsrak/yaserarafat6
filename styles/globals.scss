@@ -4,6 +4,11 @@ body {
 	font-family: $font-primary;
 }
 
+::selection {
+	background-color: $primary;
+	color: $light;
+}
+
 .section {
 	padding: 15vmin 0;
 }
@@ -15,4 +20,43 @@ h4,
 h5,
 h5 {
 	font-family: $font3;
+}
+
+.burger {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.7rem 2em 1.5em 2em;
+	background: rgba(255, 255, 255, 0);
+	outline: none;
+	width: 28px;
+	height: 20px;
+	transition: all 150ms ease-out;
+	cursor: pointer;
+
+	&::before,
+	&::after {
+		content: '';
+		width: 40px;
+		height: 2px;
+		position: absolute;
+		background: #cdc6be;
+		transition: all 150ms ease-out;
+		will-change: transform;
+	}
+
+	&::before {
+		transform: translateY(-3px);
+	}
+	&::after {
+		transform: translateY(3px);
+	}
+}
+
+.burger_active::before {
+	transform: translateY(0) rotate(45deg);
+}
+
+.burger_active::after {
+	transform: translateY(0) rotate(-45deg);
 }

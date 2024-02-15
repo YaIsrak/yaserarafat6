@@ -56,10 +56,12 @@
 	body {
 		@apply bg-background text-foreground;
 	}
-	h1 {
+	h1,
+	.h1 {
 		@apply text-4xl font-extrabold lg:text-5xl;
 	}
-	h2 {
+	h2,
+	.h2 {
 		@apply text-3xl font-semibold tracking-tight;
 	}
 	h3 {
@@ -88,5 +90,11 @@
 	}
 	.display-3 {
 		@apply text-[2rem]  md:text-[3rem] lg:text-[4em] font-light leading-none;
+	}
+}
+
+@layer utilities {
+	.clip-path {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
 	}
 }
