@@ -20,7 +20,7 @@ export default function Section1() {
 					<div className='flex justify-center items-center gap-8'>
 						<p>of</p>
 						<div className='text-base hidden md:block max-w-[20em] mt-10 text-muted-foreground font4'>
-							Hi! I’m MD Yaser Arafat Israk, Web developer and Illustrator from
+							Hi! I’m <span className='text-primary'>MD Yaser Arafat Israk</span>, Web developer and Illustrator from
 							Bangladesh, located in Chattogram
 						</div>
 					</div>
@@ -35,9 +35,9 @@ export default function Section1() {
 					origin='bottom'
 					className='flex justify-center gap-6   items-center mt-16 font-light text-center'
 				>
-					<h1 className='mt-2 font-light text-sm md:text-4xl'>Web developer</h1>
+					<h1 className='mt-2 font-light text-sm md:text-4xl text-muted-foreground'>Web developer</h1>
 					<h1>&</h1>
-					<h1 className='mt-2 font-light text-sm  md:text-4xl'>Illustrator</h1>
+					<h1 className='mt-2 font-light text-sm  md:text-4xl text-muted-foreground'>Illustrator</h1>
 				</RevealList>
 			</div>
 		</section>

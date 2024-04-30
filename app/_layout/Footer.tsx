@@ -1,3 +1,4 @@
+import { contactList } from '@/lib/constant';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
@@ -5,7 +6,7 @@ export default function Footer() {
 	return (
 		<>
 			<hr />
-			<footer className='font-mono py-12'>
+			<footer className='font-mono py-12' id="contact">
 				<div className='container'>
 					<p className='text-muted-foreground'>{'// Made with'}</p>
 
@@ -39,6 +40,21 @@ export default function Footer() {
 							</h1>
 						</div>
 					</div>
+
+					{/* Icons */}
+					<div className='my-8 flex gap-4'>
+						{contactList.map((item) => (
+							<Link
+								key={item.name}
+								href={item.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<item.icon className='w-6 h-6' />
+							</Link>
+						))}
+					</div>
+
 					<div className='my-8'>
 						<h2 className='font-normal'>Thanks for checking my website!</h2>
 						<p className='text-muted-foreground font-mono text-sm lg:text-lg'>

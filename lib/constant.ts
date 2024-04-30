@@ -1,3 +1,11 @@
+import { IconType } from 'react-icons';
+import {
+	FaSquareFacebook,
+	FaInstagram,
+	FaGithub,
+	FaLinkedin,
+} from 'react-icons/fa6';
+
 export const navlinks: {
 	name: string;
 	href: string;
@@ -30,7 +38,7 @@ export const navlinks: {
 	},
 	{
 		name: 'Contact',
-		href: '/contact',
+		href: '#contact',
 	},
 ];
 
@@ -65,5 +73,28 @@ export const experiences: {
 		location: 'Chittagong - Bangladesh',
 		time: '2020 - 2022',
 		link: 'http://originative360.com',
+	},
+];
+
+export const contactList: { name: string; link: string; icon: IconType }[] = [
+	{
+		name: 'Facebook',
+		link: 'https://www.facebook.com/yaser.arafat.israk',
+		icon: FaSquareFacebook,
+	},
+	{
+		name: 'Instagram',
+		link: 'https://www.instagram.com/y_israk',
+		icon: FaInstagram,
+	},
+	{
+		name: 'GitHub',
+		link: 'https://github.com/YaIsrak',
+		icon: FaGithub,
+	},
+	{
+		name: 'LinkedIn',
+		link: 'https://www.linkedin.com/in/israk',
+		icon: FaLinkedin,
 	},
 ];

@@ -12,7 +12,7 @@ export default function Section1Point5() {
 					className='display-1 text-[5rem] text-center flex flex-col font3'
 				>
 					Some of <br />
-					my seleted <br /> works
+					my seleted <br />art works
 				</RevealWrapper>
 			</div>
 		</section>
