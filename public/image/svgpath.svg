@@ -1,0 +1,16 @@
+<svg
+							data-v-71038956
+							fill='none'
+							preserveAspectRatio='none'
+							viewBox='0 0 459 315'
+							xmlns='http://www.w3.org/2000/svg'
+							className='position-absolute swoosh'
+						>
+							<path
+								data-v-71038956
+								d='m37.9827 67.401c62.6553-2.3532 192.4733 14.5084 225.7033 23.4123 33.229 8.9039 171.913 46.4967 172.688 91.1327.775 44.637-98.087 87.949-209.121 77.685s-199.4422-61.075-200.151-105.026c-.7089-43.951 71.6094-82.6545 164.085-94.0772 92.476-11.4227 253.793 31.4917 204.039 118.4652'
+								stroke='#d73234'
+								stroke-width='3'
+								// style='stroke-dashoffset: 0; stroke-dasharray: none;'
+							></path>
+						</svg>

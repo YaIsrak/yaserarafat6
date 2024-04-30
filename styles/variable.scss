@@ -1,0 +1,78 @@
+// Voyage font
+@font-face {
+	font-family: 'Voyage';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url(/font/Voyage.otf);
+}
+@font-face {
+	font-family: 'Voyage';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url(/font/VoyageBold.otf);
+}
+// Kobe font
+@font-face {
+	font-family: 'Kobe';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url(/font/koberegular.ttf);
+}
+// LaoMN font
+@font-face {
+	font-family: 'LaoMN';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url(/font/LaoMN.ttc);
+}
+
+// ----Varable ---- //
+// Color
+$white: white;
+$light: #ffdfbf;
+$dark: #0e0e0e;
+$primary: #cc6448;
+
+// font
+$font-primary: 'LaoMN'; // primary font
+$font2: 'Caveat', cursive;
+$font3: 'Voyage';
+$font4: 'Kobe';
+$font5: 'AktivGrotesk';
+
+// ----List ---- //
+$colors: (
+	'primary': $primary,
+	'light': $light,
+	'dark': $dark,
+);
+$fonts: (
+	'font1': $font-primary,
+	'font2': $font2,
+	'font3': $font3,
+	'font4': $font4,
+	'font5': $font5,
+);
+
+// ----Function ---- //
+// @each $color, $value in $colors {
+// 	.bg-#{$color} {
+// 		background-color: $value !important;
+// 	}
+// 	.text-#{$color} {
+// 		color: $value !important;
+// 	}
+// 	.txt-#{$color} {
+// 		color: $value !important;
+// 	}
+// }
+
+@each $font, $value in $fonts {
+	.#{$font} {
+		font-family: $value;
+	}
+}
