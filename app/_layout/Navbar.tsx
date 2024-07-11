@@ -13,13 +13,12 @@ export default function Navbar() {
 		<>
 			<nav
 				className={cn(
-					'fixed w-full z-30 transition-all',
+					'fixed w-full z-[60] transition-all',
 					scolled
-						? 'border-b border-muted-foreground/30 bg-background/50 backdrop-blur-xl'
+						? 'border-b border-muted-foreground/30 bg-background/60 backdrop-blur-xl'
 						: 'bg-background/0',
-					toggleOn && 'bg-background/0 border-none'
-				)}
-			>
+					toggleOn && 'bg-background/0 border-none backdrop-blur-0',
+				)}>
 				<div className='container flex items-center justify-center'>
 					{/* Logo */}
 					<span className=' flex-1'>
@@ -30,8 +29,7 @@ export default function Navbar() {
 						{/* Burger */}
 						<button
 							className={cn('burger', toggleOn && 'burger_active')}
-							onClick={() => setToggleOn(!toggleOn)}
-						></button>
+							onClick={() => setToggleOn(!toggleOn)}></button>
 					</div>
 				</div>
 			</nav>
@@ -39,15 +37,13 @@ export default function Navbar() {
 			{/* overlay */}
 			<div
 				className={cn(
-					'fixed z-[10] w-full h-0 flex bg-[#0e0e0e]/20 backdrop-blur-xl will-change-transform overflow-hidden transition-all ease-out duration-300',
-					toggleOn && 'h-screen'
-				)}
-			>
+					'fixed z-[50] w-full h-0 flex bg-[#0e0e0e]/20 backdrop-blur-2xl will-change-transform overflow-hidden transition-all ease-out duration-300',
+					toggleOn && 'h-screen',
+				)}>
 				{/* overlay menu */}
 				<div
 					className='w-full h-screen flex gap-4 flex-col justify-center items-center text-center h1 font3'
-					onClick={() => setToggleOn(false)}
-				>
+					onClick={() => setToggleOn(false)}>
 					<NavbarMenu />
 				</div>
 			</div>

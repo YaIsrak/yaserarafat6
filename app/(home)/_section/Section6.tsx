@@ -8,10 +8,14 @@ import Image from 'next/image';
 
 export default function Section6() {
 	const array = [Portrait1, Portrait2, Portrait3, Portrait4];
+
 	return (
 		<section className='section'>
 			<div className='container'>
-				<RevealWrapper reset delay={200} origin='bottom'>
+				<RevealWrapper
+					reset
+					delay={200}
+					origin='bottom'>
 					<h1 className='display-1 text-center  mb-4'>
 						Portraits I&apos;m proud of
 					</h1>
@@ -21,10 +25,11 @@ export default function Section6() {
 					delay={200}
 					reset
 					className='grid grid-cols-2 md:grid-cols-4 gap-3'
-					origin='bottom'
-				>
+					origin='bottom'>
 					{array.map((img, i) => (
-						<div className='w-full !aspect-[3/4] mx-auto' key={i}>
+						<div
+							className='w-full !aspect-[3/4] mx-auto'
+							key={i}>
 							<Image
 								src={img}
 								alt={'Portraits'}
@@ -32,6 +37,7 @@ export default function Section6() {
 								style={{ objectFit: 'cover' }}
 								placeholder='blur'
 								className='rounded-lg'
+								loading='lazy'
 							/>
 						</div>
 					))}

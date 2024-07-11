@@ -16,15 +16,14 @@ export default function Section2() {
 							delay={200}
 							reset
 							origin='bottom'
-							className='space-y-2'
-						>
+							className='space-y-2'>
 							<h1 className='font-normal display-1'>Grace and Beauty</h1>
 							<p>
-								A vision of grace and beauty, a woman in a traditional Indian sari
-								stands before us. Her long, flowing hair cascades over her shoulders,
-								and her serene eyes meet ours. The sari she wears is a masterpiece of
-								color and pattern, its vibrant hues echoing the vibrant colors of India
-								itself
+								A vision of grace and beauty, a woman in a traditional Indian
+								sari stands before us. Her long, flowing hair cascades over her
+								shoulders, and her serene eyes meet ours. The sari she wears is
+								a masterpiece of color and pattern, its vibrant hues echoing the
+								vibrant colors of India itself
 							</p>
 						</RevealList>
 					</div>
@@ -34,8 +33,7 @@ export default function Section2() {
 						className=''
 						rotate={{ x: 12, y: 40, z: 0 }}
 						reset
-						origin='bottom'
-					>
+						origin='bottom'>
 						<div className='aspect-[4/3] mx-auto'>
 							<Image
 								src={Art1}

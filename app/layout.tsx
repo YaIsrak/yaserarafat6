@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 		default: 'Israk',
 		template: `%s | Israk`,
 	},
-	description: 'MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
+	description:
+		'MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
 	robots: {
 		follow: true,
 		index: true,
@@ -28,17 +29,19 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en' suppressHydrationWarning={true}>
+		<html
+			lang='en'
+			suppressHydrationWarning={true}>
 			<body>
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='dark'
 					enableSystem
-					disableTransitionOnChange
-				>
+					disableTransitionOnChange>
 					<Navbar />
 					<main>{children}</main>
 					<Footer />
+					{/* <Cursor /> */}
 				</ThemeProvider>
 			</body>
 		</html>

@@ -18,7 +18,9 @@ export default function NavbarMenu() {
 	return (
 		<>
 			{navlinks.map((navLink, i) => (
-				<span key={i} className='flex cursor-pointer'>
+				<span
+					key={i}
+					className='flex cursor-pointer'>
 					{!navLink.dropDownContent ? (
 						<NavLink navLink={navLink} />
 					) : (
@@ -39,9 +41,8 @@ function NavLink({ navLink }: { navLink: NavLinkProps }) {
 				'mx-auto',
 				navLink.href === pathname
 					? 'text-primary line-through'
-					: 'text-secondary-foreground'
-			)}
-		>
+					: 'text-secondary-foreground',
+			)}>
 			{navLink.name}
 		</Link>
 	);
@@ -62,9 +63,8 @@ function NavDropDownLink({ navLink }: { navLink: NavLinkProps }) {
 							'hover:!text-secondary-foreground hover:!bg-primary/50',
 							dropDownContent.href === pathname
 								? 'text-primary'
-								: 'text-secondary-foreground'
-						)}
-					>
+								: 'text-secondary-foreground',
+						)}>
 						<Link href={dropDownContent.href}>{dropDownContent.name}</Link>
 					</DropdownMenuItem>
 				))}

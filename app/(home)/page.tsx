@@ -11,13 +11,13 @@ export default function Home() {
 	return (
 		<>
 			<Section1 />
-			<Section2Point5 />
 			<Section1Point5 />
 			<Section2 />
 			<Section3 />
 			<Section4 />
 			<Section5 />
 			<Section6 />
+			<Section2Point5 />
 		</>
 	);
 }

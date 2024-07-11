@@ -11,7 +11,10 @@ export default async function page({ params }: { params: { slug: string } }) {
 
 	return (
 		<section className='section'>
-			<SectionHeader header={data.title} description={data.body} />
+			<SectionHeader
+				header={data.title}
+				description={data.body}
+			/>
 			<div className='container'>
 				<div className='grid gap-3 grid-cols-1 md:grid-cols-3 lg:grid-cols-4'>
 					{data ? (
@@ -20,6 +23,8 @@ export default async function page({ params }: { params: { slug: string } }) {
 								<Dialog key={i}>
 									<DialogTrigger className='relative w-full h-full'>
 										<Image
+											blurDataURL='/image/loading.jpg'
+											placeholder='blur'
 											src={image.url}
 											alt={data.title + ' ' + data.body}
 											className='rounded-lg object-contain h-auto w-full'
@@ -29,6 +34,8 @@ export default async function page({ params }: { params: { slug: string } }) {
 									</DialogTrigger>
 									<DialogContent>
 										<Image
+											blurDataURL='/image/loading.jpg'
+											placeholder='blur'
 											src={image.url}
 											alt={data.title + ' ' + data.body}
 											className='rounded-lg object-contain h-auto w-full'

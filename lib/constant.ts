@@ -1,9 +1,9 @@
 import { IconType } from 'react-icons';
 import {
-	FaSquareFacebook,
-	FaInstagram,
 	FaGithub,
+	FaInstagram,
 	FaLinkedin,
+	FaSquareFacebook,
 } from 'react-icons/fa6';
 
 export const navlinks: {
@@ -61,10 +61,17 @@ export const experiences: {
 	link: string;
 }[] = [
 	{
+		name: 'Volunteer For Bangladesh',
+		post: 'Cartoonist',
+		location: 'Chittagong - Bangladesh',
+		time: '2023 - now',
+		link: 'https://vbd.com.bd',
+	},
+	{
 		name: 'Opputunity for Kids',
 		post: 'Assosiate of Graphic Designer',
 		location: 'Chittagong - Bangladesh',
-		time: '2020 - now',
+		time: '2020 - 2023',
 		link: 'https://www.ofkbd.com',
 	},
 	{

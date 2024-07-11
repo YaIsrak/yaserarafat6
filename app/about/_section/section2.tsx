@@ -37,15 +37,16 @@ export default function Section2() {
 					<h2 className='display-3 mb-2'>Experiences</h2>
 					<div className='grid grid-cols-2 md:grid-cols-3 gap-3'>
 						{experiences.map((exp, i) => (
-							<div className='' key={i}>
+							<div
+								className=''
+								key={i}>
 								<a
 									className='text-sm md:text-xl font-semibold text-primary no-underline'
 									href={exp.link}
-									target={'_blank'}
-								>
+									target={'_blank'}>
 									{exp.name}
 								</a>
-								<PTag>@{exp.post}</PTag>
+								<PTag>@ {exp.post}</PTag>
 								<PTag>{exp.location}</PTag>
 								<PTag>{exp.time}</PTag>
 							</div>
