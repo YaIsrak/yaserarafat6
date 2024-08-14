@@ -1,0 +1,49 @@
+// ----COLORS----'
+$white: white;
+$secondary: #ffdfbf;
+$dark: #0e0e0e;
+$primary: #cc6448;
+
+// ----FONTS----
+@font-face {
+	font-family: 'ClashDisplay-Variable';
+	src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2'),
+		url('/fonts/ClashDisplay-Variable.woff') format('woff'),
+		url('/fonts/ClashDisplay-Variable.ttf') format('truetype');
+	font-weight: 200 700;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'chaneyultra_extended';
+	src: url('/fonts/chaney-ultraextended-webfont.woff2') format('woff2'),
+		url('/fonts/chaney-ultraextended-webfont.woff') format('woff'),
+		url('/fonts/chaney-ultraextended-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$primary-font: 'ClashDisplay-Variable', sans-serif;
+$bold-font: 'chaneyultra_extended', sans-serif;
+
+// ----LIST----
+$colors: (
+	'primary': $primary,
+	'secondary': $secondary,
+	'dark': $dark,
+	'white': $white,
+);
+
+$fonts: (
+	'primary': $primary-font,
+	'fontbold': $bold-font,
+);
+
+// ----functions----
+
+@each $font, $value in $fonts {
+	.font-#{$font} {
+		font-family: $value;
+	}
+}
