@@ -1,14 +1,23 @@
-@import './variable';
+@import "./variable";
 
-* {
-	font-family: $primary-font;
-	color: $secondary;
+body {
+  font-family: $primary-font;
+  color: $secondary;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
-	font-family: $bold-font;
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: $bold-font;
+}
+
+p {
+  font-family: $primary-font;
 }

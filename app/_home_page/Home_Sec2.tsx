@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Art2 from "@/public/art2.png";
@@ -13,11 +14,11 @@ export default function Section2() {
       }}
     >
       <div className="container">
-        <h2 className="mb-4 text-center">Kohotobyo</h2>
+        <h2 className="mb-4 text-center text-primary">Kohotobyo</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {/* column 1 */}
+          {/*column 1 */}
           <div className="my-auto">
-            <p className="text-right text-sm">
+            <p className="text-sm md:text-right">
               This portrait of Kohotobyo is done in the style of Jamini Roy, one
               of India&apos;s most celebrated artists. Roy was known for his
               bold, minimalist style and his focus on painting everyday people.
@@ -41,7 +42,7 @@ export default function Section2() {
             </div>
           </div>
 
-          {/* Column 3 */}
+          {/* INFO: Column 3 */}
           <div className="mt-6 md:my-auto">
             <p className="text-sm">
               The use of bold colors and simple shapes is characteristic of
