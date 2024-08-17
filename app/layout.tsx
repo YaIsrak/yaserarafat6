@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import "@/styles/globals.css";
@@ -36,6 +37,7 @@ export default function RootLayout({
         >
           <Navbar />
           <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

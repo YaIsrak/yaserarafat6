@@ -3,6 +3,7 @@ import HeroSection from "./_home_page/HeroSection";
 import Home_Sec1 from "./_home_page/Home_Sec1";
 import Home_Sec2 from "./_home_page/Home_Sec2";
 import Home_Sec4 from "./_home_page/Home_Sec4";
+import Home_Sec5 from "./_home_page/Home_Sec5";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Home_Sec1 />
       <Home_Sec2 />
       <Home_Sec4 />
+      <Home_Sec5 />
     </>
   );
 }

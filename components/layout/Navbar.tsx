@@ -7,12 +7,13 @@ import Logo from "@/public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
-import CustomLink from "../ui/link";
 
 export default function Navbar() {
   const scolled = useScroll(30);
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
     <nav
@@ -29,7 +30,7 @@ export default function Navbar() {
           <Image src={Logo} width={100} alt={"logo"} placeholder="blur" />
         </Link>
 
-        <Dialog>
+        <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger>
             {/* hamburger */}
             <div className="group flex size-10 items-center justify-center rounded-full bg-foreground/0 transition hover:bg-foreground/20">
@@ -42,14 +43,17 @@ export default function Navbar() {
           <DialogContent className="z-[100] border-none bg-transparent">
             <div className="group flex flex-col items-center justify-center transition">
               {navlinks.map((link, i) => (
-                <CustomLink
+                <Link
                   key={i}
                   href={link.href}
-                  className="text-4xl"
-                  isActive={pathname === link.href}
+                  className={cn(
+                    "font-fontbold text-4xl transition hover:text-secondary",
+                    pathname === link.href ? "text-primary" : "text-muted",
+                  )}
+                  onClick={() => setOpen(false)}
                 >
                   {link.name}
-                </CustomLink>
+                </Link>
               ))}
             </div>
           </DialogContent>

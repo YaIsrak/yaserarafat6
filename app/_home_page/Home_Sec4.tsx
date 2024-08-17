@@ -26,7 +26,7 @@ export default function Home_Sec4() {
           </div>
           <div className="my-auto">
             <div className="md:ml-6">
-              <h1 className="">Spirited Away: Chihiro</h1>
+              <h1 className="text-primary">Spirited Away: Chihiro</h1>
               <p className="mt-4">
                 This fanart of <span className="text-primary">Chihiro</span>{" "}
                 from <span className="text-primary">Spirited Away</span> depicts
