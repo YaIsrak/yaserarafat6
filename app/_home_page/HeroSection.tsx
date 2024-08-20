@@ -12,13 +12,13 @@ export default function HeroSection() {
       <div className="container space-y-6 text-center">
         {/* Images */}
         <BlurFade className="flex justify-center">
-          <div className="relative -right-14 aspect-[4/5] h-40 -rotate-12">
+          <div className="relative -right-14 aspect-[4/5] h-36 -rotate-12 md:h-40">
             <Image src={Art1} alt="art1" fill className="rounded-3xl" />
           </div>
-          <div className="relative aspect-[4/5] h-40">
+          <div className="relative aspect-[4/5] h-36 md:h-40">
             <Image src={Art2} alt="art" fill className="rounded-3xl" />
           </div>
-          <div className="relative right-14 -z-10 aspect-[4/5] h-40 rotate-12">
+          <div className="relative right-14 -z-10 aspect-[4/5] h-36 rotate-12 md:h-40">
             <Image src={Art3} alt="art" fill className="rounded-3xl" />
           </div>
         </BlurFade>
