@@ -1,4 +1,4 @@
-import Art5 from "@/public/art5.png";
+import Art5 from "@/public/art5.jpg";
 import Image from "next/image";
 
 export default function Home_Sec4() {

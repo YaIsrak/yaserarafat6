@@ -1,7 +1,7 @@
 "use client";
 
 // Art
-import Art4 from "@/public/art4.png";
+import Art4 from "@/public/art4.jpg";
 import Image from "next/image";
 
 export default function Home_Sec1() {

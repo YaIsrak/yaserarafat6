@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import Art2 from "@/public/art2.png";
+import Art2 from "@/public/art2.jpg";
 import Image from "next/image";
 
 export default function Section2() {

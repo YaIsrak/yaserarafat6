@@ -1,8 +1,8 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
-import Art1 from "@/public/art1.png";
-import Art2 from "@/public/art2.png";
-import Art3 from "@/public/art3.png";
+import Art1 from "@/public/Art1.jpg";
+import Art2 from "@/public/art2.jpg";
+import Art3 from "@/public/art3.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
