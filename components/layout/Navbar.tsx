@@ -8,7 +8,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog";
 
 export default function Navbar() {
   const scolled = useScroll(30);
@@ -40,7 +45,11 @@ export default function Navbar() {
               </div>
             </div>
           </DialogTrigger>
-          <DialogContent className="z-[100] border-none bg-transparent">
+          <DialogContent
+            className="z-[100] border-none bg-transparent"
+            aria-describedby="navmanu"
+          >
+            <DialogTitle></DialogTitle>
             <div className="group flex flex-col items-center justify-center transition">
               {navlinks.map((link, i) => (
                 <Link

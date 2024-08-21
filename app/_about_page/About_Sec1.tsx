@@ -23,6 +23,7 @@ export default function About_Sec1() {
               src={pp}
               alt="art1"
               className="size-36 rounded-full md:size-56"
+              placeholder="blur"
               width={200}
               height={200}
             />

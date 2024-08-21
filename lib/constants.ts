@@ -24,7 +24,7 @@ export const navlinks: {
   },
   {
     name: "Contact",
-    href: "/contact",
+    href: "https://bento.me/israk",
   },
 ];
 

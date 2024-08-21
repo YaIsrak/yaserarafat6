@@ -9,30 +9,49 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section className="section flex h-screen items-center justify-center">
-      <div className="container space-y-6 text-center">
+      <div className="container space-y-4 text-center md:space-x-6">
         {/* Images */}
         <BlurFade className="flex justify-center">
           <div className="relative -right-14 aspect-[4/5] h-36 -rotate-12 md:h-40">
-            <Image src={Art1} alt="art1" fill className="rounded-3xl" />
+            <Image
+              src={Art1}
+              alt="art1"
+              fill
+              className="rounded-3xl"
+              placeholder="blur"
+            />
           </div>
           <div className="relative aspect-[4/5] h-36 md:h-40">
-            <Image src={Art2} alt="art" fill className="rounded-3xl" />
+            <Image
+              src={Art2}
+              alt="art"
+              fill
+              className="rounded-3xl"
+              placeholder="blur"
+            />
           </div>
           <div className="relative right-14 -z-10 aspect-[4/5] h-36 rotate-12 md:h-40">
-            <Image src={Art3} alt="art" fill className="rounded-3xl" />
+            <Image
+              src={Art3}
+              alt="art"
+              fill
+              className="rounded-3xl"
+              placeholder="blur"
+            />
           </div>
         </BlurFade>
 
         {/* Welcome text */}
         <BlurFade inView delay={0.1}>
-          <h2>
+          <h2 className="text-xl md:text-4xl">
             <div className="flex items-center justify-center gap-2">
               <Image
                 src={Art2}
                 alt="art2"
                 width={30}
                 height={40}
-                className="-rotate-12 rounded-xl"
+                placeholder="blur"
+                className="hidden -rotate-12 rounded-xl md:block"
               />
               <span className="font-fontbold">Designing</span>{" "}
               <span className="font-fontbold">Designing</span>
@@ -44,7 +63,8 @@ export default function HeroSection() {
                 alt="art2"
                 width={30}
                 height={40}
-                className="rotate-12 rounded-xl"
+                placeholder="blur"
+                className="hidden rotate-12 rounded-xl md:block"
               />
               <span className="font-fontbold">Reality</span>
             </div>
@@ -52,12 +72,12 @@ export default function HeroSection() {
         </BlurFade>
 
         {/* small text */}
-        <BlurFade className="text-sm tracking-wider" delay={0.2}>
+        <BlurFade className="text-xs tracking-wider md:text-sm" delay={0.2}>
           Discover My Journey in Art and Web Development
         </BlurFade>
 
         {/* description */}
-        <BlurFade className="text-base md:text-lg" inView delay={0.3}>
+        <BlurFade className="text-sm md:text-lg" inView delay={0.3}>
           Hi, I&apos;m <span className="font-fontbold text-primary">Israk</span>{" "}
           an <span className="text-primary">illustrator</span> and{" "}
           <span className="text-primary">web developer</span> with a passion for
