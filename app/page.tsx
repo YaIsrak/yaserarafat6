@@ -12,7 +12,7 @@ export default function Home() {
       <VelocityScroll
         text=" Selected Works "
         default_velocity={2}
-        className="h1 text-4xl text-primary md:text-7xl"
+        className="h1 text-4xl md:text-7xl"
       />
       <Home_Sec1 />
       <Home_Sec2 />

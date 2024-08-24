@@ -8,7 +8,9 @@ export default function About_Sec1() {
       <div className="container">
         <BlurFade className="flex gap-4 md:gap-12" inView>
           <div className="flex-1 space-y-4">
-            <h3 className="text-primary">MD Yaser Arafat Isak</h3>
+            <h3 className="text-secondary">
+              MD Yaser Arafat <span className="text-primary">Israk</span>
+            </h3>
             <p className="text-xs tracking-widest text-muted-foreground md:text-sm">
               A BANGLADESH BASED ARTIST, WEB DEVELOPER & ILLUSTRATOR
               SPECIALIZING IN BRANDING AND ILLUSTRATION. I LOVE CREATING BOLD

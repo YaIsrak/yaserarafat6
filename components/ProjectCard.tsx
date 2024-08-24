@@ -52,7 +52,7 @@ export default function ProjectCard({
       </CardContent>
 
       <CardFooter>
-        <div className="flex-warp flex flex-row items-start gap-4">
+        <div className="flex-warp flex flex-col items-start gap-4">
           <CustomLink
             href={url}
             target="_blank"
