@@ -1,4 +1,3 @@
-import CustomCursor from "@/components/CustomCursor";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -39,7 +38,6 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
-          <CustomCursor />
         </ThemeProvider>
       </body>
     </html>

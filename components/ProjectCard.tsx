@@ -35,7 +35,9 @@ export default function ProjectCard({
 
       {/* Titlee */}
       <CardHeader>
-        <CardTitle className="text-base text-primary">{title}</CardTitle>
+        <CardTitle className="text-base tracking-wide text-primary">
+          {title}
+        </CardTitle>
       </CardHeader>
 
       {/* Content */}
