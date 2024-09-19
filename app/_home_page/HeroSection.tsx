@@ -50,7 +50,6 @@ export default function HeroSection() {
                 alt="art2"
                 width={30}
                 height={40}
-                placeholder="blur"
                 className="hidden -rotate-12 rounded-xl md:block"
               />
               <span className="font-fontbold">Designing</span>{" "}
@@ -63,7 +62,6 @@ export default function HeroSection() {
                 alt="art2"
                 width={30}
                 height={40}
-                placeholder="blur"
                 className="hidden rotate-12 rounded-xl md:block"
               />
               <span className="font-fontbold">Reality</span>
