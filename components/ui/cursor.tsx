@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { cn } from "@/lib/utils";
 import {
@@ -62,6 +63,7 @@ export function Cursor({
     return () => {
       document.removeEventListener("mousemove", updatePosition);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cursorX, cursorY, onPositionChange]);
 
   const cursorXSpring = useSpring(cursorX, springConfig || { duration: 0 });

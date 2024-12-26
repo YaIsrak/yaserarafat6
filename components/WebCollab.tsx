@@ -1,9 +1,12 @@
-import client from "@/lib/client";
+import { getWeb } from "@/lib/queries";
 import { WebDesignProps } from "@/type.typing";
 import ProjectCard from "./ProjectCard";
 
+export const revalidate = 0;
+
 export default async function WebCollab() {
-  const { res } = await getData();
+  const res = await getWeb();
+
   return (
     <div className="grid-cols- mx-auto grid grid-cols-2 gap-3 md:grid-cols-3">
       {res?.map((data: WebDesignProps) => (
@@ -12,17 +15,3 @@ export default async function WebCollab() {
     </div>
   );
 }
-
-async function getData() {
-  const res = await client.fetch(
-    `*[_type == 'web']{
-			...,
-			"mainImageUrl": mainImage.asset->{url},
-			technology[]->
-		}`,
-  );
-
-  return { res, revalidate: 86400 };
-}
-
-export const dynamic = "force-dynamic";
