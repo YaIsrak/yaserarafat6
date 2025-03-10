@@ -3,8 +3,6 @@
 import { navlinks } from '@/lib/constants';
 import useScroll from '@/lib/hooks/useScroll';
 import { cn } from '@/lib/utils';
-import Logo from '@/public/images/logo.png';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -33,12 +31,7 @@ export default function Navbar() {
 				<Link
 					href={'/'}
 					className='flex-1'>
-					<Image
-						src={Logo}
-						width={100}
-						alt={'logo'}
-						placeholder='blur'
-					/>
+					<h3 className='text-2xl text-primary'>ISRAK</h3>
 				</Link>
 
 				<Dialog
@@ -46,10 +39,10 @@ export default function Navbar() {
 					onOpenChange={setOpen}>
 					<DialogTrigger>
 						{/* hamburger */}
-						<div className='group flex size-10 items-center justify-center rounded-full bg-foreground/0 transition hover:bg-foreground/20'>
+						<div className='group flex size-10 items-center justify-center rounded-full bg-secondary/0 transition hover:bg-secondary/20'>
 							<div className='space-y-1'>
-								<div className='h-0.5 w-4 rounded-full bg-foreground' />
-								<div className='h-0.5 w-3 rounded-full bg-foreground' />
+								<div className='h-0.5 w-4 rounded-full bg-secondary' />
+								<div className='h-0.5 w-3 rounded-full bg-secondary' />
 							</div>
 						</div>
 					</DialogTrigger>
@@ -63,7 +56,7 @@ export default function Navbar() {
 									key={i}
 									href={link.href}
 									className={cn(
-										'font-fontbold text-4xl transition hover:text-secondary',
+										'font-chaney text-4xl transition hover:text-secondary',
 										pathname === link.href
 											? 'text-primary'
 											: 'text-muted',

@@ -1,9 +1,13 @@
-import { Button } from '@/components/ui/button';
-
+import { Suspense } from 'react';
+import Hero from './_components/Hero';
+import Projects_sec from './_components/Projects_sec';
 export default function Home() {
 	return (
 		<>
-			<Button>Button</Button>
+			<Hero />
+			<Suspense>
+				<Projects_sec />
+			</Suspense>
 		</>
 	);
 }
