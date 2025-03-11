@@ -19,8 +19,8 @@ export const navlinks: {
 		href: '/about',
 	},
 	{
-		name: 'Porfolio',
-		href: '/portfolio',
+		name: 'Artworks',
+		href: '/artworks',
 	},
 	{
 		name: 'Contact',

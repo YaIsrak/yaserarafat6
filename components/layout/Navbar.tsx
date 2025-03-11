@@ -3,6 +3,7 @@
 import { navlinks } from '@/lib/constants';
 import useScroll from '@/lib/hooks/useScroll';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -12,7 +13,6 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from '../ui/dialog';
-
 export default function Navbar() {
 	const scolled = useScroll(30);
 	const pathname = usePathname();
@@ -26,12 +26,15 @@ export default function Navbar() {
 					? 'border-b border-muted-foreground/30 bg-background/60 backdrop-blur-xl'
 					: 'bg-background/0',
 			)}>
-			<div className='container flex h-16 items-center justify-center'>
+			<div className='container flex h-16 items-center justify-between'>
 				{/* logo */}
-				<Link
-					href={'/'}
-					className='flex-1'>
-					<h3 className='text-2xl text-primary'>ISRAK</h3>
+
+				<Link href={'/'}>
+					<motion.h3
+						whileTap={{ scale: 0.9 }}
+						className='text-2xl text-primary'>
+						ISRAK
+					</motion.h3>
 				</Link>
 
 				<Dialog

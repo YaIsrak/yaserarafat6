@@ -1,6 +1,7 @@
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
 import { ThemeProvider } from '@/components/theme-provider';
+import { SanityLive } from '@/sanity/lib/live';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
@@ -55,6 +56,8 @@ export default function RootLayout({
 					<Footer />
 				</ThemeProvider>
 			</body>
+
+			<SanityLive />
 		</html>
 	);
 }
