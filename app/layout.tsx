@@ -1,5 +1,3 @@
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
 import { ThemeProvider } from '@/components/theme-provider';
 import { SanityLive } from '@/sanity/lib/live';
 import type { Metadata } from 'next';
@@ -51,9 +49,7 @@ export default function RootLayout({
 					defaultTheme='dark'
 					enableSystem
 					disableTransitionOnChange>
-					<Navbar />
-					<main>{children}</main>
-					<Footer />
+					{children}
 				</ThemeProvider>
 			</body>
 
