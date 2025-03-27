@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
+import BottomAnimation from '../BottomAnimation';
 import MenuIcon from '../menu-icon';
 import { VariableFontHover } from '../ui/variable-font-hover';
 
@@ -15,7 +16,7 @@ export default function Navbar() {
 	return (
 		<nav
 			className={cn(
-				'sticky top-0 left-0 w-full  border-muted-foreground/20 backdrop-blur-sm text-white md:text-dark transition ease-[cubic-bezier(1,0,0,1)] duration-500 md:bg-transparent md:backdrop-blur-none md:mix-blend-difference',
+				'fixed top-0 left-0 w-full border-muted-foreground/20 backdrop-blur-sm text-white md:text-white transition ease-[cubic-bezier(1,0,0,1)] duration-500 md:bg-transparent md:backdrop-blur-none z-50',
 				isOpen ? 'bg-dark/90 rounded-b-3xl' : 'bg-dark/25 rounded-b-none',
 			)}>
 			<div className='container mx-auto px-2 md:px-0 grid grid-cols-4 py-4 md:py-2 items-center'>
@@ -34,6 +35,7 @@ export default function Navbar() {
 							href={href}
 							className='uppercase text-xs font-medium'
 							label={name}
+							borderClassName='bg-white'
 						/>
 					))}
 				</div>
@@ -43,7 +45,7 @@ export default function Navbar() {
 						href='#contact'
 						className='text-xs font-semibold'
 						label={'Contact'}
-						borderClassName='bg-primary'
+						borderClassName='bg-white'
 					/>
 				</div>
 
@@ -100,38 +102,20 @@ export function NavLink({
 	className?: string;
 	borderClassName?: string;
 }) {
-	const [isHovered, setIsHovered] = useState(false);
 	const pathname = usePathname();
 
 	const isActive = pathname === href;
 
 	return (
-		<div
-			className='relative'
-			onMouseEnter={() => setIsHovered(true)}
-			onMouseLeave={() => setIsHovered(false)}>
+		<BottomAnimation
+			isActive={isActive}
+			className={borderClassName}>
 			<Link
 				href={href}
 				className={cn('relative uppercase', className)}>
 				{label}
-				<motion.div
-					className={cn(
-						'absolute left-0 -bottom-1 h-0.5 bg-dark w-full',
-
-						borderClassName,
-					)}
-					initial={{ scaleX: 0, transformOrigin: 'left' }}
-					animate={{
-						scaleX: isActive || isHovered ? 1 : 0,
-						transformOrigin: isHovered ? 'left' : 'right',
-					}}
-					transition={{
-						duration: 0.5,
-						ease: [1, 0, 0, 1],
-					}}
-				/>
 			</Link>
-		</div>
+		</BottomAnimation>
 	);
 }
 
