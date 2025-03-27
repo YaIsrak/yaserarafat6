@@ -6,6 +6,7 @@
 
 @theme inline {
 	--color-background: var(--background);
+	--color-dark: var(--dark);
 	--color-foreground: var(--foreground);
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
@@ -46,14 +47,13 @@
 }
 
 @theme {
-	--font-clash-display: var(--font-clash-display);
-	--font-chaney: var(--font-chaney);
-
+	--font-instrument: var(--font-instrument);
 	--radius: 0.5rem;
 }
 
 :root {
 	--background: hsl(0, 0%, 100%);
+	--dark: #0e0e0e;
 	--foreground: hsl(240, 10%, 3.9%);
 	--card: hsl(0, 0%, 100%);
 	--card-foreground: hsl(240, 10%, 3.9%);

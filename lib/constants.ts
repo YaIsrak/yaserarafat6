@@ -11,20 +11,16 @@ export const navlinks: {
 	href: string;
 }[] = [
 	{
-		name: 'Home',
-		href: '/',
+		name: 'Projects',
+		href: '/projects',
 	},
 	{
 		name: 'About',
 		href: '/about',
 	},
 	{
-		name: 'Artworks',
-		href: '/artworks',
-	},
-	{
-		name: 'Contact',
-		href: 'https://bento.me/israk',
+		name: 'Resume',
+		href: '#contact',
 	},
 ];
 

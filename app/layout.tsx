@@ -1,6 +1,15 @@
+import { cn } from '@/lib/utils';
 import { SanityLive } from '@/sanity/lib/live';
 import type { Metadata } from 'next';
+import { Instrument_Serif, Inter } from 'next/font/google';
 import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+const instrument = Instrument_Serif({
+	subsets: ['latin'],
+	weight: '400',
+	variable: '--font-instrument',
+});
 
 export const metadata: Metadata = {
 	title: {
@@ -25,7 +34,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html suppressHydrationWarning>
-			<body className={``}>{children}</body>
+			<body className={cn(inter.className, instrument.variable)}>
+				{children}
+			</body>
 
 			<SanityLive />
 		</html>
