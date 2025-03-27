@@ -1,16 +1,11 @@
-import { Loader2 } from 'lucide-react';
-import { Suspense } from 'react';
-import AboutMe from './_components/AboutMe';
-import Hero from './_components/Hero';
-import Projects_sec from './_components/Projects_sec';
 export default function Home() {
 	return (
 		<>
-			<Hero />
-			<Suspense fallback={<Loader2 className='animate-spin size-4' />}>
-				<Projects_sec />
-			</Suspense>
-			<AboutMe />
+			<h1>sdsjdh</h1>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam,
+			corporis iusto cumque blanditiis animi earum odio tenetur, explicabo
+			rerum veniam. Blanditiis nisi voluptate deserunt aspernatur fugiat
+			totam quis tenetur.
 		</>
 	);
 }

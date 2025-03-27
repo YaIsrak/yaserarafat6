@@ -1,23 +1,6 @@
-import { ThemeProvider } from '@/components/theme-provider';
 import { SanityLive } from '@/sanity/lib/live';
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 import './globals.css';
-
-// const geistSans = Geist({
-// 	variable: '--font-geist-sans',
-// 	subsets: ['latin'],
-// });
-
-const ClashDisplay = localFont({
-	src: '../public/fonts/ClashDisplay-Variable.ttf',
-	variable: '--font-clash-display',
-});
-
-const Chaney = localFont({
-	src: '../public/fonts/chaney-ultraextended-webfont.ttf',
-	variable: '--font-chaney',
-});
 
 export const metadata: Metadata = {
 	title: {
@@ -25,7 +8,7 @@ export const metadata: Metadata = {
 		template: `%s | Israk`,
 	},
 	description:
-		'MD Yaser arafat israk, digital artist of Chittagong, Bangladesh',
+		'A Bangladesh-based web developer specializing in modern, high-performance websites. I focus on building sleek, interactive, and user-friendly web experiences using Next.js, React, and Tailwind CSS. Passionate about clean code, seamless UX, and innovative web solutions.',
 	robots: {
 		follow: true,
 		index: true,
@@ -42,16 +25,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html suppressHydrationWarning>
-			<body
-				className={`${ClashDisplay.variable} ${Chaney.variable} font-clash-display`}>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='dark'
-					enableSystem
-					disableTransitionOnChange>
-					{children}
-				</ThemeProvider>
-			</body>
+			<body className={``}>{children}</body>
 
 			<SanityLive />
 		</html>

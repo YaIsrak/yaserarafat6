@@ -1,6 +1,3 @@
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
-
 export default function RootLayout({
 	children,
 }: {
@@ -8,9 +5,7 @@ export default function RootLayout({
 }) {
 	return (
 		<>
-			<Navbar />
 			<main>{children}</main>
-			<Footer />
 		</>
 	);
 }
