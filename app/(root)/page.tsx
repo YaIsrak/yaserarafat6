@@ -1,4 +1,4 @@
-import GridLines from '@/components/GridLines';
+import GridLines from '@/components/ui/GridLines';
 import HeroSection from './_components/hero-section';
 import Projects from './_components/Projects';
 

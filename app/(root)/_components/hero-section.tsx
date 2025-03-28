@@ -1,5 +1,5 @@
-import BottomAnimation from '@/components/BottomAnimation';
-import GredientMeshImage from '@/components/GredientMeshImage';
+import BottomAnimation from '@/components/ui/BottomAnimation';
+import GredientMeshImage from '@/components/ui/GredientMeshImage';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 

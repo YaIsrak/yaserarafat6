@@ -6,8 +6,8 @@ import { motion } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
-import BottomAnimation from '../BottomAnimation';
-import MenuIcon from '../menu-icon';
+import BottomAnimation from '../ui/BottomAnimation';
+import MenuIcon from '../ui/menu-icon';
 import { VariableFontHover } from '../ui/variable-font-hover';
 
 export default function Navbar() {
