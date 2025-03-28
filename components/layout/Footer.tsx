@@ -8,7 +8,9 @@ import GridLines from '../ui/GridLines';
 export default function Footer() {
 	return (
 		<>
-			<footer className='relative bg-dark text-white'>
+			<footer
+				className='relative bg-dark text-white'
+				id='contact'>
 				<GredientMeshImage className='-translate-y-1/2  z-[10]' />
 				<div className='container mx-auto px-2 md:px-0 py-[10vmin] relative z-20'>
 					<h1 className=' text-center font-bold text-[clamp(3rem,15vw,15rem)] whitespace-nowrap'>

@@ -2,7 +2,9 @@
 
 import { navlinks } from '@/lib/constants';
 import { cn } from '@/lib/utils';
+import PP from '@/public/pp.png';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
@@ -20,7 +22,16 @@ export default function Navbar() {
 				isOpen ? 'bg-dark/90 rounded-b-3xl' : 'bg-dark/25 rounded-b-none',
 			)}>
 			<div className='container mx-auto px-2 md:px-0 grid grid-cols-4 py-4 md:py-2 items-center'>
-				<Link href='/'>
+				<Link
+					href='/'
+					className='group flex items-center gap-0 transition'>
+					<div className='relative size-0 group-hover:size-4 group-hover:mr-2 transition-all ease-[cubic-bezier(1,0,0,1)]'>
+						<Image
+							src={PP}
+							alt='Yaser Arafat'
+							placeholder='blur'
+						/>
+					</div>
 					<VariableFontHover
 						label='ISRAK'
 						className='font-semibold text-sm'
