@@ -4,10 +4,13 @@ import Link from 'next/link';
 export default function AboutSection() {
 	return (
 		<section
-			className='relative z-10 py-[10vmin]'
+			className='relative z-20'
 			id='projects'>
-			<div className='container mx-auto px-2 md:px-0'>
-				<h1 className='text-8xl md:text-9xl font-bold tracking-tight break-words'>
+			<div className='container mx-auto px-2 md:px-0 py-[10vmin] pb-[40vmin]'>
+				{/* <h1 className='text-8xl md:text-9xl font-bold tracking-tight break-words'>
+					About me
+				</h1> */}
+				<h1 className='text-[clamp(3rem,18vw,20rem)] font-bold text-center tracking-tight break-words'>
 					About me
 				</h1>
 

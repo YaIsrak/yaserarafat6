@@ -7,7 +7,7 @@ export default function HeroSection() {
 	return (
 		<section className='bg-dark text-white'>
 			<div className='w-full h-screen relative z-10 py-36 flex flex-col justify-between container mx-auto px-2 md:px-0'>
-				<h1 className='text-6xl md:text-[16vmin] font-bold uppercase tracking-tight leading-[0.85] break-words'>
+				<h1 className='text-[clamp(4rem,11vw,15rem)] font-bold uppercase tracking-tight leading-[0.85] break-words'>
 					Yaser Arafat <br /> Israk
 				</h1>
 				<div className='grid grid-cols-4 space-y-8'>

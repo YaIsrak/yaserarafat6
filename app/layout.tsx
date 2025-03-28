@@ -34,7 +34,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html suppressHydrationWarning>
-			<body className={cn(inter.className, instrument.variable)}>
+			<body
+				className={cn(
+					inter.className,
+					instrument.variable,
+					'bg-white relative',
+				)}>
 				{children}
 			</body>
 

@@ -15,8 +15,8 @@ export default async function Projects() {
 			className='relative z-10 py-[10vmin]'
 			id='projects'>
 			<div className='container mx-auto px-2 md:px-0'>
-				<h1 className='text-8xl md:text-9xl font-bold tracking-tight break-words'>
-					Selected <br /> Works
+				<h1 className='text-[clamp(3rem,12vw,13rem)] text-center font-bold tracking-tight break-words'>
+					Selected Works
 				</h1>
 
 				<div className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-5 gap-4'>

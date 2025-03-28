@@ -26,6 +26,14 @@ export const navlinks: {
 
 export const SocialLinks: { name: string; link: string }[] = [
 	{
+		name: 'LinkedIn',
+		link: 'https://www.linkedin.com/in/israk',
+	},
+	{
+		name: 'Github',
+		link: 'https://www.github.com/yaisrak',
+	},
+	{
 		name: 'Facebook',
 		link: 'https://www.facebook.com/yaser.arafat.israk',
 	},
