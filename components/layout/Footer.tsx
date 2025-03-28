@@ -18,8 +18,10 @@ export default function Footer() {
 					<div className='mt-20 mb-20'>
 						<div className='w-full h-0.5 bg-white/20 mb-8' />
 
-						<div className='grid grid-cols-4'>
-							<h1 className='text-8xl font-bold col-span-2'>ISRAK</h1>
+						<div className='grid grid-cols-1 md:grid-cols-4'>
+							<h1 className='text-8xl font-bold col-span-2 mb-8'>
+								ISRAK
+							</h1>
 
 							<ul className='space-y-2'>
 								{SocialLinks.map(({ name, link }) => (
@@ -60,7 +62,7 @@ export default function Footer() {
 					<div className='grid grid-cols-4'>
 						<div className='col-span-2' />
 
-						<div className='flex text-xs items-center justify-between'>
+						<div className='flex text-xs items-center justify-between col-span-2'>
 							<p>Bangladesh</p>
 							<Clock />
 						</div>

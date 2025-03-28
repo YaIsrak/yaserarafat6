@@ -6,9 +6,9 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 const instrument = Instrument_Serif({
-	subsets: ['latin'],
 	weight: '400',
 	variable: '--font-instrument',
+	style: ['italic'],
 });
 
 export const metadata: Metadata = {

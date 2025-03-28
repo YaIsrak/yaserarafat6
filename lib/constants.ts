@@ -55,9 +55,8 @@ export const experiences: {
 		name: 'Volunteer For Bangladesh',
 		post: 'Cartoonist',
 		location: 'Chittagong - Bangladesh',
-		time: '2023 - now',
+		time: '2023 - 2024',
 		link: 'https://vbd.com.bd',
-		image: 'https://cdn-kglbn.nitrocdn.com/oOhrYApIszkdlZdjSPGZIeZCLeFOFrfa/assets/images/optimized/rev-e4bf454/vbd.com.bd/wp-content/uploads/2023/08/VBD_logo.png',
 	},
 	{
 		name: 'Opputunity for Kids',
@@ -65,7 +64,6 @@ export const experiences: {
 		location: 'Chittagong - Bangladesh',
 		time: '2020 - 2023',
 		link: 'https://www.ofkbd.com',
-		image: 'https://www.ofkbd.com/wp-content/uploads/2023/08/OFK-New-Logo-DT@4x-e1693072540315-768x518.png',
 	},
 	{
 		name: 'Originative 360',
@@ -73,7 +71,6 @@ export const experiences: {
 		location: 'Chittagong - Bangladesh',
 		time: '2020 - 2022',
 		link: 'http://originative360.com',
-		image: '',
 	},
 ];
 
