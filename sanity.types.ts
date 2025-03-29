@@ -96,6 +96,7 @@ export type Web = {
   _rev: string;
   title?: string;
   slug?: Slug;
+  featured?: boolean;
   mainImage?: {
     asset?: {
       _ref: string;
@@ -266,7 +267,7 @@ export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./sanity/lib/queries.ts
 // Variable: WEB_DESIGN_QUERY
-// Query: *[_type == 'web']{          ...,          "mainImageUrl": mainImage.asset->{url},          technology[]->        }
+// Query: *[_type == 'web' ]{          ...,          "mainImageUrl": mainImage.asset->{url},          technology[]->        }
 export type WEB_DESIGN_QUERYResult = Array<{
   _id: string;
   _type: "web";
@@ -275,6 +276,84 @@ export type WEB_DESIGN_QUERYResult = Array<{
   _rev: string;
   title?: string;
   slug?: Slug;
+  featured?: boolean;
+  mainImage?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  url?: string;
+  github?: string;
+  technology: Array<{
+    _id: string;
+    _type: "technology";
+    _createdAt: string;
+    _updatedAt: string;
+    _rev: string;
+    image?: {
+      asset?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+      };
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: "image";
+    };
+    name?: string;
+  }> | null;
+  description?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
+    listItem?: "bullet";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  } | {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+    _key: string;
+  }>;
+  mainImageUrl: {
+    url: string | null;
+  } | null;
+}>;
+// Variable: FEATURED_WEB_QUERY
+// Query: *[_type == 'web' && featured == true]{                ...,                "mainImageUrl": mainImage.asset->{url},                technology[]->              }
+export type FEATURED_WEB_QUERYResult = Array<{
+  _id: string;
+  _type: "web";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  featured?: boolean;
   mainImage?: {
     asset?: {
       _ref: string;
@@ -346,6 +425,7 @@ export type WEB_DESIGN_QUERYResult = Array<{
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[_type == 'web']{\n          ...,\n          \"mainImageUrl\": mainImage.asset->{url},\n          technology[]->\n        }": WEB_DESIGN_QUERYResult;
+    "*[_type == 'web' ]{\n          ...,\n          \"mainImageUrl\": mainImage.asset->{url},\n          technology[]->\n        }": WEB_DESIGN_QUERYResult;
+    "*[_type == 'web' && featured == true]{\n                ...,\n                \"mainImageUrl\": mainImage.asset->{url},\n                technology[]->\n              }": FEATURED_WEB_QUERYResult;
   }
 }

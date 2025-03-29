@@ -23,6 +23,12 @@ export default defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
+			name: 'featured',
+			title: 'Featured',
+			type: 'boolean',
+			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
 			name: 'mainImage',
 			title: 'Main image',
 			type: 'image',
@@ -56,6 +62,10 @@ export default defineType({
 			type: 'blockContent',
 		}),
 	],
+
+	initialValue: {
+		featured: false,
+	},
 
 	preview: {
 		select: {

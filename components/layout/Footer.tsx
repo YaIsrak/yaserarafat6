@@ -57,6 +57,7 @@ export default function Footer() {
 						</div>
 					</div>
 				</div>
+				<GridLines className='z-10' />
 			</footer>
 
 			<footer className='fixed bottom-5 w-full text-white z-[50] mix-blend-exclusion'>
@@ -73,7 +74,6 @@ export default function Footer() {
 			</footer>
 
 			{/* */}
-			<GridLines />
 		</>
 	);
 }

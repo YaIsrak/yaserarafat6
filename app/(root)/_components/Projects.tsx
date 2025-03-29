@@ -1,13 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { WEB_DESIGN_QUERYResult } from '@/sanity.types';
+import { FEATURED_WEB_QUERYResult } from '@/sanity.types';
 import { sanityFetch } from '@/sanity/lib/live';
-import { WEB_DESIGN_QUERY } from '@/sanity/lib/queries';
+import { FEATURED_WEB_QUERY } from '@/sanity/lib/queries';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default async function Projects() {
 	const { data } = await sanityFetch({
-		query: WEB_DESIGN_QUERY,
+		query: FEATURED_WEB_QUERY,
 	});
 
 	return (
@@ -20,7 +20,7 @@ export default async function Projects() {
 				</h1>
 
 				<div className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-5 gap-4'>
-					{data.map((project, i) => (
+					{data.map((project, i: number) => (
 						<ProjectCard
 							key={project._id}
 							i={i}
@@ -46,7 +46,7 @@ function ProjectCard({
 	project,
 	i,
 }: {
-	project: WEB_DESIGN_QUERYResult[0];
+	project: FEATURED_WEB_QUERYResult[0];
 	i: number;
 }) {
 	const isEvenRow = Math.floor(i / 2) % 2 === 0;

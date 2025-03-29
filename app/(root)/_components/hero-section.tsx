@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
 	return (
-		<section className='bg-dark text-white'>
+		<section className='bg-dark text-white relative'>
 			<div className='w-full h-screen relative z-10 py-36 flex flex-col justify-between container mx-auto px-2 md:px-0'>
 				<h1 className='text-[clamp(4rem,11vw,15rem)] font-bold uppercase tracking-tight leading-[0.85] break-words'>
 					Yaser Arafat <br /> Israk
@@ -39,6 +39,7 @@ export default function HeroSection() {
 					</div>
 				</div>
 				<GredientMeshImage />
+				{/* <GradientTransition height={100} /> */}
 			</div>
 		</section>
 	);
