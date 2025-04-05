@@ -27,7 +27,7 @@ export default async function Projects() {
 				</TextAnimate>
 
 				<div className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-5 gap-4'>
-					{data.map((project, i: number) => (
+					{data.map((project: FEATURED_WEB_QUERYResult[0], i: number) => (
 						<ProjectCard
 							key={project._id}
 							i={i}

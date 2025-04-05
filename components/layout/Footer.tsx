@@ -49,6 +49,16 @@ export default function Footer() {
 										</BottomAnimation>
 									</div>
 								))}
+
+								<div className='w-fit'>
+									<BottomAnimation className='bg-white h-px'>
+										<Link
+											href={'/blog'}
+											className='text-sm flex items-center gap-1'>
+											Blogs
+										</Link>
+									</BottomAnimation>
+								</div>
 							</BlurFade>
 
 							<BlurFade
