@@ -3,7 +3,7 @@ import { experiences } from '@/lib/constants';
 
 export default function ExperineceSection() {
 	return (
-		<section className='pt-[20vmin]'>
+		<section className='pt-[20vmin] pb-[20vmin]'>
 			<div className='container mx-auto px-2 md:px-0'>
 				<div className='w-full h-px bg-muted-foreground/50 mb-8' />
 				<BlurFade>

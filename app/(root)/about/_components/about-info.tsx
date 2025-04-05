@@ -1,8 +1,10 @@
 import { TextAnimate } from '@/components/magicui/text-animate';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
+import { resumeLink } from '@/lib/constants';
 import PP from '@/public/israkpp.jpeg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AboutInfo() {
 	return (
@@ -13,10 +15,10 @@ export default function AboutInfo() {
 						<BlurFade className='relative w-full h-full'>
 							<Image
 								src={PP}
-								placeholder='blur'
 								alt='Md Yaser Arafat Israk'
 								className='grayscale h-full w-full object-contain p-12'
 								fill
+								placeholder='blur'
 							/>
 						</BlurFade>
 					</div>
@@ -54,11 +56,15 @@ export default function AboutInfo() {
 						</TextAnimate>
 
 						<BlurFade delay={0.4}>
-							<Button
-								size='sm'
-								className='rounded-xl'>
-								Get Resume
-							</Button>
+							<Link
+								href={resumeLink}
+								target='_blank'>
+								<Button
+									size='sm'
+									className='rounded-xl'>
+									Get Resume
+								</Button>
+							</Link>
 						</BlurFade>
 					</BlurFade>
 				</div>

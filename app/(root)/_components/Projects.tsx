@@ -1,6 +1,7 @@
 import { TextAnimate } from '@/components/magicui/text-animate';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
+import { getBlurDataUrl } from '@/lib/getBlurDataUrl';
 import { FEATURED_WEB_QUERYResult } from '@/sanity.types';
 import { sanityFetch } from '@/sanity/lib/live';
 import { FEATURED_WEB_QUERY } from '@/sanity/lib/queries';
@@ -50,13 +51,15 @@ export default async function Projects() {
 	);
 }
 
-function ProjectCard({
+async function ProjectCard({
 	project,
 	i,
 }: {
 	project: FEATURED_WEB_QUERYResult[0];
 	i: number;
 }) {
+	const blur_url = await getBlurDataUrl(project.mainImageUrl?.url ?? '');
+
 	const isEvenRow = Math.floor(i / 2) % 2 === 0;
 	const colSpanClass = isEvenRow
 		? i % 2 === 0
@@ -76,9 +79,11 @@ function ProjectCard({
 				<div className='relative'>
 					<Image
 						src={project.mainImageUrl?.url ?? ''}
+						placeholder='blur'
+						blurDataURL={blur_url}
 						alt={project.title!}
-						width={500}
-						height={500}
+						width={800}
+						height={800}
 						className='w-full h-full object-cover border rounded-lg border-muted-foreground/50'
 					/>
 				</div>

@@ -1,14 +1,14 @@
 import { TextAnimate } from '@/components/magicui/text-animate';
+import PageTransitionLink from '@/components/PageTransitionLink';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 
 export default function AboutSection() {
 	return (
 		<section
 			className='relative z-20'
 			id='projects'>
-			<div className='container mx-auto px-2 md:px-0 py-[10vmin] pb-[40vmin]'>
+			<div className='container mx-auto px-2 md:px-0 py-[10vmin] pb-[20vmin]'>
 				<TextAnimate
 					animation='blurInUp'
 					by='word'
@@ -48,7 +48,9 @@ export default function AboutSection() {
 								size='sm'
 								className='mt-4 rounded-xl'
 								asChild>
-								<Link href='/about'>More about me</Link>
+								<PageTransitionLink href='/about'>
+									More about me
+								</PageTransitionLink>
 							</Button>
 						</BlurFade>
 					</div>

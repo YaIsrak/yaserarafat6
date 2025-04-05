@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
 	return (
-		<section className='bg-dark text-white relative'>
+		<section className='bg-dark text-white relative overflow-hidden'>
 			<div className='w-full h-screen relative z-10 py-36 flex flex-col justify-between container mx-auto px-2 md:px-0'>
 				<BlurFade>
 					<TextAnimate

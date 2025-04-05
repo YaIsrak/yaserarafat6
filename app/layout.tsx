@@ -1,11 +1,13 @@
 import { cn } from '@/lib/utils';
 import { SanityLive } from '@/sanity/lib/live';
 import type { Metadata } from 'next';
+import { ViewTransitions } from 'next-view-transitions';
 import { Instrument_Serif, Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 const instrument = Instrument_Serif({
+	subsets: ['latin'],
 	weight: '400',
 	variable: '--font-instrument',
 	style: ['italic'],
@@ -33,17 +35,19 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html suppressHydrationWarning>
-			<body
-				className={cn(
-					inter.className,
-					instrument.variable,
-					'bg-white relative ',
-				)}>
-				{children}
-			</body>
+		<ViewTransitions>
+			<html suppressHydrationWarning>
+				<body
+					className={cn(
+						inter.className,
+						instrument.variable,
+						'bg-white relative',
+					)}>
+					{children}
+				</body>
 
-			<SanityLive />
-		</html>
+				<SanityLive />
+			</html>
+		</ViewTransitions>
 	);
 }

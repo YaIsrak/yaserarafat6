@@ -6,6 +6,9 @@ import {
 	FaSquareFacebook,
 } from 'react-icons/fa6';
 
+export const resumeLink: string =
+	'https://drive.google.com/file/d/1eDxor0G3YJUaAmY02If0VgXDuel9LYg3/view?usp=sharing';
+
 export const navlinks: {
 	name: string;
 	href: string;
@@ -20,7 +23,7 @@ export const navlinks: {
 	},
 	{
 		name: 'Resume',
-		href: '#contact',
+		href: resumeLink,
 	},
 ];
 

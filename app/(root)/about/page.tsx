@@ -8,8 +8,6 @@ export default function page() {
 			<AboutInfo />
 			<SkillSection />
 			<ExperineceSection />
-
-			<section className='py-[45vmin] md:py-[30vmin]'></section>
 		</>
 	);
 }

@@ -10,24 +10,24 @@ export default function Footer() {
 	return (
 		<>
 			<footer
-				className='relative bg-dark text-white'
+				className='relative bg-dark text-white overflow-hidden'
 				id='contact'>
 				<GredientMeshImage
-					className='-translate-y-2/5 z-[10]'
+					className='-translate-y-3/5 z-[10]'
 					imageClassName='scale-y-50 md:scale-y-70'
 				/>
-				<div className='container mx-auto px-2 md:px-0 py-[10vmin] relative z-20'>
-					<BlurFade className=' text-center font-bold text-[clamp(3rem,15vw,15rem)] whitespace-nowrap'>
+				<div className='container mx-auto px-2 md:px-0 py-[5vmin] md:py-[10vmin] relative z-20'>
+					<BlurFade className=' text-center font-bold text-[clamp(3rem,15vw,15rem)] whitespace-nowrap hidden md:block'>
 						Get in Touch
 					</BlurFade>
 
-					<div className='mt-20 mb-20'>
-						<div className='w-full h-0.5 bg-white/20 mb-8' />
+					<div className='md:mt-20 mt-8 mb-20'>
+						<div className='w-full h-0.5 bg-white/20 mb-8 hidden md:block' />
 
 						<div className='grid grid-cols-1 md:grid-cols-4'>
 							<BlurFade
 								delay={0.1}
-								className='text-8xl font-bold col-span-2 mb-8'>
+								className='text-8xl font-bold col-span-2 mb-8 hidden md:block'>
 								ISRAK
 							</BlurFade>
 
