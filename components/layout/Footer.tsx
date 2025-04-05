@@ -4,6 +4,7 @@ import Clock from '../Clock';
 import BottomAnimation from '../ui/BottomAnimation';
 import GredientMeshImage from '../ui/GredientMeshImage';
 import GridLines from '../ui/GridLines';
+import { BlurFade } from '../ui/blur-fade';
 
 export default function Footer() {
 	return (
@@ -11,23 +12,30 @@ export default function Footer() {
 			<footer
 				className='relative bg-dark text-white'
 				id='contact'>
-				<GredientMeshImage className='-translate-y-1/2  z-[10]' />
+				<GredientMeshImage
+					className='-translate-y-2/5 z-[10]'
+					imageClassName='scale-y-50 md:scale-y-70'
+				/>
 				<div className='container mx-auto px-2 md:px-0 py-[10vmin] relative z-20'>
-					<h1 className=' text-center font-bold text-[clamp(3rem,15vw,15rem)] whitespace-nowrap'>
+					<BlurFade className=' text-center font-bold text-[clamp(3rem,15vw,15rem)] whitespace-nowrap'>
 						Get in Touch
-					</h1>
+					</BlurFade>
 
 					<div className='mt-20 mb-20'>
 						<div className='w-full h-0.5 bg-white/20 mb-8' />
 
 						<div className='grid grid-cols-1 md:grid-cols-4'>
-							<h1 className='text-8xl font-bold col-span-2 mb-8'>
+							<BlurFade
+								delay={0.1}
+								className='text-8xl font-bold col-span-2 mb-8'>
 								ISRAK
-							</h1>
+							</BlurFade>
 
-							<ul className='space-y-2'>
+							<BlurFade
+								delay={0.2}
+								className='space-y-2'>
 								{SocialLinks.map(({ name, link }) => (
-									<li
+									<div
 										key={name}
 										className='w-fit'>
 										<BottomAnimation className='bg-white h-px'>
@@ -39,11 +47,13 @@ export default function Footer() {
 												{name}
 											</Link>
 										</BottomAnimation>
-									</li>
+									</div>
 								))}
-							</ul>
+							</BlurFade>
 
-							<div className='flex justify-end'>
+							<BlurFade
+								delay={0.3}
+								className='flex justify-end'>
 								<div>
 									<BottomAnimation className='bg-white h-px'>
 										<Link
@@ -53,7 +63,7 @@ export default function Footer() {
 										</Link>
 									</BottomAnimation>
 								</div>
-							</div>
+							</BlurFade>
 						</div>
 					</div>
 				</div>

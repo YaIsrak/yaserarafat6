@@ -38,7 +38,7 @@ export default function RootLayout({
 				className={cn(
 					inter.className,
 					instrument.variable,
-					'bg-white relative',
+					'bg-white relative ',
 				)}>
 				{children}
 			</body>

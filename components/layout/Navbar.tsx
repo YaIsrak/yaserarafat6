@@ -18,7 +18,7 @@ export default function Navbar() {
 	return (
 		<nav
 			className={cn(
-				'fixed top-0 left-0 w-full border-muted-foreground/20 backdrop-blur-sm text-white md:text-white transition ease-[cubic-bezier(1,0,0,1)] duration-500 md:bg-transparent md:backdrop-blur-none z-50 md:mix-blend-exclusion',
+				'fixed top-0 left-0 max-w-screen w-full border-muted-foreground/20 backdrop-blur-sm text-white md:text-white transition ease-[cubic-bezier(1,0,0,1)] duration-500 md:bg-transparent md:backdrop-blur-none z-50 md:mix-blend-exclusion',
 				isOpen ? 'bg-dark/90 rounded-b-3xl' : 'bg-dark/25 rounded-b-none',
 			)}>
 			<div className='container mx-auto px-2 md:px-0 grid grid-cols-4 py-4 md:py-2 items-center'>

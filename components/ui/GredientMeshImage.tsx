@@ -4,8 +4,10 @@ import Image from 'next/image';
 
 export default function GredientMeshImage({
 	className,
+	imageClassName,
 }: {
 	className?: string;
+	imageClassName?: string;
 }) {
 	return (
 		<div
@@ -17,7 +19,10 @@ export default function GredientMeshImage({
 				src={GradientMesh}
 				alt='hero'
 				placeholder='blur'
-				className='w-full h-full object-cover blur-[80px] scale-x-200 scale-y-80'
+				className={cn(
+					'w-full h-full object-cover blur-[80px] scale-x-200 scale-y-80',
+					imageClassName,
+				)}
 			/>
 		</div>
 	);

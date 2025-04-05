@@ -1,3 +1,5 @@
+import { TextAnimate } from '@/components/magicui/text-animate';
+import { BlurFade } from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
 import { FEATURED_WEB_QUERYResult } from '@/sanity.types';
 import { sanityFetch } from '@/sanity/lib/live';
@@ -15,9 +17,13 @@ export default async function Projects() {
 			className='relative z-10 py-[10vmin]'
 			id='projects'>
 			<div className='container mx-auto px-2 md:px-0'>
-				<h1 className='text-[clamp(3rem,12vw,13rem)] text-center font-bold tracking-tight break-words'>
+				<TextAnimate
+					animation='blurInUp'
+					by='word'
+					as={'h1'}
+					className='text-[clamp(3rem,12vw,13rem)] text-center font-bold tracking-tight break-words'>
 					Selected Works
-				</h1>
+				</TextAnimate>
 
 				<div className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-5 gap-4'>
 					{data.map((project, i: number) => (
@@ -29,14 +35,16 @@ export default async function Projects() {
 					))}
 				</div>
 
-				<div className='flex justify-end'>
+				<BlurFade
+					delay={0.5}
+					className='flex justify-end'>
 					<Button
 						className='mt-8 rounded-2xl border-black shadow-none hover:bg-black hover:text-white ease-in-out duration-300'
 						variant='outline'
 						asChild>
 						<Link href='/projects'>View All Project</Link>
 					</Button>
-				</div>
+				</BlurFade>
 			</div>
 		</section>
 	);
@@ -59,33 +67,36 @@ function ProjectCard({
 			: 'md:col-span-3';
 
 	return (
-		<Link
-			href={project.url!}
-			target='_blank'
+		<BlurFade
+			delay={i * 0.1}
 			className={`col-span-1 ${colSpanClass}`}>
-			<div className='relative'>
-				<Image
-					src={project.mainImageUrl?.url ?? ''}
-					alt={project.title!}
-					width={500}
-					height={500}
-					className='w-full h-full object-cover border rounded-lg border-muted-foreground/50'
-				/>
-			</div>
-			<div className='mt-2 flex justify-between'>
-				<p className='text-sm'>{project.title!}</p>
-
-				<div className='flex flex-wrap justify-end divide-x divide-muted-foreground/50 items-center'>
-					{project.technology &&
-						project.technology.map((technology) => (
-							<p
-								key={technology.name}
-								className='text-xs px-2 text-muted-foreground'>
-								{technology.name}
-							</p>
-						))}
+			<Link
+				href={project.url!}
+				target='_blank'>
+				<div className='relative'>
+					<Image
+						src={project.mainImageUrl?.url ?? ''}
+						alt={project.title!}
+						width={500}
+						height={500}
+						className='w-full h-full object-cover border rounded-lg border-muted-foreground/50'
+					/>
 				</div>
-			</div>
-		</Link>
+				<div className='mt-2 flex justify-between'>
+					<p className='text-sm'>{project.title!}</p>
+
+					<div className='flex flex-wrap justify-end divide-x divide-muted-foreground/50 items-center'>
+						{project.technology &&
+							project.technology.map((technology) => (
+								<p
+									key={technology.name}
+									className='text-xs px-2 text-muted-foreground'>
+									{technology.name}
+								</p>
+							))}
+					</div>
+				</div>
+			</Link>
+		</BlurFade>
 	);
 }

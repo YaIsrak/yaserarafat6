@@ -9,7 +9,9 @@ export default function RootLayout({
 	return (
 		<>
 			<Navbar />
-			<main className='relative'>{children}</main>
+			<main className='relative max-w-screen overflow-x-hidden'>
+				{children}
+			</main>
 			<Footer />
 		</>
 	);
