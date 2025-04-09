@@ -18,6 +18,7 @@ export default function AboutInfo() {
 								alt='Md Yaser Arafat Israk'
 								className='grayscale h-full w-full object-contain p-12'
 								fill
+								sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 								placeholder='blur'
 							/>
 						</BlurFade>
