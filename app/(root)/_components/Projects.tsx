@@ -1,18 +1,16 @@
 import { TextAnimate } from '@/components/magicui/text-animate';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
+import { Skeleton } from '@/components/ui/skeleton';
 import { getBlurDataUrl } from '@/lib/getBlurDataUrl';
 import { FEATURED_WEB_QUERYResult } from '@/sanity.types';
 import { sanityFetch } from '@/sanity/lib/live';
 import { FEATURED_WEB_QUERY } from '@/sanity/lib/queries';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 export default async function Projects() {
-	const { data } = await sanityFetch({
-		query: FEATURED_WEB_QUERY,
-	});
-
 	return (
 		<section
 			className='relative z-10 py-[10vmin]'
@@ -26,15 +24,18 @@ export default async function Projects() {
 					Selected Works
 				</TextAnimate>
 
-				<div className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-5 gap-4'>
-					{data.map((project: FEATURED_WEB_QUERYResult[0], i: number) => (
-						<ProjectCard
-							key={project._id}
-							i={i}
-							project={project}
-						/>
-					))}
-				</div>
+				<Suspense
+					fallback={
+						<div className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-4'>
+							<SkeletonCard />
+							<SkeletonCard />
+							<SkeletonCard />
+							<SkeletonCard />
+							<SkeletonCard />
+						</div>
+					}>
+					<ProjectList />
+				</Suspense>
 
 				<BlurFade
 					delay={0.5}
@@ -48,6 +49,24 @@ export default async function Projects() {
 				</BlurFade>
 			</div>
 		</section>
+	);
+}
+
+export async function ProjectList() {
+	const { data } = await sanityFetch({
+		query: FEATURED_WEB_QUERY,
+	});
+
+	return (
+		<div className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-5 gap-4'>
+			{data.map((project: FEATURED_WEB_QUERYResult[0], i: number) => (
+				<ProjectCard
+					key={project._id}
+					i={i}
+					project={project}
+				/>
+			))}
+		</div>
 	);
 }
 
@@ -103,5 +122,17 @@ async function ProjectCard({
 				</div>
 			</Link>
 		</BlurFade>
+	);
+}
+
+function SkeletonCard() {
+	return (
+		<div>
+			<Skeleton className='w-full h-96' />
+			<div className='flex mt-6 gap-4'>
+				<Skeleton className='h-4 w-full' />
+				<Skeleton className='h-4 w-full' />
+			</div>
+		</div>
 	);
 }

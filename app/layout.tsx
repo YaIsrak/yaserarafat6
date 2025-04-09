@@ -36,7 +36,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<ViewTransitions>
-			<html suppressHydrationWarning>
+			<html
+				suppressHydrationWarning
+				lang='en'>
 				<body
 					className={cn(
 						inter.className,

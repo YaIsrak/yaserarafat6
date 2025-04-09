@@ -68,6 +68,56 @@ export type Geopoint = {
   alt?: number;
 };
 
+export type Blog = {
+  _id: string;
+  _type: "blog";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  content?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  } | {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+    _key: string;
+  }>;
+};
+
 export type Nsfw = {
   _id: string;
   _type: "nsfw";
@@ -263,11 +313,11 @@ export type SanityImageMetadata = {
   isOpaque?: boolean;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Nsfw | Web | Slug | Technology | BlockContent | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Blog | Nsfw | Web | Slug | Technology | BlockContent | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./sanity/lib/queries.ts
 // Variable: WEB_DESIGN_QUERY
-// Query: *[_type == 'web' ]{          ...,          "mainImageUrl": mainImage.asset->{url},          technology[]->        }
+// Query: *[_type == 'web'] | order(_createdAt desc) {          ...,          "mainImageUrl": mainImage.asset->{url},          technology[]->        }
 export type WEB_DESIGN_QUERYResult = Array<{
   _id: string;
   _type: "web";
@@ -344,7 +394,7 @@ export type WEB_DESIGN_QUERYResult = Array<{
   } | null;
 }>;
 // Variable: FEATURED_WEB_QUERY
-// Query: *[_type == 'web' && featured == true]{                ...,                "mainImageUrl": mainImage.asset->{url},                technology[]->              }
+// Query: *[_type == 'web' && featured == true] | order(_createdAt desc){                ...,                "mainImageUrl": mainImage.asset->{url},                technology[]->              }
 export type FEATURED_WEB_QUERYResult = Array<{
   _id: string;
   _type: "web";
@@ -420,12 +470,116 @@ export type FEATURED_WEB_QUERYResult = Array<{
     url: string | null;
   } | null;
 }>;
+// Variable: BLOGS_QUERY
+// Query: *[_type == 'blog' ] | order(_createdAt desc)
+export type BLOGS_QUERYResult = Array<{
+  _id: string;
+  _type: "blog";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  content?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  } | {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+    _key: string;
+  }>;
+}>;
+// Variable: BLOG_QUERY
+// Query: *[_type == 'blog' && slug.current == $slug][0]
+export type BLOG_QUERYResult = {
+  _id: string;
+  _type: "blog";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  content?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  } | {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+    _key: string;
+  }>;
+} | null;
 
 // Query TypeMap
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[_type == 'web' ]{\n          ...,\n          \"mainImageUrl\": mainImage.asset->{url},\n          technology[]->\n        }": WEB_DESIGN_QUERYResult;
-    "*[_type == 'web' && featured == true]{\n                ...,\n                \"mainImageUrl\": mainImage.asset->{url},\n                technology[]->\n              }": FEATURED_WEB_QUERYResult;
+    "*[_type == 'web'] | order(_createdAt desc) {\n          ...,\n          \"mainImageUrl\": mainImage.asset->{url},\n          technology[]->\n        }": WEB_DESIGN_QUERYResult;
+    "*[_type == 'web' && featured == true] | order(_createdAt desc){\n                ...,\n                \"mainImageUrl\": mainImage.asset->{url},\n                technology[]->\n              }": FEATURED_WEB_QUERYResult;
+    "*[_type == 'blog' ] | order(_createdAt desc)": BLOGS_QUERYResult;
+    "*[_type == 'blog' && slug.current == $slug][0]": BLOG_QUERYResult;
   }
 }

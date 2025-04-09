@@ -1,8 +1,8 @@
 import { SocialLinks } from '@/lib/constants';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import Clock from '../Clock';
 import BottomAnimation from '../ui/BottomAnimation';
-import GredientMeshImage from '../ui/GredientMeshImage';
 import GridLines from '../ui/GridLines';
 import { BlurFade } from '../ui/blur-fade';
 
@@ -12,12 +12,12 @@ export default function Footer() {
 			<footer
 				className='relative bg-dark text-white overflow-hidden'
 				id='contact'>
-				<GredientMeshImage
-					className='-translate-y-3/5 z-[10]'
-					imageClassName='scale-y-50 md:scale-y-70'
-				/>
+				<div className='absolute top-0 w-full h-1/2 bg-gradient-to-r from-purple-600 to-pink-600'>
+					<div className='absolute inset-0 bg-gradient-to-b from-transparent  to-[#0e0e0e]'></div>
+				</div>
 				<div className='container mx-auto px-2 md:px-0 py-[5vmin] md:py-[10vmin] relative z-20'>
-					<BlurFade className=' text-center font-bold text-[clamp(3rem,15vw,15rem)] whitespace-nowrap hidden md:block'>
+					<BlurFade className=' text-center font-bold text-[clamp(3rem,14vw,15rem)] whitespace-nowrap tracking-tight break-words hidden md:block'>
+						{/* className='text-[clamp(3rem,12vw,13rem)] '> */}
 						Get in Touch
 					</BlurFade>
 
@@ -87,13 +87,13 @@ export default function Footer() {
 
 						<div className='flex text-xs items-center justify-between col-span-2'>
 							<p>Bangladesh</p>
-							<Clock />
+							<Suspense>
+								<Clock />
+							</Suspense>
 						</div>
 					</div>
 				</div>
 			</footer>
-
-			{/* */}
 		</>
 	);
 }

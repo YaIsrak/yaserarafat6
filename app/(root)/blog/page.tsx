@@ -2,8 +2,13 @@ import GridLines from '@/components/ui/GridLines';
 import { urlFor } from '@/sanity/lib/image';
 import { sanityFetch } from '@/sanity/lib/live';
 import { BLOGS_QUERY } from '@/sanity/lib/queries';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+	title: 'Blog',
+};
 
 export default async function BlogsPage() {
 	const { data: blogs } = await sanityFetch({

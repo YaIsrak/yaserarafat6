@@ -2,8 +2,13 @@ import GridLines from '@/components/ui/GridLines';
 import { sanityFetch } from '@/sanity/lib/live';
 import { WEB_DESIGN_QUERY } from '@/sanity/lib/queries';
 import { ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+	title: 'Projects',
+};
 
 export default async function ProjectsPage() {
 	const { data } = await sanityFetch({

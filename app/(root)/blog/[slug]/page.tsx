@@ -26,10 +26,10 @@ export default async function BlogPage({
 		<section className='w-full relative z-40 pb-[15vmin]'>
 			<article className='container mx-auto px-2 md:px-0 '>
 				<Image
-					src={urlFor(blog.image).url()}
+					src={urlFor(blog.image!).url()}
 					placeholder='blur'
-					blurDataURL={urlFor(blog.image).blur(10).url()}
-					alt={blog.title}
+					blurDataURL={urlFor(blog.image!).blur(10).url()}
+					alt={blog.title!}
 					width={1000}
 					height={1000}
 					className='w-full h-[500px] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out'
@@ -48,13 +48,13 @@ export default async function BlogPage({
 					{/* Content */}
 					<div className='mt-8 space-y-4'>
 						<PortableText
-							value={blog.content}
+							value={blog.content!}
 							components={{
 								types: {
 									image: ({ value }) => (
 										<Image
 											src={urlFor(value).url()}
-											alt={blog.title}
+											alt={blog.title!}
 											width={500}
 											height={500}
 											className='w-auto h-[500px] object-cover'
