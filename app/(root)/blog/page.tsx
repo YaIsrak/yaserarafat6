@@ -10,6 +10,18 @@ export const metadata: Metadata = {
 	title: 'Blog',
 };
 
+export async function generateStaticParams() {
+	const { data: blogs } = await sanityFetch({
+		query: BLOGS_QUERY,
+	});
+
+	return blogs
+		.map((blog: any) => ({
+			slug: blog.slug.current,
+		}))
+		.flat();
+}
+
 export default async function BlogsPage() {
 	const { data: blogs } = await sanityFetch({
 		query: BLOGS_QUERY,

@@ -3,22 +3,56 @@ import GridLines from '@/components/ui/GridLines';
 import { urlFor } from '@/sanity/lib/image';
 import { sanityFetch } from '@/sanity/lib/live';
 import { BLOG_QUERY } from '@/sanity/lib/queries';
+import { Metadata } from 'next';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { cache } from 'react';
 
-export default async function BlogPage({
-	params,
-}: {
-	params: Promise<{ slug: string }>;
-}) {
-	const { slug } = await params;
-
+async function searchBlogBySlug({ slug }: { slug: string }) {
 	const { data: blog } = await sanityFetch({
 		query: BLOG_QUERY,
 		params: { slug },
 	});
+
+	return blog;
+}
+
+const getBlog = cache(searchBlogBySlug);
+
+interface PageProps {
+	params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({
+	params,
+}: PageProps): Promise<Metadata> {
+	const { slug } = await params;
+
+	const blog = await getBlog({ slug });
+
+	if (!blog) notFound();
+
+	return {
+		title: `${blog?.title} - Updated ${new Date().getFullYear()}`,
+		description: `Blog of ${blog?.title}`,
+		openGraph: {
+			title: `${blog?.title} - Updated ${new Date().getFullYear()}`,
+			description: `Blog of ${blog?.title}`,
+			images: [
+				{
+					url: urlFor(blog.image!).url(),
+				},
+			],
+		},
+	};
+}
+
+export default async function BlogPage({ params }: PageProps) {
+	const { slug } = await params;
+
+	const blog = await getBlog({ slug });
 
 	if (!blog) notFound();
 
