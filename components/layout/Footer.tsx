@@ -15,6 +15,7 @@ export default function Footer() {
 				<div className='absolute top-0 w-full h-1/2 bg-gradient-to-r from-purple-600 to-pink-600'>
 					<div className='absolute inset-0 bg-gradient-to-b from-transparent  to-[#0e0e0e]'></div>
 				</div>
+
 				<div className='container mx-auto px-2 md:px-0 py-[5vmin] md:py-[10vmin] relative z-20'>
 					<BlurFade className=' text-center font-bold text-[clamp(3rem,14vw,15rem)] whitespace-nowrap tracking-tight break-words hidden md:block'>
 						{/* className='text-[clamp(3rem,12vw,13rem)] '> */}

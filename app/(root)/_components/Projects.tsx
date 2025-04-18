@@ -48,6 +48,10 @@ export default async function Projects() {
 					</Button>
 				</BlurFade>
 			</div>
+
+			<div className='absolute top-0 w-full h-1/5 bg-gradient-to-r from-purple-600 to-pink-600 -z-50'>
+				<div className='absolute inset-0 bg-gradient-to-b from-transparent  to-white'></div>
+			</div>
 		</section>
 	);
 }
