@@ -21,3 +21,11 @@ export const BLOGS_QUERY = defineQuery(
 export const BLOG_QUERY = defineQuery(
 	`*[_type == 'blog' && slug.current == $slug][0]`,
 );
+
+export const ARTWORKS_QUERY = defineQuery(
+	`*[_type == 'art' && category->show == true] | order(_createdAt desc)`,
+);
+
+export const CATEGORY_QUERY = defineQuery(
+	`*[_type == 'category' && show == true]`,
+);

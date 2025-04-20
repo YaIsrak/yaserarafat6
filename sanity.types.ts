@@ -118,14 +118,14 @@ export type Blog = {
   }>;
 };
 
-export type Nsfw = {
+export type Art = {
   _id: string;
-  _type: "nsfw";
+  _type: "art";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
   title?: string;
-  mainImage?: {
+  image?: {
     asset?: {
       _ref: string;
       _type: "reference";
@@ -136,6 +136,22 @@ export type Nsfw = {
     crop?: SanityImageCrop;
     _type: "image";
   };
+  category?: {
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: "category";
+  };
+};
+
+export type Category = {
+  _id: string;
+  _type: "category";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: string;
+  show?: boolean;
 };
 
 export type Web = {
@@ -313,7 +329,7 @@ export type SanityImageMetadata = {
   isOpaque?: boolean;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Blog | Nsfw | Web | Slug | Technology | BlockContent | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Blog | Art | Category | Web | Slug | Technology | BlockContent | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./sanity/lib/queries.ts
 // Variable: WEB_DESIGN_QUERY
@@ -572,6 +588,44 @@ export type BLOG_QUERYResult = {
     _key: string;
   }>;
 } | null;
+// Variable: ARTWORKS_QUERY
+// Query: *[_type == 'art' && category->show == true] | order(_createdAt desc)
+export type ARTWORKS_QUERYResult = Array<{
+  _id: string;
+  _type: "art";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  category?: {
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: "category";
+  };
+}>;
+// Variable: CATEGORY_QUERY
+// Query: *[_type == 'category' && show == true]
+export type CATEGORY_QUERYResult = Array<{
+  _id: string;
+  _type: "category";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: string;
+  show?: boolean;
+}>;
 
 // Query TypeMap
 import "@sanity/client";
@@ -581,5 +635,7 @@ declare module "@sanity/client" {
     "*[_type == 'web' && featured == true] | order(_createdAt desc){\n                ...,\n                \"mainImageUrl\": mainImage.asset->{url},\n                technology[]->\n              }": FEATURED_WEB_QUERYResult;
     "*[_type == 'blog' ] | order(_createdAt desc)": BLOGS_QUERYResult;
     "*[_type == 'blog' && slug.current == $slug][0]": BLOG_QUERYResult;
+    "*[_type == 'art' && category->show == true] | order(_createdAt desc)": ARTWORKS_QUERYResult;
+    "*[_type == 'category' && show == true]": CATEGORY_QUERYResult;
   }
 }

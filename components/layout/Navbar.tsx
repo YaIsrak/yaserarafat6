@@ -143,7 +143,7 @@ export function MobileNavLink({
 	const pathname = usePathname();
 
 	return (
-		<PageTransitionLink
+		<Link
 			href={href}
 			className={cn(
 				'text-3xl font-bold',
@@ -151,6 +151,6 @@ export function MobileNavLink({
 				className,
 			)}>
 			{children}
-		</PageTransitionLink>
+		</Link>
 	);
 }
