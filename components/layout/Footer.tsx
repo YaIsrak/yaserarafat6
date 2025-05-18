@@ -2,9 +2,10 @@ import { SocialLinks } from '@/lib/constants';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import Clock from '../Clock';
+import { BlurFade } from '../ui/blur-fade';
 import BottomAnimation from '../ui/BottomAnimation';
 import GridLines from '../ui/GridLines';
-import { BlurFade } from '../ui/blur-fade';
+import TextRevealByMask from '../ui/TextRevealByMask';
 
 export default function Footer() {
 	return (
@@ -17,11 +18,17 @@ export default function Footer() {
 				</div>
 
 				<div className='container mx-auto px-2 md:px-0 py-[5vmin] md:py-[10vmin] relative z-20'>
-					<BlurFade className=' text-center font-bold text-[clamp(3rem,14vw,15rem)] whitespace-nowrap tracking-tight break-words hidden md:block'>
-						{/* className='text-[clamp(3rem,12vw,13rem)] '> */}
+					{/* <BlurFade className=' text-center font-bold text-[clamp(3rem,14vw,15rem)] whitespace-nowrap tracking-tight break-words hidden md:block'>
 						Get in Touch
-					</BlurFade>
+					</BlurFade> */}
 
+					<TextRevealByMask
+						// animation='blurInUp'
+						by='lines'
+						as={'h1'}
+						className='text-[clamp(3rem,14vw,15rem)] whitespace-nowrap tracking-tight break-words hidden md:block text-center font-bold'>
+						Get in Touch
+					</TextRevealByMask>
 					<div className='md:mt-20 mt-8 mb-20'>
 						<div className='w-full h-0.5 bg-white/20 mb-8 hidden md:block' />
 

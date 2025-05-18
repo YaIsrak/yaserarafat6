@@ -1,6 +1,6 @@
-import { TextAnimate } from '@/components/magicui/text-animate';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
+import TextRevealAnimation from '@/components/ui/TextRevealByMask';
 import { resumeLink } from '@/lib/constants';
 import PP from '@/public/israkpp.jpeg';
 import Image from 'next/image';
@@ -38,11 +38,9 @@ export default function AboutInfo() {
 								Israk
 							</span>
 						</BlurFade>
-						<TextAnimate
+						<TextRevealAnimation
 							delay={0.3}
-							by='word'
-							as={'p'}
-							animation='blurInUp'
+							isMask={false}
 							className='text-sm font-semibold'>
 							A passionate web developer and illustrator from Chittagong,
 							Bangladesh. I have a deep love for creativity and
@@ -54,7 +52,7 @@ export default function AboutInfo() {
 							I appreciate the simple joys of life—good conversations,
 							meaningful experiences, and the endless possibilities that
 							technology and art bring.
-						</TextAnimate>
+						</TextRevealAnimation>
 
 						<BlurFade delay={0.4}>
 							<Link

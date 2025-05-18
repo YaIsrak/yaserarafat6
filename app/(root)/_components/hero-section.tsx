@@ -1,6 +1,6 @@
-import { TextAnimate } from '@/components/magicui/text-animate';
 import { BlurFade } from '@/components/ui/blur-fade';
 import BottomAnimation from '@/components/ui/BottomAnimation';
+import TextRevealByMask from '@/components/ui/TextRevealByMask';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 
@@ -9,35 +9,46 @@ export default function HeroSection() {
 		<section className='bg-dark text-white relative overflow-hidden'>
 			<div className='w-full h-screen relative z-10 py-36 flex flex-col justify-between container mx-auto px-2 md:px-0'>
 				<BlurFade>
-					<TextAnimate
-						animation='blurInUp'
-						by='word'
-						as={'h1'}
+					<TextRevealByMask
+						duration={1.5}
+						blur={0}
 						className='text-[clamp(4rem,11vw,15rem)] font-bold uppercase tracking-tight leading-[0.85] break-words'>
 						Yaser Arafat Israk
-					</TextAnimate>
+					</TextRevealByMask>
 				</BlurFade>
 
 				{/* <Test /> */}
 				<BlurFade className='grid grid-cols-4 space-y-8'>
 					<div className='col-span-4 md:col-span-2 space-y-2'>
-						<p className='md:text-5xl text-3xl  font-medium'>
+						<TextRevealByMask
+							duration={1.5}
+							delay={0.25}
+							blur={0}
+							className='md:text-5xl text-3xl  font-medium'>
 							From{' '}
 							<span className='font-instrument italic !font-normal'>
 								Sketch
 							</span>{' '}
 							to Screen - I Build Digital Wonders.
-						</p>
+						</TextRevealByMask>
 
-						<div className='flex text-xs justify-between'>
-							<BlurFade delay={0.1}>@2025</BlurFade>
-							<BlurFade delay={0.2}>Based on Bangladesh</BlurFade>
-							<BlurFade delay={0.3}>Full Stack Developer</BlurFade>
-						</div>
+						<TextRevealByMask
+							duration={1.5}
+							delay={0.4}
+							as={'div'}>
+							<div className='flex text-xs justify-between'>
+								<span>@2025</span>
+								<span>Based on Bangladesh</span>
+								<span>Full Stack Developer</span>
+							</div>
+						</TextRevealByMask>
 					</div>
 
-					<BlurFade
+					<TextRevealByMask
+						as={'div'}
+						duration={1.5}
 						delay={0.5}
+						blur={0}
 						className='flex md:justify-end md:col-span-2 items-end'>
 						<BottomAnimation className='bg-white'>
 							<Link
@@ -47,7 +58,7 @@ export default function HeroSection() {
 								Scroll down
 							</Link>
 						</BottomAnimation>
-					</BlurFade>
+					</TextRevealByMask>
 				</BlurFade>
 			</div>
 

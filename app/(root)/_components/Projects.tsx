@@ -1,7 +1,8 @@
-import { TextAnimate } from '@/components/magicui/text-animate';
+import PageTransitionLink from '@/components/PageTransitionLink';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
+import TextRevealByMask from '@/components/ui/TextRevealByMask';
 import { getBlurDataUrl } from '@/lib/getBlurDataUrl';
 import { FEATURED_WEB_QUERYResult } from '@/sanity.types';
 import { sanityFetch } from '@/sanity/lib/live';
@@ -16,13 +17,13 @@ export default async function Projects() {
 			className='relative z-10 py-[10vmin]'
 			id='projects'>
 			<div className='container mx-auto px-2 md:px-0'>
-				<TextAnimate
-					animation='blurInUp'
-					by='word'
+				<TextRevealByMask
+					// animation='blurInUp'
+					by='words'
 					as={'h1'}
 					className='text-[clamp(3rem,12vw,13rem)] text-center font-bold tracking-tight break-words'>
 					Selected Works
-				</TextAnimate>
+				</TextRevealByMask>
 
 				<Suspense
 					fallback={
@@ -39,12 +40,15 @@ export default async function Projects() {
 
 				<BlurFade
 					delay={0.5}
-					className='flex justify-end'>
+					className='flex justify-center'>
 					<Button
 						className='mt-8 rounded-2xl border-black shadow-none hover:bg-black hover:text-white ease-in-out duration-300'
-						variant='outline'
+						// variant='outline'
+						size='lg'
 						asChild>
-						<Link href='/projects'>View All Project</Link>
+						<PageTransitionLink href='/projects'>
+							View All Project
+						</PageTransitionLink>
 					</Button>
 				</BlurFade>
 			</div>
@@ -62,7 +66,9 @@ export async function ProjectList() {
 	});
 
 	return (
-		<div className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-5 gap-4'>
+		<BlurFade
+			delay={0.5}
+			className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-5 gap-4'>
 			{data.map((project: FEATURED_WEB_QUERYResult[0], i: number) => (
 				<ProjectCard
 					key={project._id}
@@ -70,7 +76,7 @@ export async function ProjectList() {
 					project={project}
 				/>
 			))}
-		</div>
+		</BlurFade>
 	);
 }
 
@@ -95,11 +101,11 @@ async function ProjectCard({
 	return (
 		<BlurFade
 			delay={i * 0.1}
-			className={`col-span-1 ${colSpanClass}`}>
+			className={`col-span-1 group ${colSpanClass}`}>
 			<Link
 				href={project.url!}
 				target='_blank'>
-				<div className='relative'>
+				<div className='relative overflow-hidden  border rounded-lg border-muted-foreground/50'>
 					<Image
 						src={project.mainImageUrl?.url ?? ''}
 						placeholder='blur'
@@ -107,7 +113,7 @@ async function ProjectCard({
 						alt={project.title!}
 						width={800}
 						height={800}
-						className='w-full h-full object-cover border rounded-lg border-muted-foreground/50'
+						className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out'
 					/>
 				</div>
 				<div className='mt-2 flex justify-between'>

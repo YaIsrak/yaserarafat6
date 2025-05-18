@@ -59,6 +59,13 @@ export const experiences: {
 	link: string;
 }[] = [
 	{
+		name: 'Altux Studio',
+		post: 'Frontend Developer',
+		location: 'Remote - Bangladesh',
+		time: '2025 - Present',
+		link: 'https://www.altuxstudio.com',
+	},
+	{
 		name: 'Volunteer For Bangladesh',
 		post: 'Cartoonist',
 		location: 'Chittagong - Bangladesh',
