@@ -17,6 +17,7 @@ const eslintConfig = [
 			'no-console': ['warn', { allow: ['warn', 'error'] }],
 			'@typescript-eslint/no-explicit-any': 'off',
 			'react/no-unescaped-entities': 'off',
+			'@typescript-eslint/ban-ts-comment': 'off',
 		},
 	},
 ];

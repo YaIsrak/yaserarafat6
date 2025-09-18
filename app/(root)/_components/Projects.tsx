@@ -18,16 +18,16 @@ export default async function Projects() {
 			id='projects'>
 			<div className='container mx-auto px-2 md:px-0'>
 				<TextRevealByMask
-					// animation='blurInUp'
-					by='words'
+					by='chars'
 					as={'h1'}
-					className='text-[clamp(3rem,12vw,13rem)] text-center font-bold tracking-tight break-words'>
-					Selected Works
+					stagger={0.05}
+					className='text-7xl md:text-9xl uppercase tracking-tighter font-bold text-[#0e0e0e]'>
+					Works
 				</TextRevealByMask>
 
 				<Suspense
 					fallback={
-						<div className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-4'>
+						<div className='mt-4 md:mt-4 grid grid-cols-1 md:grid-cols-3 gap-4'>
 							<SkeletonCard />
 							<SkeletonCard />
 							<SkeletonCard />
@@ -68,7 +68,7 @@ export async function ProjectList() {
 	return (
 		<BlurFade
 			delay={0.5}
-			className='mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-5 gap-4'>
+			className='mt-4 md:mt-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 			{data.map((project: FEATURED_WEB_QUERYResult[0], i: number) => (
 				<ProjectCard
 					key={project._id}
@@ -89,23 +89,14 @@ async function ProjectCard({
 }) {
 	const blur_url = await getBlurDataUrl(project.mainImageUrl?.url ?? '');
 
-	const isEvenRow = Math.floor(i / 2) % 2 === 0;
-	const colSpanClass = isEvenRow
-		? i % 2 === 0
-			? 'md:col-span-3'
-			: 'md:col-span-2'
-		: i % 2 === 0
-			? 'md:col-span-2'
-			: 'md:col-span-3';
-
 	return (
 		<BlurFade
 			delay={i * 0.1}
-			className={`col-span-1 group ${colSpanClass}`}>
+			className={`col-span-2 group md:col-span-1 bg-dark p-4 rounded-4xl`}>
 			<Link
 				href={project.url!}
 				target='_blank'>
-				<div className='relative overflow-hidden  border rounded-lg border-muted-foreground/50'>
+				<div className='relative overflow-hidden  border rounded-2xl border-muted-foreground/50'>
 					<Image
 						src={project.mainImageUrl?.url ?? ''}
 						placeholder='blur'
@@ -113,11 +104,16 @@ async function ProjectCard({
 						alt={project.title!}
 						width={800}
 						height={800}
-						className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out'
+						className='w-full h-[500px] object-cover scale-105 group-hover:scale-100 transition-transform duration-300 ease-out'
 					/>
 				</div>
-				<div className='mt-2 flex justify-between'>
-					<p className='text-sm'>{project.title!}</p>
+				<div className='my-2 space-y-2'>
+					<div className='flex items-center gap-2'>
+						<div className='bg-white size-8 rounded-full'></div>
+						<p className='text-3xl font-semibold text-white uppercase tracking-tighter'>
+							{project.title!}
+						</p>
+					</div>
 
 					<div className='flex flex-wrap justify-end divide-x divide-muted-foreground/50 items-center'>
 						{project.technology &&

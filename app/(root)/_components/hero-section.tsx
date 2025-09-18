@@ -1,10 +1,8 @@
 import { BlurFade } from '@/components/ui/blur-fade';
 import BottomAnimation from '@/components/ui/BottomAnimation';
 import TextRevealByMask from '@/components/ui/TextRevealByMask';
-import Spline from '@splinetool/react-spline';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
-import { Suspense } from 'react';
 
 export default function HeroSection() {
 	return (
@@ -18,19 +16,6 @@ export default function HeroSection() {
 						Yaser Arafat Israk
 					</TextRevealByMask>
 				</BlurFade>
-
-				<div className='w-full h-screen absolute top-0 left-1/2 -translate-x-1/2 hidden md:block'>
-					<BlurFade
-						className='w-full h-full'
-						delay={1}>
-						<Suspense>
-							<Spline
-								className='absolute size-3'
-								scene='https://prod.spline.design/xkpgwlFBLaPFKCbh/scene.splinecode'
-							/>
-						</Suspense>
-					</BlurFade>
-				</div>
 
 				{/* <Test /> */}
 				<BlurFade className='grid grid-cols-4 space-y-8'>

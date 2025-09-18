@@ -1,5 +1,4 @@
 import { cn } from '@/lib/utils';
-import { SanityLive } from '@/sanity/lib/live';
 import type { Metadata } from 'next';
 import { ViewTransitions } from 'next-view-transitions';
 import { Instrument_Serif, Inter } from 'next/font/google';
@@ -40,6 +39,7 @@ export default function RootLayout({
 				suppressHydrationWarning
 				lang='en'>
 				<body
+					suppressHydrationWarning
 					className={cn(
 						inter.className,
 						instrument.variable,
@@ -47,8 +47,6 @@ export default function RootLayout({
 					)}>
 					{children}
 				</body>
-
-				<SanityLive />
 			</html>
 		</ViewTransitions>
 	);
