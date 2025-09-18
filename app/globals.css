@@ -4,12 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@layer utilities {
-	.ease-custom {
-		transition-timing-function: cubic-bezier(1, -0.01, 0, 0.99);
-	}
-}
-
 @theme inline {
 	--color-background: var(--background);
 	--color-dark: var(--dark);
@@ -113,9 +107,9 @@
 	--chart-5: hsl(340, 75%, 55%);
 }
 
-html {
+/* html {
 	scroll-behavior: smooth;
-}
+} */
 
 @layer base {
 	body {

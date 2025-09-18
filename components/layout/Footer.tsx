@@ -18,13 +18,9 @@ export default function Footer() {
 				</div>
 
 				<div className='container mx-auto px-2 md:px-0 py-[5vmin] md:py-[10vmin] relative z-20'>
-					{/* <BlurFade className=' text-center font-bold text-[clamp(3rem,14vw,15rem)] whitespace-nowrap tracking-tight break-words hidden md:block'>
-						Get in Touch
-					</BlurFade> */}
-
 					<TextRevealByMask
-						// animation='blurInUp'
-						by='lines'
+						blur={40}
+						by='chars'
 						as={'h1'}
 						className='text-[clamp(3rem,14vw,15rem)] whitespace-nowrap tracking-tight break-words hidden md:block text-center font-bold'>
 						Get in Touch
