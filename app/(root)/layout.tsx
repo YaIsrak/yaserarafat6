@@ -8,12 +8,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<LenisProvider>
-			<Navbar />
-			<main className='relative max-w-screen overflow-x-hidden'>
-				{children}
-			</main>
-			<Footer />
-		</LenisProvider>
+		<>
+			<LenisProvider>
+				<Navbar />
+				<main className='relative max-w-screen overflow-x-hidden'>
+					{children}
+				</main>
+				<Footer />
+			</LenisProvider>
+		</>
 	);
 }
