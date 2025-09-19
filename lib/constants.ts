@@ -62,7 +62,7 @@ export const experiences: {
 		name: 'Altux Studio',
 		post: 'Frontend Developer',
 		location: 'Remote - Bangladesh',
-		time: '2025 - Present',
+		time: '2025',
 		link: 'https://www.altuxstudio.com',
 	},
 	{

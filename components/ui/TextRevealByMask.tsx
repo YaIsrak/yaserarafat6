@@ -12,7 +12,6 @@ gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 interface Props {
 	children: React.ReactNode;
 	className?: string;
-	containerClassName?: string;
 	y?: number;
 	opacity?: number;
 	duration?: number;
@@ -87,8 +86,11 @@ export default function TextRevealByMask({
 		<div
 			ref={containerRef}
 			className={className}>
+			{/* @ts-ignore */}
 			<Component
-				ref={textRef}
+				// @ts-ignore
+				ref={textRef as unknown as React.Ref<HTMLElement>}
+				// @ts-ignore
 				className={className}>
 				{children}
 			</Component>

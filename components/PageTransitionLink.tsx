@@ -15,6 +15,7 @@ export default function PageTransitionLink({
 	className?: string;
 } & LinkProps) {
 	const router = useTransitionRouter();
+
 	return (
 		<Link
 			href={href}
@@ -22,7 +23,6 @@ export default function PageTransitionLink({
 			{...props}
 			onClick={(e) => {
 				e.preventDefault();
-
 				router.push(href, {
 					onTransitionReady: pageAnimation,
 				});
@@ -47,7 +47,6 @@ function pageAnimation() {
 		{
 			duration: 500,
 			easing: 'cubic-bezier(1, 0, 0, 1)',
-			// easing: 'cubic-bezier(0.87, 0, 0.13, 1)',
 			fill: 'forwards',
 			pseudoElement: '::view-transition-old(root)',
 		},
@@ -68,19 +67,4 @@ function pageAnimation() {
 			pseudoElement: '::view-transition-new(root)',
 		},
 	);
-
-	// document.documentElement.animate([
-	// 	{
-	// 		clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)',
-	// 	},
-	// 	{
-	// 		clipPath: 'polygon(0 100%, 100% 100%, 100% 0%, 0 0%)',
-	// 	},
-	// 	{
-	// 		duration: 500,
-	// 		easing: 'cubic-bezier(1, 0, 0, 1)',
-	// 		fill: 'forwards',
-	// 		pseudoElement: '::view-transition-new(root)',
-	// 	},
-	// ]);
 }
