@@ -16,4 +16,5 @@ export const { sanityFetch, SanityLive } = defineLive({
 	}),
 
 	serverToken: token,
+	browserToken: token,
 });
