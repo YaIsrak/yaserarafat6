@@ -1,4 +1,5 @@
 import { FEATURED_WEB_QUERYResult } from '@/sanity.types';
+import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BlurFade } from './ui/blur-fade';
@@ -10,24 +11,24 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, i }: ProjectCardProps) {
-	// const blur_url = await getBlurDataUrl(project.mainImageUrl?.url ?? '');
-
 	return (
 		<BlurFade
 			delay={i * 0.1}
-			className={`col-span-2 group md:col-span-1 bg-dark p-4 rounded-4xl`}>
+			className='col-span-2 group md:col-span-1 bg-dark p-2'>
 			<Link
 				href={project.url!}
-				target='_blank'>
-				<div className='relative overflow-hidden  border rounded-2xl border-muted-foreground/50'>
+				target='_blank'
+				className='relative'>
+				<div className='bg-rose-100 size-42 rounded-full absolute z-10 bottom-4 right-4 flex items-center justify-center scale-0 -rotate-90 group-hover:scale-100 group-hover:-rotate-0 transition-transform duration-150 ease-out'>
+					<ArrowUpRight className='size-12 text-rose-600' />
+				</div>
+				<div className='relative overflow-hidden  border border-muted-foreground/50'>
 					<Image
 						src={project.mainImageUrl?.url ?? ''}
 						alt={project.title!}
 						width={800}
 						height={800}
 						className='w-full h-[500px] object-cover scale-105 group-hover:scale-100 transition-transform duration-300 ease-out'
-						// placeholder='blur'
-						// blurDataURL={blur_url}
 					/>
 				</div>
 				<div className='my-2 space-y-2'>

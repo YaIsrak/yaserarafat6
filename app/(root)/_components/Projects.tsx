@@ -13,13 +13,13 @@ export default async function Projects() {
 		<section
 			className='relative z-10 py-[10vmin] pt-[20vmin]'
 			id='projects'>
-			<div className='container mx-auto px-2 md:px-0'>
+			<div className='container mx-auto px-2 md:px-0 relative z-20'>
 				<TextRevealByMask
 					by='chars'
 					as={'h1'}
 					stagger={0.05}
-					className='text-7xl md:text-9xl uppercase tracking-tighter font-bold text-[#0e0e0e]'>
-					Works
+					className='text-7xl md:text-[12rem] font-black font-thunder uppercase'>
+					Projects
 				</TextRevealByMask>
 
 				<Suspense
@@ -45,10 +45,6 @@ export default async function Projects() {
 						</PageTransitionLink>
 					</Button>
 				</BlurFade>
-			</div>
-
-			<div className='absolute top-0 w-full h-1/5 bg-gradient-to-r from-purple-600 to-pink-600 -z-50'>
-				<div className='absolute inset-0 bg-gradient-to-b from-transparent  to-white'></div>
 			</div>
 		</section>
 	);

@@ -1,3 +1,4 @@
+import FixedFooter from '@/components/layout/FixedFooter';
 import Footer from '@/components/layout/Footer';
 import LenisProvider from '@/components/layout/LenisProvider';
 import Navbar from '@/components/layout/Navbar';
@@ -15,6 +16,7 @@ export default function RootLayout({
 					{children}
 				</main>
 				<Footer />
+				<FixedFooter />
 			</LenisProvider>
 		</>
 	);

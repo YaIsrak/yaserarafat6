@@ -10,7 +10,7 @@ export default function GridLines({
 	containerClassName,
 }: GridLinesProps) {
 	return (
-		<div className={cn('h-full top-0 w-full absolute', className)}>
+		<div className={cn('h-full top-0 w-full absolute z-5', className)}>
 			<div
 				className={cn(
 					'container mx-auto px-2 md:px-0 h-full w-full',

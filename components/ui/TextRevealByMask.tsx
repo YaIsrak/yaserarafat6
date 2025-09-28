@@ -1,5 +1,6 @@
 'use client';
 
+import { easeNumber } from '@/lib/constants';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { CustomEase } from 'gsap/CustomEase';
@@ -49,7 +50,7 @@ export default function TextRevealByMask({
 		gsap.context(() => {
 			if (!textRef.current) return;
 
-			CustomEase.create('myEase', 'M0,0 C1,0 0,1 1,1');
+			CustomEase.create('myEase', easeNumber);
 
 			const split = new SplitText(textRef.current, {
 				type: by,

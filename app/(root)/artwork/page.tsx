@@ -1,6 +1,9 @@
 import GridLines from '@/components/ui/GridLines';
+import gsap from 'gsap';
+import { CustomEase, ScrollTrigger, SplitText } from 'gsap/all';
 import { Metadata } from 'next';
-import GallerySection from '../_components/gallery-section';
+
+gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
 export const metadata: Metadata = {
 	title: 'Artwork',
@@ -9,7 +12,6 @@ export const metadata: Metadata = {
 export default async function ArtworkPage() {
 	return (
 		<>
-			<GallerySection />
 			<GridLines className='-z-10' />
 		</>
 	);

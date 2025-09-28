@@ -133,3 +133,5 @@ export const educations: {
 		image: 'https://sccc.eduworlderp.com/img/site/1699848045.png',
 	},
 ];
+
+export const easeNumber = 'M0,0 C1,0 0,1 1,1';

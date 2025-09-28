@@ -8,7 +8,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
-import PageTransitionLink from '../PageTransitionLink';
 import BottomAnimation from '../ui/BottomAnimation';
 import MenuIcon from '../ui/menu-icon';
 import { VariableFontHover } from '../ui/variable-font-hover';
@@ -23,7 +22,7 @@ export default function Navbar() {
 				isOpen ? 'bg-dark/90 rounded-b-3xl' : 'bg-dark/25 rounded-b-none',
 			)}>
 			<div className='container mx-auto px-2 md:px-0 grid grid-cols-4 py-4 md:py-2 items-center'>
-				<PageTransitionLink
+				<Link
 					href='/'
 					className='group flex items-center gap-0 transition'>
 					<div className='relative size-0 group-hover:size-4 group-hover:mr-2 transition-all ease-[cubic-bezier(1,0,0,1)]'>
@@ -38,7 +37,7 @@ export default function Navbar() {
 						className='font-semibold text-sm'
 						fromFontVariationSettings="'wght' 600, 'slnt' 0"
 					/>
-				</PageTransitionLink>
+				</Link>
 
 				<div className='md:flex items-center justify-end gap-8 col-span-2 hidden'>
 					{navlinks.map(({ name, href }) => (
@@ -122,11 +121,11 @@ export function NavLink({
 		<BottomAnimation
 			isActive={isActive}
 			className={borderClassName}>
-			<PageTransitionLink
+			<Link
 				href={href}
 				className={cn('relative uppercase', className)}>
 				{label}
-			</PageTransitionLink>
+			</Link>
 		</BottomAnimation>
 	);
 }
