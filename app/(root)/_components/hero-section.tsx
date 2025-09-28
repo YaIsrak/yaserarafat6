@@ -24,10 +24,9 @@ export default function HeroSection() {
 			ease: 'myEase',
 			scrollTrigger: {
 				trigger: containerRef.current,
-				start: 'top top',
-				end: '80% bottom',
+				start: 'top bottom',
 				toggleActions: 'play restart play reverse',
-				scrub: true,
+				markers: true,
 			},
 		});
 	});
