@@ -45,7 +45,7 @@ const metaData: Metadata = {
 		],
 	},
 	verification: {
-		google: 'fmDb5LvLMBphFnbLxy0twqLiHhx4sOWt_ie3fZKiGwk',
+		google: 'Z0ydVQraZub253Z0jV38rIHnzAfPndzwJ5VfHn_BnrQ',
 	},
 	alternates: {
 		canonical: `${process.env.NEXT_PUBLIC_SITE_URL}`,
