@@ -8,6 +8,5 @@ export default function robots(): MetadataRoute.Robots {
 			disallow: '/nsfw/',
 		},
 		sitemap: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yaserisrak.vercel.app'}/sitemap.xml`,
-		host: process.env.NEXT_PUBLIC_SITE_URL || 'https://yaserisrak.vercel.app',
 	};
 }
