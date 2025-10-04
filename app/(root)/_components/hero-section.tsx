@@ -26,7 +26,6 @@ export default function HeroSection() {
 				trigger: containerRef.current,
 				start: 'top bottom',
 				toggleActions: 'play restart play reverse',
-				markers: true,
 			},
 		});
 	});

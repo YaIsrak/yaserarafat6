@@ -50,7 +50,7 @@ export default function WhatICanDo() {
 	return (
 		<section
 			ref={containerRef}
-			className='relative z-20'>
+			className='relative z-20 overflow-y-hidden'>
 			{/* another content */}
 			<div className='container mx-auto px-2 md:px-0 py-[15vmin] relative'>
 				<div
