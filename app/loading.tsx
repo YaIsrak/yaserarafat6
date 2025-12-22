@@ -4,11 +4,11 @@ export default function Loading() {
 	return (
 		<div className='w-full h-screen bg-dark flex items-center justify-center text-white'>
 			<BreathingText
-				label='ISRAK'
+				label='LOADING'
 				staggerDuration={0.1}
 				toFontVariationSettings="'wght' 100, 'slnt' 0"
 				fromFontVariationSettings="'wght' 800, 'slnt' -10"
-				className='text-8xl font-bold'
+				className='text-8xl font-thunder font-black'
 			/>
 		</div>
 	);

@@ -142,3 +142,9 @@
 	z-index: 1;
 	animation: none !important;
 }
+
+.word,
+.char .digit {
+	position: relative;
+	will-change: transform;
+}

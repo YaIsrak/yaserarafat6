@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 const metaData: Metadata = {
 	title: {
-		default: 'Israk',
+		default: 'MD Yaser Arafat Israk | Web Developer & Illustrator',
 		template: `%s | Israk`,
 	},
 	description:
@@ -37,7 +37,7 @@ const metaData: Metadata = {
 		type: 'website',
 		images: [
 			{
-				url: `${process.env.NEXT_PUBLIC_SITE_URL}/israkpp.jpeg`, // 👈 image stored in public/og-image.png
+				url: `${process.env.NEXT_PUBLIC_SITE_URL}/israkpp.jpeg`,
 				width: 1200,
 				height: 630,
 				alt: 'Preview image of MD Yaser Arafat Israk portfolio website',
