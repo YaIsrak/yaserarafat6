@@ -109,12 +109,14 @@ export default function ArtworkHero() {
 					/>
 				</div>
 
-				<div
-					ref={headerRef}
-					className='header absolute bottom-[unset] top-[50svh] md:top-[unset] flex md:block justify-center md:justify-start -translate-y-1/2 md:bottom-16 w-full p-8 z-10'>
-					<h1 className='font-thunder text-[clamp(8rem,18.5vw,20rem)] uppercase font-black text-white'>
-						Artwork
-					</h1>
+				<div className='container mx-auto'>
+					<div
+						ref={headerRef}
+						className='header absolute bottom-[unset] top-[50svh] md:top-[unset] flex md:block justify-center md:justify-start -translate-y-1/2 md:bottom-16 w-full z-10'>
+						<h1 className='font-thunder text-[clamp(8rem,18.5vw,20rem)] uppercase font-black text-white'>
+							Artwork
+						</h1>
+					</div>
 				</div>
 			</section>
 		</div>
