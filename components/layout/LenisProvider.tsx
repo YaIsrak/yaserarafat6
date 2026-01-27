@@ -1,7 +1,7 @@
 // components/LenisProvider.tsx
 'use client';
 
-import Lenis from '@studio-freight/lenis';
+import Lenis from 'lenis';
 import { ReactNode, useEffect } from 'react';
 
 export default function LenisProvider({ children }: { children: ReactNode }) {

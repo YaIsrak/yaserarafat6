@@ -1,11 +1,11 @@
 import PageTransitionLink from '@/components/PageTransitionLink';
-import ProjectCard, { SkeletonCard } from '@/components/ProjectCard';
+import { SkeletonCard } from '@/components/ProjectCard';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
 import TextRevealByMask from '@/components/ui/TextRevealByMask';
-import { FEATURED_WEB_QUERYResult } from '@/sanity.types';
-import { sanityFetch } from '@/sanity/lib/live';
-import { FEATURED_WEB_QUERY } from '@/sanity/lib/queries';
+// import { FEATURED_WEB_QUERYResult } from '@/sanity.types';
+// import { sanityFetch } from '@/sanity/lib/live';
+// import { FEATURED_WEB_QUERY } from '@/sanity/lib/queries';
 import { Suspense } from 'react';
 
 export default async function Projects() {
@@ -51,21 +51,22 @@ export default async function Projects() {
 }
 
 export async function ProjectList() {
-	const { data } = await sanityFetch({
-		query: FEATURED_WEB_QUERY,
-	});
+	// const { data } = await sanityFetch({
+	// 	query: FEATURED_WEB_QUERY,
+	// });
 
 	return (
 		<BlurFade
 			delay={0.5}
 			className='mt-4 md:mt-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
-			{data.map((project: FEATURED_WEB_QUERYResult[0], i: number) => (
+			sdsdsd
+			{/* {data.map((project: FEATURED_WEB_QUERYResult[0], i: number) => (
 				<ProjectCard
 					key={project._id}
 					i={i}
 					project={project}
 				/>
-			))}
+			))} */}
 		</BlurFade>
 	);
 }
