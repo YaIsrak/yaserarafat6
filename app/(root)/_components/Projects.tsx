@@ -1,14 +1,13 @@
 import PageTransitionLink from '@/components/PageTransitionLink';
-import { SkeletonCard } from '@/components/ProjectCard';
+import ProjectCard, { SkeletonCard } from '@/components/ProjectCard';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Button } from '@/components/ui/button';
 import TextRevealByMask from '@/components/ui/TextRevealByMask';
-// import { FEATURED_WEB_QUERYResult } from '@/sanity.types';
-// import { sanityFetch } from '@/sanity/lib/live';
-// import { FEATURED_WEB_QUERY } from '@/sanity/lib/queries';
+import { client } from '@/lib/sanity/client';
+import { FEATURED_WEB_QUERY } from '@/lib/sanity/queries';
 import { Suspense } from 'react';
 
-export default async function Projects() {
+export default function Projects() {
 	return (
 		<section
 			className='relative z-10 py-[10vmin] pt-[20vmin]'
@@ -51,22 +50,19 @@ export default async function Projects() {
 }
 
 export async function ProjectList() {
-	// const { data } = await sanityFetch({
-	// 	query: FEATURED_WEB_QUERY,
-	// });
+	const data: WebProject[] = await client.fetch(FEATURED_WEB_QUERY);
 
 	return (
 		<BlurFade
 			delay={0.5}
 			className='mt-4 md:mt-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
-			sdsdsd
-			{/* {data.map((project: FEATURED_WEB_QUERYResult[0], i: number) => (
+			{data.map((project: WebProject, i: number) => (
 				<ProjectCard
 					key={project._id}
 					i={i}
 					project={project}
 				/>
-			))} */}
+			))}
 		</BlurFade>
 	);
 }

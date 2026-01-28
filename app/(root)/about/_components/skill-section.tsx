@@ -1,4 +1,5 @@
 import { BlurFade } from '@/components/ui/blur-fade';
+import { basicSkills, techSkills, toolSkills } from '@/lib/skill-data';
 
 export default function SkillSection() {
 	return (
@@ -11,26 +12,19 @@ export default function SkillSection() {
 				<div className='grid grid-cols-4 mt-8 text-sm'>
 					<div />
 					<BlurFade delay={0.1}>
-						<p>Digital Art</p>
-						<p>Frontend</p>
-						<p>UI design</p>
+						{basicSkills.map((skill) => (
+							<p key={skill}>{skill}</p>
+						))}
 					</BlurFade>
 					<BlurFade delay={0.2}>
-						<p>Next.js(React)</p>
-						<p>Express(Node.js)</p>
-						<p>Mongodb | Supabase</p>
-						<p>Zustand</p>
-						<p>Typescript</p>
-						<p>Prisma(ORM)</p>
-						<p>Auth.js | Clerk</p>
-						<p>Python</p>
+						{techSkills.map((skill) => (
+							<p key={skill}>{skill}</p>
+						))}
 					</BlurFade>
 					<BlurFade delay={0.3}>
-						<p>Vs Code</p>
-						<p>Photoshop</p>
-						<p>Clip Studio</p>
-						<p>Blender</p>
-						<p>Figma</p>
+						{toolSkills.map((skill) => (
+							<p key={skill}>{skill}</p>
+						))}
 					</BlurFade>
 				</div>
 			</div>

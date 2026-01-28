@@ -1,6 +1,8 @@
 import GridLines from '@/components/ui/GridLines';
+import { Suspense } from 'react';
 import AboutSection from './_components/about-section';
 import HeroSection from './_components/hero-section';
+import Projects from './_components/Projects';
 import WhatICanDo from './_components/what-i-can-do';
 
 export default function Home() {
@@ -8,7 +10,9 @@ export default function Home() {
 		<div>
 			<HeroSection />
 			<AboutSection />
-			{/* <Projects /> */}
+			<Suspense>
+				<Projects />
+			</Suspense>
 			<WhatICanDo />
 			<GridLines />
 		</div>
